@@ -1,0 +1,3 @@
+<Rules priority='0'>
+<Action timing='pre' name='iglkey' command="rpm --import http://rpms.infoglobe.ca/IGL/RPM-GPG-KEY-igl.txt" when='modified' status='check'/>
+</Rules>

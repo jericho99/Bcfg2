@@ -1,0 +1,47 @@
+#!/usr/bin/perl -w
+# BCFG2-IG
+# Local modifications WILL be lost
+# $Id: sqlbackup 43 2010-08-19 14:17:21Z dave $
+use File::List;
+use POSIX;
+system ("/etc/init.d/autofs restart");
+system ("ls /backupmysql");
+sleep 5;
+my $date = strftime( '%Y%m%d', localtime );
+my $pass = "QJuH9npYSQsbRADP";
+my $user= "dbbackup";
+my $backdir = "/backupmysql";
+my $search = new File::List("/var/lib/mysql");
+$search->show_only_dirs();
+my @dirs  = @{ $search->find(".*") };
+
+(open DIRFILE, "> /tmp/dirfile.txt");
+        foreach $file (@dirs) {
+                print DIRFILE $file . "\n";
+}
+close (DIRFILE);
+
+
+(open DIRFILE2, '/tmp/dirfile.txt') or die;
+        my @dir2 = <DIRFILE2>;
+        open DIRFILE2, ">/tmp/dirfile.txt";
+        foreach (@dir2) {
+                s/\/var\/lib\/mysql\///;
+                s/\///;
+                s/^[\ \t]*\n//g ;
+
+        print DIRFILE2 $_;
+        }
+close (DIRFILE2);
+
+
+$data_file="/tmp/dirfile.txt";
+open(DATA, $data_file) || die("Could not open file!");
+@raw_data=<DATA>;
+close(DATA);
+foreach $key (@raw_data){
+chop($key);
+
+system ("/usr/bin/mysqldump -u $user --password=$pass $key > $backdir/$key-$date.sql");
+
+}

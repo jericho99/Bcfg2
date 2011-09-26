@@ -1,0 +1,585 @@
+# From http://www.globecom.net/ietf/draft/draft-lachman-ldap-mail-routing-03.html
+# apparently expired ...
+
+# Object Class and Attribute Definitions
+# moved below
+
+#objectIdentifier 1.3.6.1.4.1.1466.115.121.1.26 IA5String
+
+#   The 'mailAlternateAddress' attribute is used to specify alternate
+#   email addresses, if any, for the recipient; for example,
+#   "nickname@example.com".
+#   When determining the disposition of a given message, an MTA may
+#   search the directory for an entry with object class 'mailRecipient'
+#   and a 'mail' or 'mailAlternateAddress' attribute matching the
+#   message's recipient address.  If exactly one matching entry is found,
+#   the MTA may regard the message as being addressed to the entity that
+#   is represented by the directory entry.
+#   In short, address attributes may be used by an LDAP entry to answer
+#   the question "what is/are this account's email address(es)?"
+
+attributetype ( 1.3.6.1.4.1.10018.1.1.1 NAME 'mailbox'
+	DESC 'The absolute path to the mailbox for a mail account in a non-default location'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.1
+	NAME 'mailAlternateAddress'
+	DESC 'alternate RFC 822 email address of this recipient'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+# see misc.schema
+
+#4.4.1.  inetMailGroupVersion attribute (ces, 0-1, {admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.2 NAME 'inetMailGroupVersion'
+	DESC 'version string for the inetMailGroup objectClass'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE )
+
+#4.4.2.  errorsTo attribute (ces, 0-1, {admin, MTA})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.3
+	NAME 'errorsTo'
+	DESC 'user or group to receive error messages for this group'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE )
+
+#4.4.3.  requestsTo attribute (ces, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.6
+	NAME 'requestsTo'
+	DESC 'address to forward all subscription requests for the distribution list'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#4.4.4.  suppressEmailError attribute (cis, 0-1, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.7
+	NAME 'suppressEmailError'
+	DESC 'suppress error messages from being sent back to message originator'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#4.4.5.  mailDeliveryFile attribute (ces, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.12
+	NAME 'mailDeliveryFile'
+	DESC 'path/filename for archiving messages sent to the distribution lists'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#4.4.7.  mailProgramDeliveryInfo attribute (ces, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.14
+	NAME 'mailProgramDeliveryInfo'
+	DESC 'named programs for message processing'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#4.5.1.  joinable attribute (cis, 0-1, {admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.4
+	NAME 'joinable'
+	DESC 'indicate if users can subscribe to the list'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE )
+
+#4.5.2.  multiLineDescription attribute (cis, 0-many, {admin, client})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.19
+	NAME 'multiLineDescription'
+	DESC 'multi-line description of this list'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+#Multi-line description of the distribution list.
+
+#4.5.3.  seeAlso attribute (dn, 0-many, {admin, client})
+#attributetype ( 2.5.4.34
+#	NAME 'seeAlso'
+#	DESC 'directory entry that holds more information about this list'
+#	EQUALITY caseExactIA5Match
+#	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#Distinguished name of an entry to consult for further information.
+
+#4.5.4.  expandable attribute (cis, 0-1, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.10
+	NAME 'expandable'
+	DESC 'privacy option for membership list'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE )
+
+#4.5.5.  datasource attribute (cis, 0-1, {admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.11
+	NAME 'dataSource'
+	DESC 'free form text to indicate source of data'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE )
+#Free form text that describes the original source or identifier of
+#the provisioning tool.
+
+#attributetype ( 1.3.6.1.4.1.42.2.27.2.1.4 NAME 'deliveryProgramPath'
+#	DESC 'Program to execute for all incoming mails.'
+#	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+#	SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.4.1.7914.1.2.1.12
+	NAME 'inetMailUserStatus'
+	DESC 'The status of a user account: active, nopop, noimap, disabled, deleted'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE )
+
+#4.6.1.  moderator attribute (ces, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.5
+	NAME 'moderator'
+	DESC 'designated moderator(s) of the distribution list'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#4.6.2.  authorizedDomain attribute (cis, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.8
+	NAME 'authorizedDomain'
+	DESC 'Domains authorized to submit messages to the distribution list'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#4.6.3.  authorizedSubmitter attribute (ces, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.9
+	NAME 'authorizedSubmitter'
+	DESC 'addresses authorized to submit messages to the distribution list'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+# 4.6.4 unauthorizedDomain attribute (cis, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.17
+	NAME 'unauthorizedDomain'
+	DESC 'Domains not authorized to submit messages to the distribution list'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#unauthorizedSubmitter attribute (ces, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.18
+	NAME 'unauthorizedSubmitter'
+	DESC 'mailto: or ldap: URL of allowed sender of mail to the list'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#rfc822MailMember attribute (cis, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.15
+	NAME 'rfc822MailMember'
+	DESC 'rfc822 mail address of group member(s)'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+# This attribute allows us to specify membership in the group using an
+# LDAP search URL.  This allows the creation of a group based on search
+# of the directory for entries that match the given filter, rather than
+# explicitly calling out each member individually.
+# 
+# The URL has the form:
+# 
+# ldap://[<server>[:<port>]]/<baseDN>?[<attrs>]?<scope>?<filter>.  The
+# 'attrs' portion of the URL is not applicable for this use and is
+# ignored.  Default value for 'server:port' is the LDAP server being
+# used by the MTA.  The 'baseDN' specifies the base for the search; if
+# not present, the default is the baseDN being used by the MTA.  The
+# scope defines levels of the directory tree to be searched relative to
+# the specified search base; its default value is 'base'.  Finally, the
+# default for filter is "(mail=*)" since we only want to include those
+# entities in the distribution list that can accept mail.
+#membershipFilter attribute (ces, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.20
+	NAME 'membershipFilter'
+	DESC 'LDAP search URL to describe distribution list membership'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+
+#inetAuthorizedServices attribute (cis, 0-many, {client, mta, msma, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.3.1.1
+	NAME 'inetAuthorizedServices'
+	DESC 'list of internet services authorized for use by this user'
+	EQUALITY distinguishedNameMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.12 )
+
+#inetSubscriberHttpURL attribute (ces, 0-many, {})
+attributetype ( 1.3.6.1.4.1.42.2.27.3.1.2
+	NAME 'inetSubscriberHttpURL'
+	DESC 'web page(s) of the subscriber'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+
+#inetSubscriberStatus attribute (cis, 0-1, {client, mta, msma, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.3.1.3
+	NAME 'inetSubscriberStatus'
+	DESC 'status of the subscribers account'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE )
+
+# This attribute takes one of three values. If this attribute is
+# missing from a user entry, the semantics are the same as if the value
+# is 'active'.
+# Supported values are:
+# active - The subscriber account is active.  The subscriber may use
+# all accesses granted by inetAuthorizedServices.
+# inactive - The subscriber account is inactive.  The subscriber may
+# not use any services granted by inetAuthorizedServices.  Service
+# requests for a user marked as inactive must return transient
+# failures.
+# deleted - The subscriber account is marked as deleted.  The
+# account may remain in this state within the directory for some
+# time (pending purging of deleted users). Service requests for a
+# user marked as deleted must return permanent failures.
+
+# Free form text that describes the source or identifier of the
+# provisioning tool.
+
+#5.3.2.  inetMailUserVersion attribute (ces, 1, {admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.21
+	NAME 'inetMailUserVersion'
+	DESC 'Version of this instance of the inetMailUser object class'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE )
+
+#5.3.3.  mailAutoReplyStartDate attribute (generalizedTime, 0-1, {client, mta})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.22
+	NAME 'mailAutoReplyStartDate'
+	DESC 'Date on which to enable email Auto-Reply'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10}
+	SINGLE-VALUE )
+
+#5.3.4.  mailAutoReplyExpirationDate attribute (generalizedTime, 0-1, {client, mta})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.23
+	NAME 'mailAutoReplyExpirationDate'
+	DESC 'Date on which to disable email Auto-Reply'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10}
+	SINGLE-VALUE )
+
+#5.3.5.  mailAutoReplyTimeout attribute (cis, 0-1, {client, mta})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.24
+	NAME 'mailAutoReplyTimeout'
+	DESC 'Duration between auto-replies'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE )
+
+#5.3.6.  mailAutoReplySubject attribute (cis, 0-1, {client, mta})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.25
+	NAME 'mailAutoReplySubject'
+	DESC 'The Subject line of an auto-reply message'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE )
+
+#5.3.7.  mailAutoReplyText attribute (cis, 0-1, {client, mta})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.26
+	NAME 'mailAutoReplyText'
+	DESC 'The body of an auto-reply message'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE )
+
+#5.3.8.  mailAutoReplyTextInternal attribute (cis, 0-1, {client, mta})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.27
+	NAME 'mailAutoReplyTextInternal'
+	DESC 'The body of an internal auto-reply message'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE )
+
+#5.3.10.  mailDeliveryOption attribute (cis, 1-many, {mta})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.29
+	NAME 'mailDeliveryOption'
+	DESC 'message handling option for messages sent to a designated recipient'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+#5.3.11.  mailFolderMap attribute (cis, 0-1, {msma, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.30
+	NAME 'mailFolderMap'
+	DESC 'Location of the message store for user folders'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE )
+
+#5.3.12.  mailForwardingAddress attribute  (cis, 0-many, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.31
+	NAME 'mailForwardingAddress'
+	DESC 'RFC822 address to forward email to'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+#5.3.13.  mailMessageStore attribute (ces, 0-1, {mta, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.32
+	NAME 'mailMessageStore'
+	DESC 'File system location of the Inbox for a user'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+	SINGLE-VALUE )
+
+#5.3.15.  mailQuota attribute (cis, 0-1, {mta, msma, admin})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.34
+	NAME 'mailQuota'
+	DESC 'Maximum size of a message store for a user'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE )
+#<size>K - size is specified in kilo bytes
+#<size>M - size is specified in mega bytes
+#<size>G - size is specified in giga bytes
+#<size>T - size is specified in tera bytes
+
+#5.3.16.  userDefinedAttribute1 attribute (cis, 0-many, {})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.35
+	NAME 'userDefinedAttribute1'
+	DESC 'First attribute for use by the user'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+#userDefinedAttribute1 may be used by the user.
+
+#5.3.17.  userDefinedAttribute2 attribute (cis, 0-many, {})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.36
+	NAME 'userDefinedAttribute2'
+	DESC 'Second attribute for use by the user'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+#userDefinedAttribute2 may be used by the user.
+
+#5.3.18.  userDefinedAttribute3 attribute (cis, 0-many, {})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.37
+	NAME 'userDefinedAttribute3'
+	DESC 'Third attribute for use by the user'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+#userDefinedAttribute3 may be used by the user.
+
+#5.3.19.  userDefinedAttribute4 attribute (cis, 0-many, {})
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.38
+	NAME 'userDefinedAttribute4'
+	DESC 'Fourth attribute for use by the user'
+	EQUALITY caseIgnoreMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+#userDefinedAttribute4 may be used by the user.
+
+# Stores alternate e-mail aliases (RFC-822 format), if any, defined for
+# the user or distribution list.  Mail to any of the listed
+# rfc822MailAlias attributes of an LDAP entry will be delivered to the
+# user or group associated with that entry.  The value in this
+# attribute must be unique for all 'mail' and 'rfc822MailAlias'
+# attributes in a domain.
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.39
+    NAME 'rfc822MailAlias'
+    DESC 'alternate RFC822 email address for a user or distribution list'
+    EQUALITY caseIgnoreIA5Match
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 1.3.6.1.4.1.42.2.27.2.1.40
+    NAME 'mailDeliveryAgent'
+    DESC 'mail delivery Server FQDN/hostname'
+    EQUALITY caseIgnoreIA5Match
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 2.16.840.1.113730.3.1.13
+	NAME 'mailLocalAddress'
+	DESC 'RFC822 email address of this recipient'
+	EQUALITY caseIgnoreIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 2.16.840.1.113730.3.1.18
+ 	NAME 'mailHost'
+ 	DESC 'FQDN of the SMTP/MTA of this recipient'
+ 	EQUALITY caseIgnoreIA5Match
+ 	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256}
+ 	SINGLE-VALUE )
+
+attributetype ( 2.16.840.1.113730.3.1.47
+	NAME 'mailRoutingAddress'
+ 	DESC 'RFC822 routing address of this recipient'
+ 	EQUALITY caseIgnoreIA5Match
+ 	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256}
+ 	SINGLE-VALUE )
+
+# The URL has the form:
+# ldap://[<server>[:<port>]]/<baseDN>?[<attrs>]?<scope>?<filter>.  The
+# 'attrs' portion of the URL is not applicable for this use and is
+# ignored.  Default value for 'server:port' is the LDAP server being
+# used by the MTA.
+#inetSubscriber objectClass definition
+objectclass ( 1.3.6.1.4.1.42.2.27.3.2.1
+	NAME 'inetSubscriber'
+	SUP top
+	AUXILIARY
+	MUST ( uid )
+	MAY ( inetAuthorizedServices $ inetSubscriberHttpURL $
+	   inetSubscriberStatus ) )
+
+#5.3.  inetMailUser objectClass definition
+objectclass ( 1.3.6.1.4.1.42.2.27.2.2.3
+	NAME 'inetMailUser'
+	SUP top
+	AUXILIARY
+	MUST ( inetMailUserVersion )
+	MAY ( datasource $ mailAutoReplyStartDate
+		$ mailAutoReplyExpirationDate $ mailAutoReplyTimeout
+		$ mailAutoReplySubject $ mailAutoReplyText
+		$ mailAutoReplyTextInternal $ mailDeliveryFile
+		$ mailDeliveryOption $ mailFolderMap $ inetMailUserStatus
+		$ mailForwardingAddress $ mailHost $ mailDeliveryAgent
+		$ mailMessageStore $ mailProgramDeliveryInfo
+		$ mailQuota $ userDefinedAttribute1
+		$ userDefinedAttribute2 $ userDefinedAttribute3
+		$ userDefinedAttribute4 ) )
+
+# and http://www.globecom.net/ietf/draft/draft-srivastava-ldap-mail-00.html 
+#4.3.  inetMailGroup objectClass definition
+#   The inetMailGroup object class is defined as follows:
+objectclass ( 1.3.6.1.4.1.42.2.27.2.2.2
+	NAME 'inetMailGroup'
+	SUP top
+	AUXILIARY
+	MUST ( inetMailGroupVersion )
+	MAY ( errorsTo $ joinable $ moderator
+	   $ multiLineDescription $ requestsTo $ seeAlso
+	   $ suppressEmailError $ userPassword $ authorizedDomain
+	   $ authorizedSubmitter $ dataSource $ expandable
+	   $ mailDeliveryFile $ mailDeliveryOption
+	   $ mailProgramDeliveryInfo $ rfc822MailMember
+	   $ unauthorizedDomain $ unauthorizedSubmitter
+	   $ membershipFilter ) )
+
+objectclass ( 1.3.6.1.4.1.42.2.27.2.2.1
+    NAME 'inetMailRouting'
+    SUP top
+    AUXILIARY
+    MUST ( mail $ mailHost )
+    MAY ( rfc822MailAlias ) )
+
+objectclass ( 2.16.840.1.113730.3.2.3
+	NAME ( 'mailRecipient' 'inetLocalMailRecipient' )
+	DESC 'Internet local mail recipient'
+	SUP top
+	AUXILIARY
+	MAY ( cn $ mail $ mailRoutingAddress $ mailLocalAddress
+		$ mailAlternateAddress $ mailHost ) )
+
+objectclass ( 1.3.6.1.4.1.42.2.27.1.2.5
+	NAME 'nisMailAlias'
+	DESC 'NIS mail alias'
+	SUP top STRUCTURAL
+	MUST cn
+	MAY rfc822MailMember )
+
+#   The 'mailRecipient' object class and associated attributes are
+#   defined (using syntaxes given in [6]) as follows.
+# The 'mailRecipient' object class signifies that the entry represents
+#   an entity within the organization that can receive SMTP mail, such as
+#   a mail user account or a mail group account (mailing list).
+#   The 'cn' attributetype (common name) is provided as a means for
+#   administrators to identify the entry [7].
+# Address Attributes
+
+#objectclass ( 0.9.2342.19200300.100.1.3
+#	NAME ( 'rfc822Mailbox' 'mail' )
+#	DESC 'RFC822 email address of this recipient'
+#	EQUALITY caseIgnoreIA5Match
+#	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256}
+#	SINGLE-VALUE )
+
+#The attribute name 'mail' is a synonym for 'rfc822Mailbox', as
+#   defined earlier in [8].  This attribute specifies the recipient's
+#   "primary" or "advertised" email address, i.e., that which might
+#   appear on a business card; for example, "user@example.com".
+
+# 3.3  Routing Attributes
+#attributetype ( 2.16.840.1.113730.3.1.18
+#	NAME 'mailHost'
+#	DESC 'fully qualified hostname of the SMTP MTA that handles messages for this recipient'
+#	EQUALITY caseIgnoreIA5Match
+#	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256}
+#	SINGLE-VALUE )
+#   The 'mailHost' attribute indicates which MTA considers the
+#   recipient's mail to be locally handlable.  This information can be
+#   used for routing, in that an intermediary MTA may take it to be the
+#   destination for messages addressed to this recipient.
+#attributetype ( 2.16.840.1.113730.3.1.47 NAME 'mailRoutingAddress'
+#	DESC 'RFC 822 address to use when routing messages to the SMTP MTA of this recipient'
+#	EQUALITY caseIgnoreIA5Match
+#	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256}
+#	SINGLE-VALUE )
+#   The 'mailRoutingAddress' attribute indicates a routing address for
+#   the recipient.  An intermediary MTA may use this information to route
+#   the message to the MTA that handles mail for this recipient.
+#   Only one of the above two attributes need be present in order to
+#   route messages on behalf of the recipient.  The 'mailRoutingAddress'
+#   attribute is more explicit in terms of providing an address that can
+#   be used to rewrite the SMTP envelope recipient address.  With
+#   'mailHost', the envelope address either is not rewritten, or is
+#   rewritten according to implementation-specific rules and/or
+#   configuration.
+#   In short, routing attributes may be used by an LDAP entry to answer
+#   the question "how should MTAs route mail to this account?"
+#   (analogous to using the sendmail "aliases" database for per-user
+#   routing within an organization).  This is in contrast with
+#   "forwarding" (see Appendix); forwarding and delivery options may be
+#   used by an LDAP entry to answer the question "what happens to mail
+#   once it arrives at this account?", which may include forwarding to
+#   some other account within or outside the organization (analogous to
+#   using the sendmail ".forward" file).
+
+##--- example ldifs ---##
+# user example:
+#dn: cn=Jill Smith (js),ou=People,dc=sun,dc=com,o=internet
+#cn: Jill Smith (js)
+#cn: Jill Smith
+#sn: Smith
+#initials: JS
+#givenname: Jill
+#mail: jill.smith@sun.com
+#inetAuthorizedServices: pop3
+#inetAuthorizedServices: imap
+#inetAuthorizedServices: smtp
+#mailquota: -1
+#mailfoldermap: SUN-MS
+#maildeliveryoption: mailbox
+#mailautoreplytext: Out of the office
+#mailautoreplytextinternal: I'm on vacation $ Jill Smith
+#mailhost: hostname.sun.com
+#rfc822mailbox: jill.smith@hostname.sun.com
+#rfc822mailbox: js@sun.com
+#rfc822mailbox: jill.smith@sun.com
+#uid: js
+#userpassword: {crypt}yh38nwNwU8N2
+#objectclass: top
+#objectclass: inetSubscriber
+#objectclass: inetOrgPerson
+#objectclass: inetMailUser
+
+# mailing list example:
+#dn: cn=Football,ou=Groups,dc=sun,dc=com,o=internet
+#commonName: Football
+#objectClass: top
+#objectClass: groupOfUniqueNames
+#objectClass: inetMailRouting
+#objectClass: inetMailGroup
+#owner: cn=Fred Random (fr),ou=People,dc=sun,dc=com,o=internet
+#moderator: ldap://cn=Jill Smith (js),ou=People,dc=sun,dc=com,o=internet
+#moderator: mailto: fred.random@sun.com
+#requestsTo: mailto:john.doe@isp.net
+#errorsTo: ldap://cn=Jill Smith (js),ou=People,dc=sun,dc=com,o=internet
+#mailHost: mail.sun.com
+#expandable: TRUE
+#joinable: FALSE
+#mail: football@sun.com
+#rfc822MailAlias: football-fanatics@sun.com
+#rfc822MailAlias: football-fans@sun.com
+#rfc822mailmember:john.doe@isp.net
+#rfc822mailmember:jane.doe@isp.net
+#uniqueMember: cn=Fred Random (fr),ou=People,dc=sun,dc=com,o=internet
+#uniqueMember: cn=Jill Smith (js),ou=People,dc=sun,dc=com,o=internet
+#maildeliveryoption: file
+#maildeliveryfile: /dist-list/football-mail.log
+#authorizeddomain: isp.net
+#authorizeddomain: sun.com

@@ -1,0 +1,22 @@
+<Bundle name='vsftpd' revision='$Id: vsftpd.xml 514 2011-02-21 18:08:16Z dave $'>
+    <Group name='centos'>
+        <Path name='/etc/vsftpd/chroot_list'/>
+        <Path name='/etc/vsftpd/ftpusers'/>
+        <Path name='/etc/vsftpd/user_list'/>  
+        <Path name='/etc/vsftpd/vsftpd.conf'/>
+        <Package name='vsftpd'/>
+        <Service name='vsftpd'/>
+    </Group>
+
+    <Group name='ftpsqlauth'>
+        <Package name='pam_mysql'/>
+        <Path name='/etc/pam.d/vsftpd'/>
+    </Group>
+
+    <Group name='ftpadm'>
+        <Package name='apg'/>
+        <Path name='/etc/cron.daily/ftpadm.sh'/>
+    </Group>
+
+</Bundle>
+

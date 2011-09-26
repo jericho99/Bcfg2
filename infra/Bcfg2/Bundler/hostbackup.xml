@@ -1,0 +1,11 @@
+<Bundle name='hostbackup' revision='$Id: hostbackup.xml 473 2011-01-31 22:03:33Z dave $'>
+    <Group name='centos'>
+<!--        <Path name='/home/gestion' owner="gestion" group="gestion" perms="0700"/>
+        <Path name='/home/gestion/.ssh/' owner="gestion" group="gestion" perms="0700"/>-->
+        <BoundPath type='directory' owner='gestion' group='gestion' perms='0700' name='/home/gestion'/>
+        <BoundPath type='directory' owner='gestion' group='gestion' perms='0700' name='/home/gestion/.ssh'/>
+
+        <Path name='/home/gestion/.ssh/authorized_keys' owner="gestion" group="gestion" perms="0600"/>
+    </Group>
+</Bundle>
+

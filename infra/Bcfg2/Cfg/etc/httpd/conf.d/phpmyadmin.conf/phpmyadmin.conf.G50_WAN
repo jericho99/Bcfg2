@@ -1,0 +1,17 @@
+# BCFG2-IG
+# $Id: phpmyadmin.conf 384 2011-01-05 16:03:10Z dave $
+# Local modifications WILL be lost
+#
+#  Web application to manage MySQL
+#
+
+<Directory "/usr/share/phpmyadmin">
+  Order Deny,Allow
+  Deny from all
+  Allow from 69.70.231.230 
+</Directory>
+
+Alias /phpmyadmin /usr/share/phpmyadmin
+Alias /phpMyAdmin /usr/share/phpmyadmin
+Alias /mysqladmin /usr/share/phpmyadmin
+

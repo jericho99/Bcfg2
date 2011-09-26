@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "
+                     ####                       ##              #                
+  #####             #                            #              #                
+    #               #                            #              #                
+    #     # ####   ####      #####    ######     #      #####   ######    #####  
+    #     ##    #   #       #     #  #     #     #     #     #  #     #  #     # 
+    #     #     #   #       #     #  #     #     #     #     #  #     #  ####### 
+    #     #     #   #       #     #  #     #     #     #     #  #     #  #       
+  #####   #     #   #        #####    ######    ###     #####   ######    #####  
+                                           #                                     
+                                      #####                                      
+"
+echo "SVP, veuillez laisser ce terminal ouvert pendant l'intervention."
+echo "A la fin de l'intervention, fermez cette commande avec la combinaison de touche CTRL-C"
+echo "et déconnectez vous en tappant exit dans le terminal."
+echo ""
+while date ; do sleep 5 ; done
+

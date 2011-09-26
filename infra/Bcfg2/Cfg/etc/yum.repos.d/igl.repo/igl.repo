@@ -1,0 +1,8 @@
+#BCFG2
+[IGL]
+name = IGL
+baseurl = http://rpms.infoglobe.ca/IGL/$basearch/
+enabled = 1
+protect = 0
+gpgcheck = 0
+priority=2

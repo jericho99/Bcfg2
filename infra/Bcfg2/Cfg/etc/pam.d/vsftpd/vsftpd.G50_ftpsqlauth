@@ -1,0 +1,7 @@
+#%PAM-1.0
+# BCFG2-IG $Id: vsftpd.G50_ftpsqlauth 543 2011-03-04 15:07:28Z dave $
+# Local modifications WILL be lost 
+
+auth required pam_mysql.so user=ftp passwd=go2Ic7go host=127.0.0.1 db=ftp table=vsftpd usercolumn=user_name passwdcolumn=user_passwd crypt=1
+account required pam_mysql.so user=ftp passwd=go2Ic7go host=127.0.0.1 db=ftp table=vsftpd usercolumn=user_name passwdcolumn=user_passwd crypt=1
+session required pam_mysql.so user=ftp passwd=go2Ic7go host=127.0.0.1 db=ftp table=vsftpd usercolumn=user_name passwdcolumn=user_passwd crypt=1

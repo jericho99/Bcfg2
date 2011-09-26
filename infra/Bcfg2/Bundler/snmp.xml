@@ -1,0 +1,8 @@
+<Bundle name='snmp' revision='$Id: snmp.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos5'>
+            <Path name='/etc/snmp/snmpd.conf'/> 
+            <Path name='/etc/sysconfig/snmpd.options'/> 
+            <Package name='net-snmp'/>
+            <Service name='snmpd'/>
+        </Group>
+</Bundle>

@@ -1,0 +1,30 @@
+{% python
+import socket
+import re
+ip = socket.gethostbyname(metadata.hostname)
+
+shortname = re.split("\.", metadata.hostname)
+%}\
+
+# Do not remove the following line, or various programs
+# that require network functionality will fail.
+
+127.0.0.1       localhost.localdomain localhost
+::1             localhost6.localdomain6 localhost6
+
+${ip} ${metadata.hostname} ${shortname[0]}
+
+{% if "DMZ" in metadata.groups %}\
+10.10.200.11 rpms.infoglobe.ca 
+{% end %}\
+
+{% if "WAN" in metadata.groups %}\
+69.70.199.21	    chronos.int.infoglobe.ca
+{% end %}\
+
+{% if "sshsrv" in metadata.groups %}\
+# Fix for tunnelling error with SSH
+10.10.200.11    courrier.infoglobe.ca
+{% end %}\
+
+

@@ -1,0 +1,9 @@
+<Bundle name='pam_script' revision='$Id: pam_script.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos'>
+        <Package name='pam_script'/>
+	<Path name='/etc/security/onsessionopen'/>
+	<Path name='/etc/security/onsessionclose'/>
+
+    </Group>
+</Bundle>
+

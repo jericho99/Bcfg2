@@ -1,0 +1,324 @@
+<Groups revision='$Id: profiles.xml 549 2011-03-07 13:07:02Z dave $'>
+
+    <!-- En ordre alphabetique par section SVP -->
+<!-- -->
+    <!-- Profils Hosts -->
+   <!-- Profils Hosts -->
+
+       <Group name='davetest' profile='true' public='false'>
+        <Group name='centos5'/>
+        <Group name='base-centos'/>
+        <Group name='centos-minimal'/>
+        <Group name='ldapauth'/>
+        <Group name='snmp'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+        <Group name='hosts2'/>
+        <Group name='subversion'/>
+        <Group name='httpd'/>
+        <Group name='php53'/>
+        <Group name='imagemagick'/>
+        <Group name='php53-mcrypt'/>
+        <Group name='php53-mysql'/>
+        <Group name='php53-gd'/>
+<!--        <Group name='mysql'/>-->
+        <Group name='userdir'/>
+        <Group name='public_html'/>
+        <Group name='vsftpd'/>
+        <Group name='lamptweek'/>
+
+    </Group>
+
+
+       <Group name='websrvtypo3dev-php53' profile='true' public='false'>
+        <Group name='centos5'/>
+        <Group name='base-centos'/>
+        <Group name='centos-minimal'/>
+        <Group name='ldapauth'/>
+        <Group name='snmp'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+        <Group name='hosts2'/>
+        <Group name='subversion'/>
+        <Group name='httpd'/>
+        <Group name='php53'/>
+        <Group name='imagemagick'/>
+        <Group name='php53-mcrypt'/>
+        <Group name='php53-mysql'/>
+        <Group name='php53-gd'/>
+        <Group name='phpmyadmin'/>
+        <Group name='mysql'/>
+        <Group name='userdir'/>
+        <Group name='public_html'/>
+        <Group name='vsftpd'/>
+        <Group name='motd'/>
+        <Group name='lamptweek-php53'/>
+        <Group name='buildtools'/>
+        <Group name='nfs'/>
+        <Group name='proxysql'/>
+        <Group name='devhosting'/>
+        <Group name='hostbackup'/>
+        <Group name='pam_script'/>
+        <Group name='java'/>
+    </Group>
+
+
+       <Group name='websrvtypo3dev-php52' profile='true' public='false'>
+        <Group name='centos5'/>
+        <Group name='base-centos'/>
+        <Group name='centos-minimal'/>
+        <Group name='ldapauth'/>
+        <Group name='snmp'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+        <Group name='hosts2'/>
+        <Group name='subversion'/>
+        <Group name='httpd'/>
+        <Group name='php52'/>
+        <Group name='imagemagick'/>
+        <Group name='php52-mcrypt'/>
+        <Group name='php52-mysql'/>
+        <Group name='php52-gd'/>
+        <Group name='phpmyadmin'/>
+        <Group name='mysql'/>
+        <Group name='userdir'/>
+        <Group name='public_html'/>
+        <Group name='vsftpd'/>
+        <Group name='motd'/>
+        <Group name='lamptweek-php52'/>
+        <Group name='buildtools'/>
+        <Group name='portmap'/>
+        <Group name='fstab'/>
+<!--        <Group name='proxysql'/> -->
+        <Group name='devhosting'/>
+        <Group name='pam_script'/>
+        <Group name='sqlbackup'/>
+        <Group name='hostbackup'/>
+        <Group name='java'/>
+
+    </Group>
+
+	<Group name='hercule' profile='true' public='false'>
+        <Group name='centos5'/>
+        <Group name='hosts2'/>
+        <Group name='base-centos'/>
+        <Group name='centos-minimal2'/>
+        <Group name='ldapauth'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+        <Group name='subversion'/>
+        <Group name='subversion-server'/>
+        <Group name='motd'/>
+        <Group name='php'/>
+        <Group name='php-devel'/>
+        <Group name='php-gd'/>
+        <Group name='php-ldap'/>
+        <Group name='php-mcrypt'/>
+        <Group name='php-mhash'/>
+        <Group name='php-mysql'/>
+        <Group name='php-xml'/>
+        <Group name='php-xmlrpc'/>
+        <Group name='php-pgsql'/>
+        <Group name='phpmyadmin'/>
+        <Group name='postgresql'/>
+	</Group>
+
+       <Group name='ldapslave' profile='true' public='false'>
+        <Group name='centos5'/>
+        <Group name='base-centos'/>
+        <Group name='centos-minimal'/>
+        <Group name='hosts2'/>
+        <Group name='ldapauth'/>
+        <Group name='snmp'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+        <Group name='openldap'/>
+        <Group name='openldap-clients'/>
+        <Group name='postfix'/>
+        <Group name='motd'/>
+        <Group name='DMZ'/>
+    </Group>
+
+       <Group name='patty' profile='true' public='false'>
+        <Group name='centos5'/>
+
+    </Group>
+
+       <Group name='quimby' profile='true' public='false'>
+        <Group name='debian'/>
+
+    </Group>
+
+       <Group name='selma' profile='true' public='false'>
+        <Group name='centos5'/>
+        <Group name='base-centos'/>
+        <Group name='centos-minimal'/>
+        <Group name='snmp'/>
+        <Group name='ssmtp'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+    </Group>
+
+       <Group name='websrv-java' profile='true' public='false'>
+        <Group name='centos5'/>
+        <Group name='base-centos'/>
+        <Group name='centos-minimal'/>
+        <Group name='ldapauth'/>
+        <Group name='snmp'/>
+        <Group name='ssmtp'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+        <Group name='hosts2'/>
+        <Group name='motd'/>
+        <Group name='java'/>
+<!--        <Group name='tomcat'/>-->
+    </Group>
+
+
+       <Group name='srv-backup' profile='true' public='false'>
+        <Group name='centos5'/>
+       <Group name='base-centos'/>
+        <Group name='centos-minimal'/>
+        <Group name='snmp'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+        <Group name='motd'/>
+        <Group name='hosts2'/>
+        <Group name='backupconf'/>
+    </Group>
+
+       <Group name='oldsrvdev' profile='true' public='false'>
+        <Group name='centos5'/>
+        <Group name='base-centos'/>
+        <Group name='centos-minimal'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+        <Group name='motd'/>
+        <Group name='WAN'/>
+        <Group name='httpd'/>
+        <Group name='hosts2'/>
+        <Group name='imagemagick'/>
+        <Group name='php52-mcrypt'/>
+        <Group name='php52-mysql'/>
+        <Group name='php52-gd'/>
+        <Group name='php52-soap'/>
+        <Group name='phpmyadmin'/>
+        <Group name='mysql'/>
+        <Group name='lamptweek-php52'/>
+        <Group name='websrvext'/>
+        <Group name='webexthosting'/>
+</Group>
+
+
+
+       <Group name='srvweb' profile='true' public='false'>
+        <Group name='centos5'/>
+        <Group name='base-centos'/>
+        <Group name='centos-minimal'/>
+        <Group name='yum-epel'/>
+        <Group name='yum-dag'/>
+        <Group name='motd'/>
+        <Group name='WAN'/>
+        <Group name='httpd'/>
+        <Group name='hosts2'/>
+        <Group name='imagemagick'/>
+        <Group name='php52-mcrypt'/>
+        <Group name='php52-mysql'/>
+        <Group name='php52-gd'/>
+        <Group name='php52-soap'/>
+        <Group name='phpmyadmin'/>
+        <Group name='mysql'/>
+        <Group name='lamptweek-php52'/>
+        <Group name='websrvext'/>
+        <Group name='webexthosting'/>
+        <Group name='iptables'/>
+        <Group name='bind'/>
+        <Group name='sqlbackup'/>
+        <Group name='sendmail'/>
+        <Group name='hostbackup'/>
+        <Group name='vsftpd'/>
+        <Group name='ftpsqlauth'/>
+        <Group name='ftpadm'/>
+</Group>
+
+
+	<Group name='sshsrv' profile='true' public='false'>
+		<Group name='centos5'/>
+		<Group name='base-centos'/>
+		<Group name='centos-minimal'/>
+		<Group name='ssmtp'/>
+		<Group name='yum-epel'/>
+		<Group name='yum-dag'/>
+		<Group name='DMZ'/>
+		<Group name='hosts2'/>
+		<Group name='devlighthosting'/>
+	</Group>
+
+	<Group name='vmdev1' profile='true' public='false'>
+		<Group name='centos5'/>
+
+	</Group>
+
+	<Group name='vmdev2' profile='true' public='false'>
+		<Group name='centos5'/>
+
+	</Group>
+
+	<Group name='vmdmz' profile='true' public='false'>
+		<Group name='centos5'/>
+
+	</Group>
+
+	<Group name='vmprod1' profile='true' public='false'>
+		<Group name='centos5'/>
+
+	</Group>
+
+	<Group name='vmprod2' profile='true' public='false'>
+		<Group name='centos5'/>
+
+	</Group>
+
+	<Group name='vmprod3' profile='true' public='false'>
+		<Group name='centos5'/>
+		<Group name='base-centos'/>
+	        <Group name='centos-minimal'/>
+	        <Group name='snmp'/>
+	        <Group name='yum-epel'/>
+	        <Group name='yum-dag'/>
+	        <Group name='motd'/>
+	        <Group name='hosts2'/>
+	        <Group name='kvm'/>
+	</Group>
+
+	<Group name='vmsrv' profile='true' public='false'>
+		<Group name='centos5'/>
+
+	</Group>
+
+	<Group name='websrv' profile='true' public='false'>
+		<Group name='centos5'/>
+
+	</Group>
+
+	<Group name='zeus' profile='true' public='false'>
+		<Group name='centos5'/>
+		<Group name='base-centos'/>
+		<Group name='centos-minimal'/>
+		<Group name='hosts2'/>
+		<Group name='ldapauth'/>
+		<Group name='snmp'/>
+		<Group name='yum-epel'/>
+		<Group name='yum-dag'/>
+		<Group name='motd'/>
+		<Group name='aoe'/>
+		<Group name='samba'/>
+		<Group name='fstab'/>
+<!--        <Group name='rdiffbackup'/>-->
+
+	</Group>
+
+
+
+</Groups>
+

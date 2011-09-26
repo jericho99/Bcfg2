@@ -1,0 +1,103 @@
+#!/usr/bin/perl
+# BCFG2-CSBE
+# $Id: mirror 770 2009-09-29 14:37:38Z dave $
+use strict;
+use File::Path;
+use Getopt::Long;
+
+my $base;
+GetOptions( 'base=s' => \$base, ) or die;
+die unless defined $base;
+
+mkpath($base);
+
+my %repos = (
+    CentOS => {
+        mirrors => [
+            [ 'rsync://rsync.arcticnetwork.ca/centos', ],
+            [
+                'rsync://mirrors.kernel.org/centos/',
+                'rsync://rsync.gtlib.gatech.edu/centos/',
+                'rsync://ftp.linux.ncsu.edu/centos/',
+                'mirror.trouble-free.net::centos',
+                'rsync://mirrors.cat.pdx.edu/centos/',
+                'mirror.cs.wisc.edu::centos',
+            ],
+            [
+                'ftp.belnet.be::packages/centos/',
+                'rsync.sunsite.org.uk::sites/msync.centos.org/CentOS/',
+                'rsync.siiludus.com::centos',
+                'centos.crazyfrogs.org::centos',
+                'rsync.hrz.tu-chemnitz.de::ftp/pub/linux/centos/',
+                'rsync://ftp.nluug.nl/CentOS/',
+                'rsync.cs.uu.nl::CentOS',
+                'mirror.ii.uib.no::sites/msync.centos.org/centos/',
+                'rsync://mirror.nsc.liu.se/CentOS/',
+                'rsync://ftp.riken.jp/centos/',
+                'rsync://ftp.nara.wide.ad.jp/centos',
+                'rsync://rsync.oss.eznetsols.org/ftp/linux/centos/',
+                'rsync://mirror.averse.net/centos/',
+                'rsync://rsync.planetmirror.com/centos/',
+                'rsync://mirrors.csol.org/CentOS',
+                'rsync://sunsite.icm.edu.pl/pub/Linux/distributions/centos/',
+                'rsync://ftp.pbone.net/pub/centos/',
+            ]
+        ],
+        exclude => [
+            '*/ia64/*', '*/ppc/*', '*/s390/*', '*/s390x/*',
+            '*/isos/*', '2*',      '3*',       '*.src.rpm',
+            '*/alpha/*', '*/x86_64/*', '*beta*', 
+            '4*', '*/apt/*','5.2/*','5.1/*',
+        ],
+    },
+    "dag/redhat/el5/en/i386/dag" => {
+        mirrors => [ ['rsync://apt.sw.be/pub/freshrpms/pub/dag/redhat/el5/en/i386/dag'] ],
+        #mirrors => [ ['rsync://apt.sw.be/pub/freshrpms/pub/dag/'] ],
+        #exclude => ['*'],
+        #include => [ '/redhat/el4/en/i386/dag/RPMS' ],
+    },
+);
+
+my @failed;
+foreach my $repo ( keys %repos ) {
+    print "--> Repository: $repo\n";
+    my $success = 0;
+    foreach my $mirrors ( @{ $repos{$repo}{mirrors} } ) {
+        my @command = qw(rsync -rlvzH --size-only --delete-after --timeout=10);
+        foreach my $clude (qw(include exclude)) {
+            push @command, map { "--$clude=$_" } @{ $repos{$repo}{$clude} }
+              if $repos{$repo}{$clude};
+        }
+        push @command, '--progress' if -t STDOUT;
+        while (@$mirrors) {
+            my $mirror = splice( @$mirrors, int rand @$mirrors, 1 );
+            print "---> Trying mirror: $mirror\n";
+            my @command = @command;
+            push @command, $mirror, "$base/$repo";
+            my $status = system @command;
+            print "---> rsync command: ", join(" ", @command), "\n";
+            if ( $status == 0 ) {
+                $success = 1;
+                last;
+            }
+            else {
+
+                # Give time for the user to press CTRL+C a second time.
+                sleep 1;
+            }
+        }
+        last if $success;
+    }
+    if ( not $success ) {
+        push @failed, $repo;
+    }
+}
+
+print "------------------------------------------------------\n";
+if (@failed) {
+    die "Syncing failed for repo: ", join( ' ', @failed ), "\n";
+}
+else {
+    print "Success!\n";
+}
+

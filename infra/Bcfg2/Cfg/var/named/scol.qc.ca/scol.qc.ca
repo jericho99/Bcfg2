@@ -1,0 +1,27 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+scol.qc.ca		IN SOA	ns1.csbe.qc.ca. ns2.csbe.qc.ca (
+				2009112102 ; serial YYYYMMDDXX
+				10800      ; refresh (3 hours)
+				3600       ; retry (1 hour)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+			NS	ns1.csbe.qc.ca.
+			NS	ns2.csbe.qc.ca.
+			A 207.96.172.18
+			MX 5 mail.scol.qc.ca
+			MX 10 mail2.scol.qc.ca
+
+$ORIGIN scol.qc.ca.
+
+www        A 207.96.172.18
+courrier	 CNAME courrier2.scol.qc.ca.
+courrier2	 A 207.96.172.43
+;elrond     A 206.167.170.37
+mail		 A 207.96.172.19
+mail2      A 207.96.172.51
+
+;virtualdns A 216.226.53.251
+;virtualdns A 206.167.170.11
+;virtualdns A 24.226.145.19

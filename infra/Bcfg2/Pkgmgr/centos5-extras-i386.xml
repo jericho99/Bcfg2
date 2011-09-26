@@ -1,0 +1,753 @@
+<PackageList priority='30' type='yum'>
+    <Group name='centos5'>
+        <Group name='i386'>
+            <Package name='GeoIP' type='yum'>
+                <Instance epoch='0' version='1.4.5' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='GeoIP-data' type='yum'>
+                <Instance epoch='0' version='20090201' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='GeoIP-devel' type='yum'>
+                <Instance epoch='0' version='1.4.5' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='Terminal' type='yum'>
+                <Instance epoch='0' version='0.2.8' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='Thunar' type='yum'>
+                <Instance epoch='0' version='0.9.0' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='Thunar-devel' type='yum'>
+                <Instance epoch='0' version='0.9.0' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='adminutil' type='yum'>
+                <Instance epoch='0' version='1.1.8' release='2.el5.centos.0' arch='i386'/>
+            </Package>
+            <Package name='adminutil-devel' type='yum'>
+                <Instance epoch='0' version='1.1.8' release='2.el5.centos.0' arch='i386'/>
+            </Package>
+            <Package name='arj' type='yum'>
+                <Instance epoch='0' version='3.10.22' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='beagle' type='yum'>
+                <Instance epoch='0' version='0.2.18' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='beagle-evolution' type='yum'>
+                <Instance epoch='0' version='0.2.18' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='beagle-gui' type='yum'>
+                <Instance epoch='0' version='0.2.18' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='bytefx-data-mysql' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='centos-admin-console' type='yum'>
+                <Instance epoch='0' version='8.1.0' release='2.el5.centos.2' arch='noarch'/>
+            </Package>
+            <Package name='centos-ds' type='yum'>
+                <Instance epoch='0' version='8.1.0' release='1.el5.centos.2' arch='i386'/>
+            </Package>
+            <Package name='centos-ds-admin' type='yum'>
+                <Instance epoch='0' version='8.1.0' release='9.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='centos-ds-base' type='yum'>
+                <Instance epoch='0' version='8.1.0' release='0.14.el5.centos.2' arch='i386'/>
+            </Package>
+            <Package name='centos-ds-base-devel' type='yum'>
+                <Instance epoch='0' version='8.1.0' release='0.14.el5.centos.2' arch='i386'/>
+            </Package>
+            <Package name='centos-ds-console' type='yum'>
+                <Instance epoch='0' version='8.1.0' release='5.el5.centos.2' arch='noarch'/>
+            </Package>
+            <Package name='centos-idm-console' type='yum'>
+                <Instance epoch='0' version='1.0.1' release='1.el5.centos.2' arch='i386'/>
+            </Package>
+            <Package name='chrpath' type='yum'>
+                <Instance epoch='0' version='0.13' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='compat-gtkhtml38' type='yum'>
+                <Instance epoch='0' version='3.12.0' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='compat-gtkhtml38-devel' type='yum'>
+                <Instance epoch='0' version='3.12.0' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='dbh' type='yum'>
+                <Instance epoch='1' version='1.0.24' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='dbh-devel' type='yum'>
+                <Instance epoch='1' version='1.0.24' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='dbus-sharp' type='yum'>
+                <Instance epoch='0' version='0.63' release='8.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='dbus-sharp-devel' type='yum'>
+                <Instance epoch='0' version='0.63' release='8.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='dmapi' type='yum'>
+                <Instance epoch='0' version='2.2.8' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='dmapi-devel' type='yum'>
+                <Instance epoch='0' version='2.2.8' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='drbd' type='yum'>
+                <Instance epoch='0' version='8.0.16' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='drbd82' type='yum'>
+                <Instance epoch='0' version='8.2.6' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='drbd83' type='yum'>
+                <Instance epoch='0' version='8.3.8' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='evolution-sharp' type='yum'>
+                <Instance epoch='0' version='0.14.0.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='evolution-sharp-devel' type='yum'>
+                <Instance epoch='0' version='0.14.0.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='exo' type='yum'>
+                <Instance epoch='0' version='0.3.4' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='exo-devel' type='yum'>
+                <Instance epoch='0' version='0.3.4' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='fortune-mod' type='yum'>
+                <Instance epoch='0' version='1.99.1' release='7.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='freenx' type='yum'>
+                <Instance epoch='0' version='0.7.3' release='6.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='freetds' type='yum'>
+                <Instance epoch='0' version='0.64' release='11.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='freetds-devel' type='yum'>
+                <Instance epoch='0' version='0.64' release='11.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='freetds-doc' type='yum'>
+                <Instance epoch='0' version='0.64' release='11.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gmime' type='yum'>
+                <Instance epoch='0' version='2.2.10' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gmime-devel' type='yum'>
+                <Instance epoch='0' version='2.2.10' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gmime-sharp' type='yum'>
+                <Instance epoch='0' version='2.2.10' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gnome-sharp' type='yum'>
+                <Instance epoch='0' version='2.16.0' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gnome-sharp-devel' type='yum'>
+                <Instance epoch='0' version='2.16.0' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gollem-h3' type='yum'>
+                <Instance epoch='0' version='1.0.4' release='1.el5_3' arch='noarch'/>
+            </Package>
+            <Package name='gsf-sharp' type='yum'>
+                <Instance epoch='0' version='0.8.1' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gsf-sharp-devel' type='yum'>
+                <Instance epoch='0' version='0.8.1' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gtk-sharp2' type='yum'>
+                <Instance epoch='0' version='2.10.0' release='6.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gtk-sharp2-devel' type='yum'>
+                <Instance epoch='0' version='2.10.0' release='6.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gtk-sharp2-doc' type='yum'>
+                <Instance epoch='0' version='2.10.0' release='6.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gtk-sharp2-gapi' type='yum'>
+                <Instance epoch='0' version='2.10.0' release='6.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='gtk-xfce-engine' type='yum'>
+                <Instance epoch='0' version='2.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='hddtemp' type='yum'>
+                <Instance epoch='0' version='0.3' release='0.14.beta15.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='heartbeat' type='yum'>
+                <Instance epoch='0' version='2.1.3' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='heartbeat-devel' type='yum'>
+                <Instance epoch='0' version='2.1.3' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='heartbeat-gui' type='yum'>
+                <Instance epoch='0' version='2.1.3' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='heartbeat-ldirectord' type='yum'>
+                <Instance epoch='0' version='2.1.3' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='heartbeat-pils' type='yum'>
+                <Instance epoch='0' version='2.1.3' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='heartbeat-stonith' type='yum'>
+                <Instance epoch='0' version='2.1.3' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='horde' type='yum'>
+                <Instance epoch='0' version='3.1.9' release='1.el5_3' arch='noarch'/>
+            </Package>
+            <Package name='ibm-data-db2' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='idm-console-framework' type='yum'>
+                <Instance epoch='0' version='1.1.3' release='9.el5.centos.2' arch='noarch'/>
+            </Package>
+            <Package name='imp-h3' type='yum'>
+                <Instance epoch='0' version='4.1.6' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='ingo-h3' type='yum'>
+                <Instance epoch='0' version='1.1.5' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='jss' type='yum'>
+                <Instance epoch='0' version='4.2.5' release='1.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='kdegames-devel' type='yum'>
+                <Instance epoch='6' version='3.5.4' release='1.fc6' arch='i386'/>
+            </Package>
+            <Package name='kdemultimedia-devel' type='yum'>
+                <Instance epoch='6' version='3.5.4' release='2.fc6' arch='i386'/>
+            </Package>
+            <Package name='kdepim-devel' type='yum'>
+                <Instance epoch='6' version='3.5.4' release='4.fc6' arch='i386'/>
+            </Package>
+            <Package name='kmod-drbd' type='yum'>
+                <Instance epoch='0' version='8.0.16' release='5.el5_3' arch='i686'/>
+            </Package>
+            <Package name='kmod-drbd-PAE' type='yum'>
+                <Instance epoch='0' version='8.0.16' release='5.el5_3' arch='i686'/>
+            </Package>
+            <Package name='kmod-drbd-xen' type='yum'>
+                <Instance epoch='0' version='8.0.16' release='5.el5_3' arch='i686'/>
+            </Package>
+            <Package name='kmod-drbd82' type='yum'>
+                <Instance epoch='0' version='8.2.6' release='2' arch='i686'/>
+            </Package>
+            <Package name='kmod-drbd82-PAE' type='yum'>
+                <Instance epoch='0' version='8.2.6' release='2' arch='i686'/>
+            </Package>
+            <Package name='kmod-drbd82-xen' type='yum'>
+                <Instance epoch='0' version='8.2.6' release='2' arch='i686'/>
+            </Package>
+            <Package name='kmod-drbd83' type='yum'>
+                <Instance epoch='0' version='8.3.8' release='1.el5.centos' arch='i686'/>
+            </Package>
+            <Package name='kmod-drbd83-PAE' type='yum'>
+                <Instance epoch='0' version='8.3.8' release='1.el5.centos' arch='i686'/>
+            </Package>
+            <Package name='kmod-drbd83-xen' type='yum'>
+                <Instance epoch='0' version='8.3.8' release='1.el5.centos' arch='i686'/>
+            </Package>
+            <Package name='kmod-xenpv' type='yum'>
+                <Instance epoch='0' version='0.1' release='9.el5' arch='i686'/>
+            </Package>
+            <Package name='kmod-xenpv-PAE' type='yum'>
+                <Instance epoch='0' version='0.1' release='9.el5' arch='i686'/>
+            </Package>
+            <Package name='kmod-xfs' type='yum'>
+                <Instance epoch='0' version='0.4' release='2' arch='i686'/>
+            </Package>
+            <Package name='kmod-xfs-PAE' type='yum'>
+                <Instance epoch='0' version='0.4' release='2' arch='i686'/>
+            </Package>
+            <Package name='kmod-xfs-xen' type='yum'>
+                <Instance epoch='0' version='0.4' release='2' arch='i686'/>
+            </Package>
+            <Package name='kronolith-h3' type='yum'>
+                <Instance epoch='0' version='2.1.8' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='libbeagle' type='yum'>
+                <Instance epoch='0' version='0.2.18' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libbeagle-devel' type='yum'>
+                <Instance epoch='0' version='0.2.18' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libbeagle-python' type='yum'>
+                <Instance epoch='0' version='0.2.18' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libgdiplus' type='yum'>
+                <Instance epoch='0' version='1.2.5' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libgdiplus-devel' type='yum'>
+                <Instance epoch='0' version='1.2.5' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libgpod' type='yum'>
+                <Instance epoch='0' version='0.4.0' release='1.el5' arch='i386'/>
+            </Package>
+            <Package name='libmcrypt' type='yum'>
+                <Instance epoch='0' version='2.5.8' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libmcrypt-devel' type='yum'>
+                <Instance epoch='0' version='2.5.8' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libnet' type='yum'>
+                <Instance epoch='0' version='1.1.2.1' release='2.rf' arch='i386'/>
+            </Package>
+            <Package name='libnxcl' type='yum'>
+                <Instance epoch='0' version='0.9.0' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libnxcl-devel' type='yum'>
+                <Instance epoch='0' version='0.9.0' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libsilc-devel' type='yum'>
+                <Instance epoch='0' version='1.0.2' release='2.fc6' arch='i386'/>
+            </Package>
+            <Package name='libtidy' type='yum'>
+                <Instance epoch='0' version='0.99.0' release='12.20070228.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libtidy-devel' type='yum'>
+                <Instance epoch='0' version='0.99.0' release='12.20070228.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libwpd-devel' type='yum'>
+                <Instance epoch='0' version='0.8.7' release='3.el5' arch='i386'/>
+            </Package>
+            <Package name='libxfce4mcs' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libxfce4mcs-devel' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libxfce4util' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libxfce4util-devel' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libxfcegui4' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='libxfcegui4-devel' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mcs' type='yum'>
+                <Instance epoch='0' version='0.4.1' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mcs-devel' type='yum'>
+                <Instance epoch='0' version='0.4.1' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mcs-libs' type='yum'>
+                <Instance epoch='0' version='0.4.1' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='meanwhile-devel' type='yum'>
+                <Instance epoch='0' version='1.0.2' release='5.el5' arch='i386'/>
+            </Package>
+            <Package name='mhash' type='yum'>
+                <Instance epoch='0' version='0.9.9' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mhash-devel' type='yum'>
+                <Instance epoch='0' version='0.9.9' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mnemo-h3' type='yum'>
+                <Instance epoch='0' version='2.1.2' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='mock' type='yum'>
+                <Instance epoch='0' version='0.6.13' release='1.el5_2.3' arch='i386'/>
+            </Package>
+            <Package name='mod_mono' type='yum'>
+                <Instance epoch='0' version='1.2.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-core' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-data' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-data-firebird' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-data-oracle' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-data-postgresql' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-data-sqlite' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-data-sybase' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-devel' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-extras' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-jscript' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-locale-extras' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-nunit' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-nunit-devel' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-web' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mono-winforms' type='yum'>
+                <Instance epoch='0' version='1.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='mousepad' type='yum'>
+                <Instance epoch='0' version='0.2.13' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='nag-h3' type='yum'>
+                <Instance epoch='0' version='2.1.4' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='nx' type='yum'>
+                <Instance epoch='0' version='3.4.0' release='6.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='opal-devel' type='yum'>
+                <Instance epoch='0' version='2.2.2' release='1.1.0.1' arch='i386'/>
+            </Package>
+            <Package name='orage' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pdns' type='yum'>
+                <Instance epoch='0' version='2.9.21' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pdns-backend-geo' type='yum'>
+                <Instance epoch='0' version='2.9.21' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pdns-backend-ldap' type='yum'>
+                <Instance epoch='0' version='2.9.21' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pdns-backend-mysql' type='yum'>
+                <Instance epoch='0' version='2.9.21' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pdns-backend-pipe' type='yum'>
+                <Instance epoch='0' version='2.9.21' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pdns-backend-postgresql' type='yum'>
+                <Instance epoch='0' version='2.9.21' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pdns-backend-sqlite' type='yum'>
+                <Instance epoch='0' version='2.9.21' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pdns-recursor' type='yum'>
+                <Instance epoch='0' version='3.1.5' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='perl-Authen-Radius' type='yum'>
+                <Instance epoch='0' version='0.13' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='perl-Data-HexDump' type='yum'>
+                <Instance epoch='0' version='0.02' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='perl-Geo-IP' type='yum'>
+                <Instance epoch='0' version='1.31' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='perl-Mail-POP3Client' type='yum'>
+                <Instance epoch='0' version='2.17' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='perl-MailTools' type='yum'>
+                <Instance epoch='0' version='1.77' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='perl-Net-IMAP-Simple' type='yum'>
+                <Instance epoch='0' version='1.17' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='perl-Net-IMAP-Simple-SSL' type='yum'>
+                <Instance epoch='0' version='1.3' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='perl-TimeDate' type='yum'>
+                <Instance epoch='0' version='1.16' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-dbase' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='15.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='php-mcrypt' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='15.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='php-mhash' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='15.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='php-mssql' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='15.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='php-pear-Auth-SASL' type='yum'>
+                <Instance epoch='0' version='1.0.2' release='4.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-DB' type='yum'>
+                <Instance epoch='0' version='1.7.13' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-Date' type='yum'>
+                <Instance epoch='0' version='1.4.7' release='2.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-File' type='yum'>
+                <Instance epoch='0' version='1.2.2' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-HTTP-Request' type='yum'>
+                <Instance epoch='0' version='1.4.2' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-Log' type='yum'>
+                <Instance epoch='0' version='1.9.13' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-MDB2' type='yum'>
+                <Instance epoch='0' version='2.4.1' release='2.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-MDB2-Driver-mysql' type='yum'>
+                <Instance epoch='0' version='1.4.1' release='3.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-Mail' type='yum'>
+                <Instance epoch='0' version='1.1.14' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-Mail-Mime' type='yum'>
+                <Instance epoch='0' version='1.4.0' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-Net-SMTP' type='yum'>
+                <Instance epoch='0' version='1.2.10' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-Net-Sieve' type='yum'>
+                <Instance epoch='0' version='1.1.5' release='2.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-Net-Socket' type='yum'>
+                <Instance epoch='0' version='1.0.8' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pear-Net-URL' type='yum'>
+                <Instance epoch='0' version='1.0.15' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='php-pecl-Fileinfo' type='yum'>
+                <Instance epoch='0' version='1.0.4' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='php-pecl-memcache' type='yum'>
+                <Instance epoch='0' version='2.2.3' release='1.el5_2' arch='i386'/>
+            </Package>
+            <Package name='php-readline' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='15.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='php-tidy' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='15.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='pilot-link-devel' type='yum'>
+                <Instance epoch='2' version='0.11.8' release='16' arch='i386'/>
+            </Package>
+            <Package name='planner-devel' type='yum'>
+                <Instance epoch='0' version='0.14' release='3' arch='i386'/>
+            </Package>
+            <Package name='pwlib-devel' type='yum'>
+                <Instance epoch='0' version='1.10.1' release='7.0.1.el5' arch='i386'/>
+            </Package>
+            <Package name='python-exo' type='yum'>
+                <Instance epoch='0' version='0.3.4' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='qtnx' type='yum'>
+                <Instance epoch='0' version='0.9.0' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='recode' type='yum'>
+                <Instance epoch='0' version='3.6' release='22.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='recode-devel' type='yum'>
+                <Instance epoch='0' version='3.6' release='22.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='scribus-devel' type='yum'>
+                <Instance epoch='0' version='1.3.3.2' release='3.el5' arch='i386'/>
+            </Package>
+            <Package name='thunar-archive-plugin' type='yum'>
+                <Instance epoch='0' version='0.2.4' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='thunar-volman' type='yum'>
+                <Instance epoch='0' version='0.2.0' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='tidy' type='yum'>
+                <Instance epoch='0' version='0.99.0' release='12.20070228.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='tomboy' type='yum'>
+                <Instance epoch='0' version='0.8.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='turba-h3' type='yum'>
+                <Instance epoch='0' version='2.1.7' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='xarchiver' type='yum'>
+                <Instance epoch='0' version='0.4.9' release='0.2.20070103svn24249.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xdg-utils' type='yum'>
+                <Instance epoch='0' version='1.0.2' release='2.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='xfce-mcs-manager' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce-mcs-manager-devel' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce-mcs-plugins' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce-utils' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-appfinder' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-battery-plugin' type='yum'>
+                <Instance epoch='0' version='0.5.0' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-clipman-plugin' type='yum'>
+                <Instance epoch='0' version='0.8.0' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-cpugraph-plugin' type='yum'>
+                <Instance epoch='0' version='0.4.0' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-datetime-plugin' type='yum'>
+                <Instance epoch='0' version='0.5.0' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-dev-tools' type='yum'>
+                <Instance epoch='0' version='4.4.0' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='xfce4-dict-plugin' type='yum'>
+                <Instance epoch='0' version='0.2.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-diskperf-plugin' type='yum'>
+                <Instance epoch='0' version='2.1.0' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-eyes-plugin' type='yum'>
+                <Instance epoch='0' version='4.4.0' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-fsguard-plugin' type='yum'>
+                <Instance epoch='0' version='0.4.0' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-genmon-plugin' type='yum'>
+                <Instance epoch='0' version='3.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-icon-theme' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='xfce4-mailwatch-plugin' type='yum'>
+                <Instance epoch='0' version='1.0.1' release='5.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-minicmd-plugin' type='yum'>
+                <Instance epoch='0' version='0.4' release='6.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='xfce4-mixer' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-mount-plugin' type='yum'>
+                <Instance epoch='0' version='0.5.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-netload-plugin' type='yum'>
+                <Instance epoch='0' version='0.4.0' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-notes-plugin' type='yum'>
+                <Instance epoch='0' version='1.6.0' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-panel' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-panel-devel' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-places-plugin' type='yum'>
+                <Instance epoch='0' version='1.0.0' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-quicklauncher-plugin' type='yum'>
+                <Instance epoch='0' version='1.9.4' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-screenshooter-plugin' type='yum'>
+                <Instance epoch='0' version='1.0.0' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-sensors-plugin' type='yum'>
+                <Instance epoch='0' version='0.10.99.2' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-session' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-session-devel' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-session-engines' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-smartbookmark-plugin' type='yum'>
+                <Instance epoch='0' version='0.4.2' release='4.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-systemload-plugin' type='yum'>
+                <Instance epoch='0' version='0.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-taskmanager' type='yum'>
+                <Instance epoch='0' version='0.4.0' release='0.2.rc2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-timer-plugin' type='yum'>
+                <Instance epoch='0' version='0.5.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-volstatus-icon' type='yum'>
+                <Instance epoch='0' version='0.1.0' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-wavelan-plugin' type='yum'>
+                <Instance epoch='0' version='0.5.4' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-weather-plugin' type='yum'>
+                <Instance epoch='0' version='0.6.2' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-websearch-plugin' type='yum'>
+                <Instance epoch='0' version='0.1.1' release='0.6.20070428svn2704.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-xfapplet-plugin' type='yum'>
+                <Instance epoch='0' version='0.1.0' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfce4-xkb-plugin' type='yum'>
+                <Instance epoch='0' version='0.4.3' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfdesktop' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfprint' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfprint-devel' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfsdump' type='yum'>
+                <Instance epoch='0' version='2.2.46' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfsprogs' type='yum'>
+                <Instance epoch='0' version='2.9.4' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfsprogs-devel' type='yum'>
+                <Instance epoch='0' version='2.9.4' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfwm4' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xfwm4-themes' type='yum'>
+                <Instance epoch='0' version='4.4.2' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='xscreensaver' type='yum'>
+                <Instance epoch='1' version='5.04' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xscreensaver-base' type='yum'>
+                <Instance epoch='1' version='5.04' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xscreensaver-extras' type='yum'>
+                <Instance epoch='1' version='5.04' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xscreensaver-extras-gss' type='yum'>
+                <Instance epoch='1' version='5.04' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xscreensaver-gl-base' type='yum'>
+                <Instance epoch='1' version='5.04' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xscreensaver-gl-extras' type='yum'>
+                <Instance epoch='1' version='5.04' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xscreensaver-gl-extras-gss' type='yum'>
+                <Instance epoch='1' version='5.04' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xsp' type='yum'>
+                <Instance epoch='0' version='1.2.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='xsp-devel' type='yum'>
+                <Instance epoch='0' version='1.2.1' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='yum-cron' type='yum'>
+                <Instance epoch='0' version='0.6' release='1.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='yum-priorities' type='yum'>
+                <Instance epoch='0' version='1.1.16' release='13.el5.centos' arch='noarch'/>
+            </Package>
+            <Package name='yumex' type='yum'>
+                <Instance epoch='0' version='2.0.3' release='2.el5.centos' arch='noarch'/>
+            </Package>
+        </Group>
+    </Group>
+</PackageList>

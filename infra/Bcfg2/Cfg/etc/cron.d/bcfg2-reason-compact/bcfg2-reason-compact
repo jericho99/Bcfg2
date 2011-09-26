@@ -1,0 +1,7 @@
+# BCFG2-CSBE $Id: bcfg2-reason-compact 260 2009-04-21 08:20:06Z ddoyon $
+# Everyday at 1:00AM, Compact the db
+0 1 * * *   root    test -x /usr/sbin/bcfg2-reason-compact && /usr/sbin/bcfg2-reason-compact -N100000
+
+# Every Sunday at 2:00AM, Purge the db
+0 2 * * 0   root    test -x /usr/sbin/bcfg2-reason-compact && /usr/sbin/bcfg2-reason-compact -N100000 -D
+

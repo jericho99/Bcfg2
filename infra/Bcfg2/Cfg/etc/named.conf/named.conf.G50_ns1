@@ -1,0 +1,129 @@
+options {
+	directory "/var/named";
+	dump-file "/var/named/data/cache_dump.db";
+	statistics-file "/var/named/data/named_stats.txt";
+	//allow-query { 216.139.225.95; localhost; };
+	//allow-recursion { 216.139.225.95; localhost; };
+//	allow-transfer { 172.30.2.26; localhost; };
+//	forwarders { 194.109.6.66; };
+	dnssec-enable yes;
+};
+acl trusted-servers  {
+        172.30.2.26;  //ns2
+};
+
+controls {
+  inet 127.0.0.1 allow { localhost; } keys { "rndckey"; };
+};
+
+logging {
+    channel query_logging {
+         file "/var/log/named/named_querylog"
+         versions 3 size 100M;
+         print-time yes;                 // timestamp log entries
+      };
+
+      category queries {
+          query_logging;
+      };
+};
+
+
+zone "cnar.qc.ca" {
+    type master;
+    file "cnar.qc.ca";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+};
+
+zone "csbe.qc.ca" {
+    type master;
+    file "csbe.qc.ca";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+
+};
+
+zone "education0312.qc.ca" {
+    type master;
+    file "education0312.qc.ca";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+
+};
+
+zone "polyst-francois.qc.ca" {
+    type master;
+    file "polyst-francois.qc.ca";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+
+};
+
+zone "portic0312.qc.ca" {
+    type master;
+    file "portic0312.qc.ca";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+
+};
+
+zone "recitdevprof.qc.ca" {
+    type master;
+    file "recitdevprof.qc.ca";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+
+};
+
+zone "scol.qc.ca" {
+    type master;
+    file "scol.qc.ca";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+
+};
+
+zone "ecolepbv.com" {
+    type master;
+    file "ecolepbv.com";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+
+};
+
+zone "mapbv.com" {
+    type master;
+    file "mapbv.com";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+
+};
+
+zone "rac12.qc.ca" {
+    type master;
+    file "rac12.qc.ca";
+    allow-update { localhost; };
+    allow-query { any; };
+    also-notify { 172.30.2.26; };
+    allow-transfer { trusted-servers; };
+
+};

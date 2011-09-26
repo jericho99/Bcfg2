@@ -1,0 +1,80 @@
+# BCFG2-IG
+# Local modifications WILL be lost
+# $Id: DB_CONFIG 43 2010-08-19 14:17:21Z dave $
+#
+# This configuration file sets BerkeleyDB options when using the bdb
+# backend, for the database held in the directory where this file resides
+#
+# Please see the OpenLDAP FAQ-O-Matic
+# (http://www.openldap.org/faq/data/cache/893.html) and the Berkeley DB
+# documentation (http://www.sleepycat.com/docs/ref/env/db_config.html)
+# for more information on the settings available
+# Links:
+# http://www.oracle.com/technology/documentation/berkeley-db/db/api_c/frame.html
+# http://www.openldap.org/faq/data/cache/1072.html
+# http://www.openldap.org/faq/data/cache/1075.html
+# http://bugs.debian.org/303057
+# http://lists.alioth.debian.org/pipermail/pkg-openldap-devel/2006-February/000249.html
+
+#Set the size of the shared memory buffer pool -- that is, the cache -- 
+#to gbytes gigabytes plus bytes. The cache should be the size of the 
+#normal working data set of the application, with some small amount of 
+#additional memory for unusual situations. (Note: the working set is not 
+#the same as the number of pages accessed simultaneously, and should be 
+#quite a bit larger!)
+#The default cache size is 256KB, and may not be specified as less than 
+#20KB. Any cache size less than 500MB is automatically increased by 25% 
+#to account for buffer pool overhead; cache sizes larger than 500MB are 
+#used as specified. The current maximum size of a single cache is 4GB.
+#JMD: 256 Megs cache
+set_cachesize 0 268435456 1
+
+# Set the size of the underlying logging subsystem region, in bytes. 
+# By default, or if the value is set to 0, the base region size is 60KB. 
+# The log region is used to store filenames, and so may need to be 
+# increased in size if a large number of files will be opened and registered 
+# with the specified Berkeley DB environment's log manager.
+set_lg_regionmax 1048576
+
+
+# Set the size of the in-memory log buffer, in bytes. By default, or if 
+# the value is set to 0, a size of 32K is used. The size of the log 
+# file (see DB_ENV->set_lg_max) must be at least four times the size of 
+# the in-memory log buffer.
+# JMD: 2MB
+set_lg_bsize 2097152
+
+
+# Set the maximum size of a single file in the log, in bytes. 
+# Because DB_LSN file offsets are unsigned four-byte values, the set 
+# value may not be larger than the maximum unsigned four-byte value. 
+# By default, or if the value is set to 0, a size of 10MB is used. 
+# The size of the log file must be at least four times the size of the 
+# in-memory log buffer (see DB_ENV->set_lg_bsize).
+set_lg_max              10485760
+
+# Number of locks (both requested and granted)
+# Set the maximum number of locks supported by the Berkeley DB lock 
+# subsystem. This value is used by DB_ENV->open to estimate how much 
+# space to allocate for various lock-table data structures. The default 
+# value is 1000 locks. For specific information on configuring the size 
+# of the lock subsystem, see 
+# http://pybsddb.sourceforge.net/ref/lock/max.html
+set_lk_max_locks 4000
+
+# Maximum number of simultaneous locking entities 
+set_lk_max_lockers 1500
+
+# Maximum number of simultaneously locked objects 
+set_lk_max_objects 1500
+
+# Set directory to use for transaction logs:
+# should be on another drive
+#set_lg_dir /var/lib/ldap/logs 
+
+#set_flags DB_LOG_AUTOREMOVE
+#set_flags DB_TXN_NOSYNC
+
+# For batch imports, disabling transaction logging totally can dramatically
+# improve performance:
+# set_flags DB_TXN_NOT_DURABLE

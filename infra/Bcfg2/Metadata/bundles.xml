@@ -1,0 +1,284 @@
+<Groups revision="$Id: bundles.xml 532 2011-02-28 14:20:36Z dave $">
+  <!-- En ordre alphabetique SVP--> 
+
+    <Group name="amavisd">
+        <Bundle name="amavisd"/>
+    </Group>
+    
+    <Group name="aoe">
+        <Bundle name="aoe"/>
+    </Group>
+    
+    <Group name="autofs">
+        <Bundle name="autofs"/>
+    </Group>
+
+    <Group name="base-centos">
+        <Bundle name="base-centos"/>
+    </Group>
+
+    <Group name="backupconf">
+        <Bundle name="backupconf"/>
+    </Group>
+
+    <Group name="bashrc">
+        <Bundle name="bashrc"/>
+    </Group>
+
+    <Group name="bcfg2">
+        <Bundle name="bcfg2"/>
+    </Group>
+
+    <Group name="bcfg2-info">
+        <Bundle name="bcfg2-info"/>
+    </Group>
+ 
+    <Group name="bind">
+        <Bundle name="bind"/>
+    </Group>
+
+    <Group name="buildtools">
+        <Bundle name="buildtools"/>
+    </Group>
+
+    <Group name="clamav">
+        <Bundle name="clamav"/>
+    </Group>
+
+    <Group name="cron.daily">
+        <Bundle name="cron.daily"/>
+    </Group>
+
+    <Group name="crontab">
+        <Bundle name="crontab"/>
+    </Group>
+
+    <Group name="dansguardian">
+        <Bundle name="dansguardian"/>
+    </Group>
+
+    <Group name="devhosting">
+        <Bundle name="devhosting"/>
+    </Group>
+
+    <Group name="devlighthosting">
+        <Bundle name="devlighthosting"/>
+    </Group>
+
+    <Group name="donemanual">
+        <Bundle name="donemanual"/>
+    </Group>
+
+    <Group name="fstab">
+        <Bundle name="fstab"/>
+    </Group>
+
+    <Group name="glusterfs">
+        <Bundle name="glusterfs"/>
+    </Group>
+
+    <Group name="hosts2">
+        <Bundle name="hosts2"/>
+    </Group>
+
+    <Group name="hostbackup">
+        <Bundle name="hostbackup"/>
+    </Group>
+
+    <Group name="httpd">
+        <Bundle name="httpd"/>
+    </Group>
+
+    <Group name="imagemagick">
+        <Bundle name="imagemagick"/>
+    </Group>
+
+    <Group name="iptables">
+        <Bundle name="iptables"/>
+    </Group>
+
+    <Group name="java">
+        <Bundle name="java"/>
+    </Group>
+
+    <Group name="kvm">
+        <Bundle name="kvm"/>
+    </Group>
+
+    <Group name="lamptweek-php52">
+        <Bundle name="lamptweek-php52"/>
+    </Group>
+
+    <Group name="lamptweek-php53">
+        <Bundle name="lamptweek-php53"/>
+    </Group>
+
+    <Group name="ldapauth">
+        <Bundle name="ldapauth"/>
+    </Group>
+
+    <Group name="ldapbackup">
+        <Bundle name="ldapbackup"/>
+    </Group>
+
+    <Group name="lighttpd">
+        <Bundle name="lighttpd"/>
+    </Group>
+
+    <Group name="logaricheck">
+        <Bundle name="logaricheck"/>
+    </Group>
+
+    <Group name="logrotate">
+        <Bundle name="logrotate"/>
+    </Group>
+
+    <Group name="motd">
+        <Bundle name="motd"/>
+    </Group>
+
+    <Group name="mysql">
+        <Bundle name="mysql"/>
+    </Group>
+
+    <Group name="nagios-nrpe">
+        <Bundle name="nagios-nrpe"/>
+    </Group>
+
+    <Group name="nfs">
+        <Bundle name="nfs" />
+    </Group>
+
+    <Group name="openldap">
+        <Bundle name="openldap"/>
+    </Group>
+
+    <Group name="pam_script">
+        <Bundle name="pam_script"/>
+    </Group>
+
+    <Group name="portmap">
+        <Bundle name="portmap"/>
+    </Group>
+
+    <Group name="postgrey">
+        <Bundle name="postgrey"/>
+    </Group>
+
+    <Group name="postgresql">
+        <Bundle name="postgresql"/>
+    </Group>
+
+    <Group name="postfix">
+        <Bundle name="postfix"/>
+    </Group>
+
+    <Group name="proxysql">
+        <Bundle name="proxysql"/>
+    </Group>
+
+    <Group name="php">
+        <Bundle name="php"/>
+    </Group>
+
+    <Group name="php52">
+        <Bundle name="php52"/>
+    </Group>
+
+    <Group name="php53">
+        <Bundle name="php53"/>
+    </Group>
+
+    <Group name="phpmyadmin">
+        <Bundle name="phpmyadmin"/>
+    </Group>
+
+    <Group name="psqlbackup">
+        <Bundle name="psqlbackup"/>
+    </Group>
+
+    <Group name="public_html">
+        <Bundle name="public_html"/>
+    </Group>
+
+    <Group name="radius">
+        <Bundle name="radius"/>
+    </Group>
+
+    <Group name="rdiffbackup">
+        <Bundle name="rdiffbackup"/>
+    </Group>
+
+    <Group name="samba">
+        <Bundle name="samba"/>
+    </Group>
+
+    <Group name="sendmail">
+        <Bundle name="sendmail"/>
+    </Group>
+
+    <Group name="sshdconfig">
+        <Bundle name="sshdconfig"/>
+    </Group>
+    <Group name="spamassassin">
+        <Bundle name="spamassassin"/>
+    </Group>
+
+    <Group name="sqlbackup">
+        <Bundle name="sqlbackup"/>
+    </Group>
+
+    <Group name="squid">
+        <Bundle name="squid"/>
+    </Group>
+
+    <Group name="snmp">
+        <Bundle name="snmp"/>
+    </Group>
+
+    <Group name="ssmtp">
+        <Bundle name="ssmtp"/>
+    </Group>
+    
+    <Group name="subversion">
+        <Bundle name="subversion"/>
+    </Group>
+
+    <Group name="sudoers">
+        <Bundle name="sudoers"/>
+    </Group>
+
+    <Group name="syslog-ng">
+        <Bundle name="syslog-ng"/>
+    </Group>
+
+    <Group name="vsftpd">
+        <Bundle name="vsftpd"/>
+    </Group>
+
+    <Group name="tomcat">
+        <Bundle name="tomcat"/>
+    </Group>
+
+    <Group name="tftpd">
+        <Bundle name="tftpd"/>
+    </Group>
+
+    <Group name="webexthosting">
+        <Bundle name="webexthosting"/>
+    </Group>
+
+    <Group name="yum">
+        <Bundle name="yum"/>
+    </Group>
+
+    <Group name="yum-epel">
+        <Bundle name="yum-epel"/>
+    </Group>
+
+    <Group name="yum-dag">
+        <Bundle name="yum-dag"/>
+    </Group>
+
+</Groups>
+

@@ -1,0 +1,369 @@
+# BCFG2-CSBE $Id: amavisd.conf.G50_postfix 855 2009-11-05 15:55:00Z dave $
+# Local modifications WILL be lost 
+
+use strict;
+
+# Configuration file for amavisd-new
+#
+# This software is licensed under the GNU General Public License (GPL).
+# See comments at the start of amavisd-new for the whole license text.
+#@bypass_virus_checks_maps = (1);  # uncomment to DISABLE anti-virus code
+#bypass_spam_checks_maps  = (1);  # uncomment to DISABLE anti-spam code
+
+
+# Section I - Essential daemon and MTA settings
+#
+$MYHOME = "/var/amavis";
+$mydomain = 'scol.qc.ca';      # (no useful default)
+# $myhostname = 'host.example.com';  # fqdn of this host, default by uname(3)
+$daemon_user  = "amavis";   # (no default;  customary: vscan or amavis)
+$daemon_group = "amavis";   # (no default;  customary: vscan or amavis)
+$TEMPBASE = "$MYHOME/tmp";     # prefer to keep home dir /var/amavis clean?
+#$helpers_home = $MYHOME;   # (defaults to $MYHOME)
+#$daemon_chroot_dir = $MYHOME;  # (default is undef, meaning: do not chroot)
+#$pid_file  = "$MYHOME/amavisd.pid";  # (default is "$MYHOME/amavisd.pid")
+#$lock_file = "$MYHOME/amavisd.lock"; # (default is "$MYHOME/amavisd.lock")
+$ENV{TMPDIR} = $TEMPBASE;       # wise to set TMPDIR, but not obligatory
+#$forward_method = 'smtp:127.0.0.1:10025';  # where to forward checked mail
+#$notify_method = $forward_method;          # where to submit notifications
+$max_servers  =  4;   # number of pre-forked children          (default 2)
+$max_requests = 10;   # retire a child after that many accepts (default 10)
+$child_timeout=5*60;  # abort child if it does not complete each task in n sec
+
+@local_domains_acl = ( ".$mydomain" );  # $mydomain and its subdomains
+
+# Section II - MTA specific (defaults should be ok)
+#
+#$relayhost_is_client = 1;        # (defaults to false)
+#$insert_received_line = 1;       # behave like MTA: insert 'Received:' header
+$unix_socketname = "$MYHOME/amavisd.sock"; # amavis helper protocol socket
+#$unix_socketname = undef;        # disable listening on a unix socket
+#$gets_addr_in_quoted_form = 1;   # "Bob \"Funny\" Dude"@example.com
+$inet_socket_port = 10024;        # accept SMTP on this local TCP port
+@inet_acl = qw( 172.30.2.21 );      # allow SMTP access only from localhost IP
+#$inet_socket_bind = undef;       # bind to all IP interfaces if undef
+
+# Section III - Logging
+#
+$DO_SYSLOG = 1;                   # (defaults to false)
+#$SYSLOG_LEVEL = 'user.info';     # (facility.priority, default 'mail.info')
+$LOGFILE = "$MYHOME/amavis.log";  # (defaults to empty, no log)
+$log_level = 1;       # (defaults to 0)
+# log both infected and noninfected messages (default):
+$log_templ = '[? %#V |[? %#F |[?%#D|Not-Delivered|Passed]|BANNED name/type
+(%F)]|INFECTED (%V)], #
+<%o> -> [<%R>|,][? %i ||, quarantine %i], Message-ID: %m, Hits: %c';
+
+# Section IV - Notifications/DSN, BOUNCE/REJECT/DROP/PASS destiny, quarantine
+#
+#$hdr_encoding = 'iso-8859-1';  # (default: 'iso-8859-1')
+#$bdy_encoding = 'iso-8859-1';  # (default: 'iso-8859-1')
+#$notify_sender_templ      = read_text('/var/amavis/notify_spam_sender.txt');
+#$notify_virus_sender_templ= read_text('/var/amavis/notify_spam_sender.txt');
+# $notify_virus_admin_templ = read_text('/var/amavis/notify_virus_admin.txt');
+# $notify_virus_recips_templ= read_text('/var/amavis/notify_virus_recips.txt');
+#$notify_spam_sender_templ = read_text("$MYHOME/notify_spam_sender.txt");
+# $notify_spam_admin_templ  = read_text('/var/amavis/notify_spam_admin.txt');
+#   read_l10n_templates('/etc/amavis/en_US');
+$final_virus_destiny      = D_DISCARD;  # (defaults to D_BOUNCE)
+#$final_banned_destiny     = D_BOUNCE;  # (defaults to D_BOUNCE)
+$final_spam_destiny       = D_DISCARD;  # (defaults to D_REJECT)
+$final_bad_header_destiny = D_PASS;  # (defaults to D_PASS), D_BOUNCE suggested
+#$warnvirussender = 1;  # (defaults to false (undef))
+#$warnspamsender = 1;   # (defaults to false (undef))
+#$warnbannedsender = 1; # (defaults to false (undef))
+#$warnbadhsender = 1;   # (defaults to false (undef))
+#$warnvirusrecip = 1;   # (defaults to false (undef))
+#$warnbannedrecip = 1;  # (defaults to false (undef))
+#$warn_offsite = 1; # (defaults to false (undef), i.e. only notify locals)
+
+$viruses_that_fake_sender_re = new_RE(
+  qr'nimda|hybris|klez|bugbear|yaha|braid|sobig|fizzer|palyh|peido|holar'i,
+  qr'tanatos|lentin|bridex|mimail|trojan\.dropper|dumaru|parite|spaces'i,
+  qr'dloader|galil|gibe|swen|netwatch|bics|sbrowse|sober|rox|val(hal)?la'i,
+  qr'frethem|sircam|be?agle|tanx|mydoom|novarg|shimg|netsky|somefool|moodown'i,
+  qr'@mm|@MM',    # mass mailing viruses as labeled by f-prot and uvscan
+  qr'Worm'i,      # worms as labeled by ClamAV, Kaspersky, etc
+  [qr'^(EICAR|Joke\.|Junk\.)'i         => 0],
+  [qr'^(WM97|OF97|W95/CIH-|JS/Fort)'i  => 0],
+  [qr/.*/ => 1],  # true by default  (remove or comment-out if undesired)
+);
+$virus_admin = undef;   # do not send virus admin notifications (default)
+$spam_admin = undef;    # do not send spam admin notifications (default)
+$mailfrom_notify_admin     = "postmaster\@scol.qc.ca";
+$mailfrom_notify_recip     = "postmaster\@scol.qc.ca";
+$mailfrom_notify_spamadmin = "postmaster\@$mydomain";
+$hdrfrom_notify_sender = 'Postmaster<postmaster@domain.com>';
+# $hdrfrom_notify_admin = $mailfrom_notify_admin;
+# $hdrfrom_notify_spamadmin = $mailfrom_notify_spamadmin;
+$mailfrom_to_quarantine = '';   # override sender address with null return path
+$QUARANTINEDIR = "/var/virusmails";
+$virus_quarantine_to = undef;                 # no quarantine
+#$spam_quarantine_to = undef;                 # no quarantine
+$spam_quarantine_to = "quarantine\@$mydomain";
+#$spam_quarantine_bysender_to = undef;   # dflt: no by-sender spam quarantine
+$X_HEADER_TAG = 'X-Scanned';    # (default: undef)
+$X_HEADER_LINE = "by amavisd-new at $mydomain";
+$undecipherable_subject_tag = '***UNCHECKED*** ';  # undef disables it
+$remove_existing_x_scanned_headers = 1; # leave existing X-Virus-Scanned alone
+$remove_existing_spam_headers  = 1;     # remove existing spam headers if
+$bypass_decode_parts = 1;       # (defaults to false)
+$keep_decoded_original_re = new_RE(
+# qr'^MAIL$',   # retain full original message for virus checking (can be slow)
+  qr'^MAIL-UNDECIPHERABLE$',  # retain full mail if it contains undecipherables
+  qr'^(ASCII(?! cpio)|text|uuencoded|xxencoded|binhex)'i,
+# qr'^Zip archive data',
+);
+
+$banned_filename_re = new_RE(
+#  qr'^UNDECIPHERABLE$',  # is or contains any undecipherable components
+   qr'\.[^.]*\.(exe|vbs|pif|scr|bat|cmd|com|dll)$'i, # double extension
+#  qr'.\.(exe|vbs|pif|scr|bat|cmd|com)$'i,           # banned extension - basic
+#  qr'.\.(ade|adp|bas|bat|chm|cmd|com|cpl|crt|exe|hlp|hta|inf|ins|isp|js|
+#         jse|lnk|mdb|mde|msc|msi|msp|mst|pcd|pif|reg|scr|sct|shs|shb|vb|
+#         vbe|vbs|wsc|wsf|wsh)$'ix,                  # banned extension - long
+#  qr'.\.(mim|b64|bhx|hqx|xxe|uu|uue)$'i, # banned extension - WinZip vulnerab.
+#  qr'^\.(zip|lha|tnef|cab)$'i,                      # banned file(1) types
+   qr'^\.exe$'i,                                     # banned file(1) types
+   qr'^application/x-msdownload$'i,                  # banned MIME types
+   qr'^application/x-msdos-program$'i,
+#  qr'^message/partial$'i, qr'^message/external-body$'i, # block rfc2046
+);
+
+# Section V - Per-recipient and per-sender handling, wshitelisting, etc.
+#
+read_hash(\%whitelist_sender, "$MYHOME/whitelist_sender");
+read_hash(\%blacklist_sender, "$MYHOME/blacklist_sender");
+#read_hash(\%virus_lovers, "$MYHOME/lookups/virus_lovers");
+#read_hash(\%spam_lovers, "$MYHOME/lookups/spam_lovers");
+
+$sql_select_white_black_list = undef;  # undef disables SQL white/blacklisting
+$localpart_is_case_sensitive = 0;   # (default is false)
+
+# Section VI - Resource limits
+#
+# $smtpd_recipient_limit = 1000;  # (default is 1000)
+$MAXLEVELS = 14;        # (default is undef, no limit)
+$MAXFILES = 1500;       # (default is undef, no limit)
+$MIN_EXPANSION_QUOTA =      100*1024;  # bytes  (default undef, not enforced)
+$MAX_EXPANSION_QUOTA = 300*1024*1024;  # bytes  (default undef, not enforced)
+$MIN_EXPANSION_FACTOR =   5;  # times original mail size  (must be specified)
+$MAX_EXPANSION_FACTOR = 500;  # times original mail size  (must be specified)
+
+# Section VII - External programs, virus scanners
+#
+$path = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin';
+$file   = 'file';   # file(1) utility; use 3.41 or later to avoid vulnerability
+$gzip   = 'gzip';
+$bzip2  = 'bzip2';
+$lzop   = 'lzop';
+$uncompress = ['uncompress', 'gzip -d', 'zcat'];
+$unfreeze   = ['unfreeze', 'freeze -d', 'melt', 'fcat'];
+$arc        = ['nomarch', 'arc'];
+$unarj      = ['unarj'];  # both can extract, arj is recommended
+$unrar      = ['unrar'];  # both can extract, same options
+$zoo    = 'zoo';
+$lha    = 'lha';
+$cabextract = '/usr/bin/cabextract';
+$cpio   = ['gcpio','cpio']; # gcpio is a GNU cpio on OpenBSD, which supports
+                            # the options needed; the rest of us use cpio
+# SpamAssassin settings
+$sa_local_tests_only = 0;   # (default: false)
+#$sa_auto_whitelist = 1;    # turn on AWL (default: false)
+$sa_timeout = 30;           # timeout in seconds for a call to SpamAssassin
+$sa_mail_body_size_limit = 150*1024; # don't waste time on SA if mail is larger
+$sa_tag_level_deflt  = 0; # add spam info headers if at, or above that level
+$sa_tag2_level_deflt = 7; # add 'spam detected' headers at that level
+$sa_kill_level_deflt = 7; # triggers spam evasive actions
+
+#$sa_tag_level_deflt  = 3.0; # add spam info headers if at, or above that level
+#$sa_tag2_level_deflt = 6.3; # add 'spam detected' headers at that level
+#$sa_kill_level_deflt = 8.0; # triggers spam evasive actions
+#$sa_dsn_cutoff_level = 10;  # spam level beyond which a DSN is not sent,
+#$sa_spam_subject_tag = '**POSSIBLE*SPAM** ';   # (defaults to undef, disabled)
+#$sa_spam_modifies_subj = 1; # may be a ref to a lookup table, default is true
+
+
+@av_scanners = (
+
+
+  ### http://www.nai.com/
+#  ['NAI McAfee AntiVirus (uvscan)', 'uvscan',
+#    '--secure -rv --mime --summary --noboot - {}', [0], [13],
+#    qr/(?x) Found (?:
+#        \ the\ (.+)\ (?:virus|trojan)  |
+#        :\ (?:virus|trojan)\ or\ variant\ ([^ ]+)  |
+#        :\ (.+)\ NOT\ a\ virus)/,
+  # sub {$ENV{LD_PRELOAD}='/lib/libc.so.6'},
+  # sub {delete $ENV{LD_PRELOAD}},
+#  ],
+
+### http://www.clamav.net/
+#['ClamAV-clamd',
+#  \&ask_daemon, ["CONTSCAN {}\n", "/var/lib/clamav/clamd.socket"],
+#  qr/\bOK$/, qr/\bFOUND$/,
+#  qr/^.*?: (?!Infected Archive)(.*) FOUND$/ ],
+# NOTE: the easiest is to run clamd under the same user as amavisd; match the
+# socket name (LocalSocket) in clamav.conf to the socket name in this entry
+# When running chrooted one may prefer: ["CONTSCAN {}\n","$MYHOME/clamd"],
+# ### http://www.clamav.net/
+ ['ClamAV-clamd',
+   \&ask_daemon, ["CONTSCAN {}\n", "/var/lib/clamav/clamd.socket"],
+   qr/\bOK$/, qr/\bFOUND$/,
+   qr/^.*?: (?!Infected Archive)(.*) FOUND$/ ],
+
+
+);
+
+@av_scanners_backup = (
+# always succeeds (uncomment to consider mail clean if all other scanners fail)
+['always-clean', sub {0}],
+);
+
+# Section VIII - Debugging
+
+#
+#@debug_sender_acl = qw( debug@example.com );
+#$keep_decoded_original_re = new_RE( qr/.*/ );
+#$sa_debug = 1;            # defaults to false
+#-------------
+
+
+
+
+# ENVELOPE SENDER SOFT-WHITELISTING / SOFT-BLACKLISTING
+
+@score_sender_maps = ({ # a by-recipient hash lookup table,
+                        # results from all matching recipient tables are summed
+
+# ## per-recipient personal tables  (NOTE: positive: black, negative: white)
+# 'user1@example.com'  => [{'bla-mobile.press@example.com' => 10.0}],
+# 'user3@example.com'  => [{'.ebay.com'                 => -3.0}],
+# 'user4@example.com'  => [{'cleargreen@cleargreen.com' => -7.0,
+#                           '.cleargreen.com'           => -5.0}],
+
+  ## site-wide opinions about senders (the '.' matches any recipient)
+  '.' => [  # the _first_ matching sender determines the score boost
+
+   new_RE(  # regexp-type lookup table, just happens to be all soft-blacklist
+    [qr'^(bulkmail|offers|cheapbenefits|earnmoney|foryou)@'i         => 5.0],
+    [qr'^(greatcasino|investments|lose_weight_today|market\.alert)@'i=> 5.0],
+    [qr'^(money2you|MyGreenCard|new\.tld\.registry|opt-out|opt-in)@'i=> 5.0],
+    [qr'^(optin|saveonlsmoking2002k|specialoffer|specialoffers)@'i   => 5.0],
+    [qr'^(stockalert|stopsnoring|wantsome|workathome|yesitsfree)@'i  => 5.0],
+    [qr'^(your_friend|greatoffers)@'i                                => 5.0],
+    [qr'^(inkjetplanet|marketopt|MakeMoney)\d*@'i                    => 5.0],
+   ),
+
+#  read_hash("/var/amavis/sender_scores_sitewide"),
+
+   { # a hash-type lookup table (associative array)
+     '.aqpde.ca'                              => -3.0,
+     '.rtsq.qc.ca'                            => -3.0,
+     'nobody@cert.org'                        => -3.0,
+     'cert-advisory@us-cert.gov'              => -3.0,
+     'owner-alert@iss.net'                    => -3.0,
+     'slashdot@slashdot.org'                  => -3.0,
+     'securityfocus.com'                      => -3.0,
+     'ntbugtraq@listserv.ntbugtraq.com'       => -3.0,
+     'security-alerts@linuxsecurity.com'      => -3.0,
+     'mailman-announce-admin@python.org'      => -3.0,
+     'amavis-user-admin@lists.sourceforge.net'=> -3.0,
+     'amavis-user-bounces@lists.sourceforge.net' => -3.0,
+     'spamassassin.apache.org'                => -3.0,
+     'notification-return@lists.sophos.com'   => -3.0,
+     'owner-postfix-users@postfix.org'        => -3.0,
+     'owner-postfix-announce@postfix.org'     => -3.0,
+     'owner-sendmail-announce@lists.sendmail.org'   => -3.0,
+     'sendmail-announce-request@lists.sendmail.org' => -3.0,
+     'donotreply@sendmail.org'                => -3.0,
+     'ca+envelope@sendmail.org'               => -3.0,
+     'noreply@freshmeat.net'                  => -3.0,
+     'owner-technews@postel.acm.org'          => -3.0,
+     'ietf-123-owner@loki.ietf.org'           => -3.0,
+     'cvs-commits-list-admin@gnome.org'       => -3.0,
+     'rt-users-admin@lists.fsck.com'          => -3.0,
+     'clp-request@comp.nus.edu.sg'            => -3.0,
+     'surveys-errors@lists.nua.ie'            => -3.0,
+     'emailnews@genomeweb.com'                => -5.0,
+     'yahoo-dev-null@yahoo-inc.com'           => -3.0,
+     'returns.groups.yahoo.com'               => -3.0,
+     'clusternews@linuxnetworx.com'           => -3.0,
+     lc('lvs-users-admin@LinuxVirtualServer.org')    => -3.0,
+     lc('owner-textbreakingnews@CNNIMAIL12.CNN.COM') => -5.0,
+
+     # soft-blacklisting (positive score)
+     '.droitshumains.ca'                      => 10.0,
+     'visionbeauce@hotmail.com'               => 10.0,
+     'beauce@visionschools.com'               => 10.0,
+     'postcards@hallmark.com '                => 10.0,
+     'miseco3@hotmail.com'                    => 10.0,
+     '.accenture.com'                         => -4.0,
+     '.ca.ibm.com'                            => -4.0,
+     '.ibm.com'                               => -4.0,
+     'clefat@axion.ca'                        => -4.0,
+     '.risq.qc.ca'                            => -4.0,
+     '.sofad.qc.ca'                           => -6.0,
+     '.thconsulting.com'                      => -6.0,
+     '.telus.com'                             => -4.0,
+     '.radiopirate.com'                       => -6.0,
+     'redhat.com'                             => -4.0,
+     '.altiris.com'                           => -4.0,
+     'aquops.qc.ca'                       => -6.0,
+     '.spectraquest.com'                      => -4.0,
+     '.cabinetbnp.com'                        => -4.0,
+     '.csappalaches.qc.ca'                    => -8.0,
+     '.acsq.qc.ca'                            => -4.0,
+     'stages@fse.ulaval.ca'                   => -4.0,
+     'recit@rtsq.qc.ca     '                  => -4.0,
+     '.designfrancart.com'                    => -6.0,
+     '.theatreperiscope.qc.ca'                => -15.0,
+     '.Ville.Sainte-Marie.qc.ca'              => -6.0,
+     '.desjardins.com'                        => -6.0,
+     'dominic.loubier@globetrotter.net'       => -6.0,
+     '.sdm.qc.ca'                             => -10.0,
+     'transit@sdm.qc.ca'                      => -10.0,
+     '.moulesindustriels.com'                 => -4.0,
+     'amistad@bellnet.ca'                     => -4.0,
+     'cl.ruel@sympatico.ca'                   => -4.0,
+     '.cegepbceapp.qc.ca'                     => -4.0,
+     '.amistad@bellnet.ca'                    => -4.0,
+     'cocotte19931@hotmail.com'               => -4.0,
+     '.recitmst.qc.ca'                        => -4.0,
+     'mariepierre.lemire@cjedrummond.qc.ca'   => -4.0,
+     '.fse.ulaval.ca'                         => -4.0,
+     '.uqar.qc.ca'                            => -4.0,
+     '.edusofad.com'                          => -4.0,
+     'jade2004@globetrotter.net'              => -4.0,
+     '.pq.org'                                => -4.0,
+     '.mcc.gouv.qc.ca'                        => -4.0,
+     '.gouv.qc.ca'                            => -4.0,
+     '.meq.gouv.qc.ca'                        => -4.0,
+     '.mels.gouv.qc.ca'                       => -4.0,
+     '.jourdelaterre.org'                     => -4.0,
+     '.fqrsc.gouv.qc.ca'                      => -4.0,
+     '.mels.gouv.qc.ca'                       => -4.0,
+     'refad@sympatico.ca'                     => -4.0,
+     '.symantec.com'                          => -4.0,
+     'marie_5339@hotmail.com'                 => -4.0,
+     'genevieve.beaudet@aquops.qc.ca'         => -4.0,
+     'Reservations@caa-quebec.qc.ca'          => -19.0,
+     '.caa-quebec.qc.ca'                      => -19.0,
+     'daniela.pizzuto@geo-exchange.ca'        => -4.0,
+     'sara.pelletier@protandem.com'           => -4.0,
+     'hameld@cs-soreltracy.qc.ca'             => -4.0,
+     'info@ecoleolympique.ca'                 => -4.0,
+     '.axion.ca'                              => -4.0,
+     '.editionsgeniales.com'                  => -4.0,
+     'sender@example.net'                     =>  3.0,
+     '.example.net'                           =>  1.0,
+
+   },
+  ],  # end of site-wide tables
+});
+
+
+
+1;  # insure a defined return
+
+

@@ -1,0 +1,6 @@
+<Bundle name='portmap' revision='$Id: portmap.xml 342 2010-12-20 20:48:29Z dave $'>
+    <Group name='centos'>
+        <Service name='portmap'/>
+</Group>
+</Bundle>
+

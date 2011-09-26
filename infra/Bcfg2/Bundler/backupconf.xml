@@ -1,0 +1,31 @@
+<Bundle name='backupconf.xml' revision='$Id: backupconf.xml 478 2011-02-01 14:43:57Z dave $'>
+    <Group name='centos'>
+        <BoundPath type='directory' owner='gestion' group='gestion' perms='0700' name='/home/gestion'/>
+        <BoundPath type='directory' owner='gestion' group='gestion' perms='0700' name='/home/gestion/.ssh'/>
+        <BoundPath type='directory' owner='gestion' group='gestion' perms='0700' name='/home/gestion/backup'/>
+        <BoundPath type='directory' owner='gestion' group='gestion' perms='0700' name='/home/gestion/backup/conf'/>
+        <Path name="/home/gestion/.ssh/config"/>
+        <Path name="/home/gestion/backup/backup.pl" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/hades.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/hercule.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/patty.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/quimby.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/selma.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/srv-backup.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/srvdev.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/srvdns.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/srvweb.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/sshsrv.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/vmdev1.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/vmdev2.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/vmdmz.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/vmprod1.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/vmprod2.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/vmsrv.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/websrv.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/webdev.conf" owner="gestion" group="gestion" perms="0644"/>
+        <Path name="/home/gestion/backup/conf/zeus.conf" owner="gestion" group="gestion" perms="0644"/>
+
+</Group>
+</Bundle>
+

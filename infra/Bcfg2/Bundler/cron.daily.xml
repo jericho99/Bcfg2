@@ -1,0 +1,7 @@
+<Bundle name='cron.daily' revision='$Id: cron.daily.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos5'>
+        <Path name='/etc/cron.daily/updatedb'/> 
+<!--        <Path name='/etc/cron.daily/yumcache'/> -->
+</Group>
+</Bundle>
+

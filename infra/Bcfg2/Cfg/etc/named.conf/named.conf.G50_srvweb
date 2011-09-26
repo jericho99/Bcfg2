@@ -1,0 +1,276 @@
+//# BCFG2-IG
+//# Local modifications WILL be lost
+
+options {
+	directory "/var/named/slaves";
+	dump-file "/var/named/data/cache_dump.db";
+	statistics-file "/var/named/data/named_stats.txt";
+	dnssec-enable yes;
+allow-notify { 67.207.145.62; };
+};
+
+controls {
+  inet 127.0.0.1 allow { localhost; } keys { "rndckey"; };
+};
+logging {
+    channel query_logging {
+         file "/var/log/named/named_querylog"
+         versions 3 size 100M;
+         print-time yes;                 // timestamp log entries
+      };
+
+      category queries {
+          query_logging;
+      };
+};
+
+acl trusted-servers  {
+       208.78.100.167 ;  //ns1
+       208.78.96.119 ;  //srvns5
+       67.207.145.62 ;  //ns2
+};
+
+
+zone "infogloberecrute.com" {
+    type slave;
+    file "infogloberecrute.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.100.167; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+
+zone "infoglobe.ca" {
+    type slave;
+    file "infoglobe.ca";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.100.167; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+
+zone "lqt.ca" {
+    type slave;
+    file "lqt.ca";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.100.167; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "tc2l.ca" {
+    type slave;
+    file "tc2l.ca";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.100.167; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "linuxquebec.com" {
+    type slave;
+    file "linuxquebec.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.100.167; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "typo3quebec.com" {
+    type slave;
+    file "typo3quebec.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.100.167; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "typo3quebec.ca" {
+    type slave;
+    file "typo3quebec.ca";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.100.167; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "hebdolinux.org" {
+    type slave;
+    file "hebdolinux.org";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.100.167; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "ass-r-racine.qc.ca" {
+    type slave;
+    file "ass-r-racine.qc.ca";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "commercemonde.com" {
+    type slave;
+    file "commercemonde.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "allarddaniel.com" {
+    type slave;
+    file "allarddaniel.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "dallaire-racine.ca" {
+    type slave;
+    file "dallaire-racine.ca";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "dyndns.ca" {
+    type slave;
+    file "dyndns.ca";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "ecogenie.ca" {
+    type slave;
+    file "ecogenie.ca";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "gclnotaires.com" {
+    type slave;
+    file "gclnotaires.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "gingrasvallerand.com" {
+    type slave;
+    file "gingrasvallerand.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "jlmd.ca" {
+    type slave;
+    file "jlmd.ca";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "hlnotaires.com" {
+    type slave;
+    file "hlnotaires.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "notalliance.com" {
+    type slave;
+//    file "notalliance.com";
+    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "parbus.com" {
+    type slave;
+    file "parbus.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "planexsolutions.com" {
+    type slave;
+    file "planexsolutions.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "stationcentrale.com" {
+    type slave;
+    file "stationcentrale.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+zone "lqtsystems.com" {
+    type slave;
+    file "lqtsystems.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+
+
+zone "bulletincslf.com" {
+    type slave;
+    file "bulletincslf.com";
+//    allow-update { localhost; };
+    allow-query { any; };
+    masters { 208.78.96.119; };
+//    allow-transfer { trusted-servers; };
+
+};
+

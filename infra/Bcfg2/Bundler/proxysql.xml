@@ -1,0 +1,10 @@
+<Bundle name='proxysql' revision='$Id: proxysql.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos5'>
+        <Package name='socat'/>
+        <Path name='/etc/init.d/proxysql'/>
+        <Service name='proxysql'/>
+        <Path name='/etc/my.cnf'/>
+	<Action name='httpd-reload'/>
+    </Group>
+</Bundle>
+

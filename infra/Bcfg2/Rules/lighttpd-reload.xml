@@ -1,0 +1,4 @@
+<Rules priority='0' revision='$Id: lighttpd-reload.xml 343 2010-12-20 20:52:11Z dave $'>
+    <Action timing='post' name='lighttpd-reload' when='modified' status='ignore' command="/etc/init.d/lighttpd restart" />
+</Rules>
+

@@ -1,0 +1,51 @@
+<Bundle name='php53' revision='$Id: php53.xml 342 2010-12-20 20:48:29Z dave $'>
+    <Group name='centos'>
+        <Package name='php53'/>
+        <Package name='php53-pear'/>
+
+    <Group name='php53-ldap'>
+        <Package name='php53-ldap'/>
+        </Group>
+    <Group name='php53-mysql'>
+        <Package name='php53-mysql'/>
+        </Group>
+
+    <Group name='php53-odbc'>
+        <Package name='php53-odbc'/>
+        </Group>
+
+    <Group name='php53-xml'>
+        <Package name='php53-xml'/>
+        </Group>
+ 
+    <Group name='php53-xmlrpc'>
+        <Package name='php53-xmlrpc'/>
+        </Group>
+
+    <Group name='php53-devel'>
+        <Package name='php53-devel'/>
+        </Group>
+
+    <Group name='php53-gd'>
+        <Package name='php53-gd'/>
+        </Group>
+
+    <Group name='php53-imap'>
+        <Package name='php53-imap'/>
+        </Group>
+
+    <Group name='php53-snmp'>
+        <Package name='php53-snmp'/>
+        </Group>
+
+    <Group name='php53-mcrypt'>
+        <Package name='php53-mcrypt'/>
+    </Group>
+
+    <Group name='phpmyadmin'>
+        <Package name='phpmyadmin'/>
+    </Group>
+
+    </Group>
+</Bundle>
+

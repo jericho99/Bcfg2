@@ -1,0 +1,9 @@
+<Bundle name='ldapauth' revision='$Id: ldapauth.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos'>
+        <Path name='/etc/ldap.conf'/>
+        <Path name='/etc/nsswitch.conf'/>
+        <Path name='/etc/pam.d/system-auth-ac'/>
+        <Path name='/etc/pam.d/sshd'/>
+</Group>
+</Bundle>
+

@@ -1,0 +1,7 @@
+<Bundle name='mcaffee' revision='$Id: mcaffee.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos'>
+        <Path name='/etc/cron.monthly/clean_mcaffee.sh'/>
+        <Path name='/etc/cron.daily/update_mcaffee'/>
+    </Group>
+</Bundle>
+

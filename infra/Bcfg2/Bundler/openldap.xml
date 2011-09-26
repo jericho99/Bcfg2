@@ -1,0 +1,20 @@
+<Bundle name='openldap' revision='$Id: openldap.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos'>
+        <Package name='openldap-servers'/>
+        <Package name='openldap-servers-overlays'/>
+        <Path name='/etc/openldap/slapd.conf'/>
+        <Path name='/etc/openldap/slave.conf'/>
+        <Path name='/etc/openldap/master.conf'/>
+        <Path name='/etc/openldap/ldap.conf'/>
+        <Path name='/etc/openldap/schema/idcard.schema'/>
+        <Path name='/etc/openldap/schema/mail.schema'/>
+        <Path name='/etc/openldap/schema/samba.schema'/>
+        <Path name='/etc/openldap/schema/samba2.schema'/>
+        <Path name='/var/lib/ldap/DB_CONFIG'/>
+        <Service name='ldap'/>
+    <Group name='openldap-clients'>
+        <Package name='openldap-clients'/>
+        </Group>
+    </Group>
+</Bundle>
+

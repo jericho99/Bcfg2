@@ -1,0 +1,18 @@
+# Users that are not allowed to login via ftp
+# BCFG2-IG
+# $Id: ftpusers 43 2010-08-19 14:17:21Z dave $
+# Local modifications WILL be lost
+root
+bin
+daemon
+adm
+lp
+sync
+shutdown
+halt
+mail
+news
+uucp
+operator
+games
+nobody

@@ -1,0 +1,4 @@
+<Rules priority='0' revision='$Id: httpd-reload.xml 167 2010-09-17 16:17:36Z dave $'>
+    <Action timing='post' name='httpd-reload' when='modified' status='ignore' command="/etc/init.d/httpd restart" />
+</Rules>
+

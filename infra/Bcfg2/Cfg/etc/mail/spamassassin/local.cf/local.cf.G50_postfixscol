@@ -1,0 +1,21 @@
+# BCFG2-CSBE $Id: local.cf.G50_postfixscol 733 2009-09-18 14:56:56Z dave $
+# Local modifications WILL be lost
+
+# These values can be overridden by editing ~/.spamassassin/user_prefs.cf
+# (see spamassassin(1) for details)
+
+# These should be safe assumptions and allow for simple visual sifting
+# without risking lost emails.
+
+required_hits 5
+report_safe 0
+rewrite_header Subject [SPAM]
+
+        whitelist_from *@cs-soreltracy.qc.ca
+	whitelist_from *@fqrsc.gouv.qc.ca
+	whitelist_from *@mels.gouv.qc.ca
+	whitelist_from *@srs.bis.na.blackberry.com
+        whitelist_from nagios@nagios.csbe
+        whitelist_from_spf *@cs-soreltracy.qc.ca	
+	whitelist_from_spf *@mels.gouv.qc.ca
+	whitelist_from_spf *@srs.bis.na.blackberry.com	

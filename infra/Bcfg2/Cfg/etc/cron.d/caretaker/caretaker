@@ -1,0 +1,2 @@
+*/5 * * * * root /usr/bin/php /var/www/virtuals/caretaker/typo3/cli_dispatch.phpsh scheduler 
+

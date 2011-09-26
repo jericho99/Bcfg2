@@ -1,0 +1,17 @@
+# Name: RPMforge RPM Repository for Red Hat Enterprise 5 - dag
+# URL: http://rpmforge.net/
+# BCFG2-IG
+# $Id: rpmforge.repo 107 2010-08-24 18:37:27Z dave $
+# Local modifications WILL be lost
+
+[rpmforge]
+name = Red Hat Enterprise $releasever - RPMforge.net - dag
+#baseurl = http://apt.sw.be/redhat/el5/en/$basearch/dag
+mirrorlist = http://apt.sw.be/redhat/el5/en/mirrors-rpmforge
+#mirrorlist = file:///etc/yum.repos.d/mirrors-rpmforge
+enabled = 1
+protect = 0
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag
+gpgcheck = 0 
+priority=4
+

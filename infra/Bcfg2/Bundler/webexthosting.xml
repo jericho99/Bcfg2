@@ -1,0 +1,27 @@
+<Bundle name="webexthosting.xml" revision="$Id: webexthosting.xml 544 2011-03-04 15:22:21Z dave $">
+  <Group name="centos5">
+    <Path name="/etc/httpd/virtual/maintenance.conf"/>
+    <Path name="/etc/httpd/virtual/blog.conf"/>
+    <Path name="/etc/httpd/virtual/labotypo3.conf"/>
+    <Path name="/etc/httpd/virtual/tc2l.conf"/>
+    <Path name="/etc/httpd/virtual/typo3quebec.conf"/>
+    <Path name="/etc/httpd/virtual/t3.formations.conf"/>
+    <Path name="/etc/httpd/virtual/club.conf"/>
+    <Path name="/etc/httpd/virtual/infoglobe.conf"/>
+    <Path name="/etc/httpd/virtual/support.conf"/>
+    <Path name="/etc/httpd/virtual/infogloberecrute.conf"/>
+    <Path name="/etc/httpd/virtual/caretaker.conf"/>
+    <Path name="/etc/httpd/virtual/ftp.infoglobe.conf"/>
+    <Path name="/etc/httpd/ssl/clients.infoglobe.ca.crt"/>
+    <Path name="/etc/httpd/ssl/clients.infoglobe.ca.key.nopass"/>
+    <Path name="/etc/httpd/ssl/gd_intermediate.crt"/>
+    
+    <!--CRON FILE-->
+    <Path name="/etc/cron.d/caretaker"/>
+
+    <!--WEB FILE-->
+    <Path name="/var/www/virtuals/maintenance/maintenance.gif"/>
+    <Path name="/var/www/virtuals/maintenance/index.html"/>
+    <Action name="httpd-reload"/>
+  </Group>
+</Bundle>

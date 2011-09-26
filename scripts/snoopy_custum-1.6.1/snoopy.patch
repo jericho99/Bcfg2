@@ -1,0 +1,12 @@
+--- snoopy.c.old	2010-06-28 08:51:15.000000000 -0400
++++ snoopy.c.new	2010-06-28 08:50:59.000000000 -0400
+@@ -85,7 +85,8 @@
+ 
+ 	// Log it
+ 	openlog("snoopy", LOG_PID, LOG_AUTHPRIV);
+-	syslog(LOG_INFO, "[uid:%d sid:%d cwd:%s]: %s", getuid(), getsid(0), cwd, logString);
++
++	syslog(LOG_INFO, "[%s, uid:%d sid:%d cwd:%s]: %s", getlogin(), getuid(), getsid(0), cwd, logString);
+ 
+ 	// Free the logString memory
+ 	free(logString);

@@ -1,0 +1,51 @@
+<Bundle name='php52' revision='$Id: php52.xml 342 2010-12-20 20:48:29Z dave $'>
+    <Group name='centos'>
+        <Package name='php52'/>
+        <Package name='php52-pear'/>
+
+    <Group name='php52-ldap'>
+        <Package name='php52-ldap'/>
+        </Group>
+    <Group name='php52-mysql'>
+        <Package name='php52-mysql'/>
+        </Group>
+
+    <Group name='php52-odbc'>
+        <Package name='php52-odbc'/>
+        </Group>
+
+    <Group name='php52-xml'>
+        <Package name='php52-xml'/>
+        </Group>
+ 
+    <Group name='php52-xmlrpc'>
+        <Package name='php52-xmlrpc'/>
+        </Group>
+
+    <Group name='php52-devel'>
+        <Package name='php52-devel'/>
+        </Group>
+
+    <Group name='php52-gd'>
+        <Package name='php52-gd'/>
+        </Group>
+
+    <Group name='php52-imap'>
+        <Package name='php52-imap'/>
+        </Group>
+
+    <Group name='php52-snmp'>
+        <Package name='php52-snmp'/>
+        </Group>
+
+    <Group name='php52-mcrypt'>
+        <Package name='php52-mcrypt'/>
+    </Group>
+
+    <Group name='phpmyadmin'>
+        <Package name='phpmyadmin'/>
+    </Group>
+
+    </Group>
+</Bundle>
+

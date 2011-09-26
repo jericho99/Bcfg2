@@ -1,0 +1,15 @@
+<Bundle name='lamptweek-php53' revision='$Id: lamptweek-php53.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos5'>
+        <Package name='httpd-devel'/>
+        <Package name='php53-devel'/>
+        <Package name='pcre-devel'/>
+        <Package name='php53-pecl-apc'/>
+        <Package name='php53-pecl-memcache'/>
+        <Package name='memcached'/>
+        <Path name='/etc/httpd/conf.d/deflate.conf'/>
+        <Path name='/etc/php.ini'/>
+        <Service name='memcached'/>
+	<Action name='httpd-reload'/>
+    </Group>
+</Bundle>
+

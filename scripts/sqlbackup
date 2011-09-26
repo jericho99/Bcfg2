@@ -1,0 +1,59 @@
+#!/usr/bin/perl -w
+# $Id: sqlbackup 947 2010-01-08 16:32:21Z dave $
+#Copyright (C) 2009  doyon4@gmail.com
+
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#
+
+use File::List;
+use POSIX;
+my $date = strftime( '%Y%m%d', localtime );
+my $pass = "QJuH9npYSQsbRADP";
+my $user= "dbbackup";
+my $backdir = "/backupmysql";
+my $search = new File::List("/var/lib/mysql");
+$search->show_only_dirs();
+my @dirs  = @{ $search->find(".*") };
+
+(open DIRFILE, "> /tmp/dirfile.txt");
+        foreach $file (@dirs) {
+                print DIRFILE $file . "\n";
+}
+close (DIRFILE);
+
+
+(open DIRFILE2, '/tmp/dirfile.txt') or die;
+        my @dir2 = <DIRFILE2>;
+        open DIRFILE2, ">/tmp/dirfile.txt";
+        foreach (@dir2) {
+                s/\/var\/lib\/mysql\///;
+                s/\///;
+                s/^[\ \t]*\n//g ;
+
+        print DIRFILE2 $_;
+        }
+close (DIRFILE2);
+
+
+$data_file="/tmp/dirfile.txt";
+open(DATA, $data_file) || die("Could not open file!");
+@raw_data=<DATA>;
+close(DATA);
+foreach $key (@raw_data){
+chop($key);
+
+system ("/usr/bin/mysqldump -u $user --password=$pass $key > $backdir/$key-$date.sql");
+
+}

@@ -1,0 +1,15 @@
+# BCFG2-IG $Id: exports. 821 2009-10-16 15:14:31Z dave $
+# Local modifications WILL be lost 
+# /etc/exports: the access control list for filesystems which may be exported
+#       to NFS clients.  See exports(5).
+#
+# Example for NFSv2 and NFSv3:
+# /srv/homes       hostname1(rw,sync) hostname2(ro,sync)
+#
+# Example for NFSv4:
+# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt)
+# /srv/nfs4/homes  gss/krb5i(rw,sync)
+#
+
+/var/www/sites 10.10.0.0/23(rw,no_root_squash,sync)
+

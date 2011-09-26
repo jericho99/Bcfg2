@@ -1,0 +1,7 @@
+# BCFG2-IG
+# Local modifications WILL be lost
+# $Id: snmpd.options 116 2010-08-25 14:50:00Z dave $
+# snmpd command line options
+# OPTIONS="-Lsd -Lf /dev/null -p /var/run/snmpd.pid -a"
+OPTIONS='-Lsd -Lf /dev/null -I -smux -p /var/run/snmpd.pid'
+

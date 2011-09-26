@@ -1,0 +1,4 @@
+<Rules priority='0'>
+    <!-- Relis et applique les valeurs du fichier /etc/sysctl.conf -->
+    <Action timing='pre' name='removesyslog' command='/etc/init.d/syslog stop;chkconfig syslog off' when='modified' status='check'/>
+</Rules>

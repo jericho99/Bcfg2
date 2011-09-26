@@ -1,0 +1,1437 @@
+<PackageList priority='50' type='yum'>
+    <Group name='centos5'>
+        <Group name='i386'>
+            <Package name='ImageMagick' type='yum'>
+                <Instance epoch='0' version='6.2.8.0' release='4.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='ImageMagick-c++' type='yum'>
+                <Instance epoch='0' version='6.2.8.0' release='4.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='ImageMagick-c++-devel' type='yum'>
+                <Instance epoch='0' version='6.2.8.0' release='4.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='ImageMagick-devel' type='yum'>
+                <Instance epoch='0' version='6.2.8.0' release='4.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='ImageMagick-perl' type='yum'>
+                <Instance epoch='0' version='6.2.8.0' release='4.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='NetworkManager' type='yum'>
+                <Instance epoch='1' version='0.7.0' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='NetworkManager-devel' type='yum'>
+                <Instance epoch='1' version='0.7.0' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='NetworkManager-glib' type='yum'>
+                <Instance epoch='1' version='0.7.0' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='NetworkManager-glib-devel' type='yum'>
+                <Instance epoch='1' version='0.7.0' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='NetworkManager-gnome' type='yum'>
+                <Instance epoch='1' version='0.7.0' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='apr' type='yum'>
+                <Instance epoch='0' version='1.2.7' release='11.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='apr-devel' type='yum'>
+                <Instance epoch='0' version='1.2.7' release='11.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='apr-docs' type='yum'>
+                <Instance epoch='0' version='1.2.7' release='11.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='apr-util' type='yum'>
+                <Instance epoch='0' version='1.2.7' release='11.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='apr-util-devel' type='yum'>
+                <Instance epoch='0' version='1.2.7' release='11.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='apr-util-docs' type='yum'>
+                <Instance epoch='0' version='1.2.7' release='11.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='apr-util-mysql' type='yum'>
+                <Instance epoch='0' version='1.2.7' release='11.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='autofs' type='yum'>
+                <Instance epoch='1' version='5.0.1' release='0.rc2.143.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='avahi' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-compat-howl' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-compat-howl-devel' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-compat-libdns_sd' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-compat-libdns_sd-devel' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-devel' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-glib' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-glib-devel' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-qt3' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-qt3-devel' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='avahi-tools' type='yum'>
+                <Instance epoch='0' version='0.6.16' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='bind' type='yum'>
+                <Instance epoch='30' version='9.3.6' release='4.P1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='bind-chroot' type='yum'>
+                <Instance epoch='30' version='9.3.6' release='4.P1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='bind-devel' type='yum'>
+                <Instance epoch='30' version='9.3.6' release='4.P1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='bind-libbind-devel' type='yum'>
+                <Instance epoch='30' version='9.3.6' release='4.P1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='bind-libs' type='yum'>
+                <Instance epoch='30' version='9.3.6' release='4.P1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='bind-sdb' type='yum'>
+                <Instance epoch='30' version='9.3.6' release='4.P1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='bind-utils' type='yum'>
+                <Instance epoch='30' version='9.3.6' release='4.P1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='bzip2' type='yum'>
+                <Instance epoch='0' version='1.0.3' release='6.el5_5' arch='i386'/>
+            </Package>
+            <Package name='bzip2-devel' type='yum'>
+                <Instance epoch='0' version='1.0.3' release='6.el5_5' arch='i386'/>
+            </Package>
+            <Package name='bzip2-libs' type='yum'>
+                <Instance epoch='0' version='1.0.3' release='6.el5_5' arch='i386'/>
+            </Package>
+            <Package name='caching-nameserver' type='yum'>
+                <Instance epoch='30' version='9.3.6' release='4.P1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='celt051' type='yum'>
+                <Instance epoch='0' version='0.5.1.3' release='0.el5' arch='i386'/>
+            </Package>
+            <Package name='celt051-devel' type='yum'>
+                <Instance epoch='0' version='0.5.1.3' release='0.el5' arch='i386'/>
+            </Package>
+            <Package name='cman' type='yum'>
+                <Instance epoch='0' version='2.0.115' release='34.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='cman-devel' type='yum'>
+                <Instance epoch='0' version='2.0.115' release='34.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='cmirror' type='yum'>
+                <Instance epoch='0' version='1.1.39' release='8.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='compat-dapl' type='yum'>
+                <Instance epoch='0' version='2.0.25' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='compat-dapl-devel' type='yum'>
+                <Instance epoch='0' version='2.0.25' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='compat-dapl-static' type='yum'>
+                <Instance epoch='0' version='2.0.25' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='compat-dapl-utils' type='yum'>
+                <Instance epoch='0' version='2.0.25' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='compat-openldap' type='yum'>
+                <Instance epoch='0' version='2.3.43_2.2.29' release='12.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='crash' type='yum'>
+                <Instance epoch='0' version='4.1.2' release='4.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='crash-devel' type='yum'>
+                <Instance epoch='0' version='4.1.2' release='4.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='cups' type='yum'>
+                <Instance epoch='1' version='1.3.7' release='18.el5_5.8' arch='i386'/>
+            </Package>
+            <Package name='cups-devel' type='yum'>
+                <Instance epoch='1' version='1.3.7' release='18.el5_5.8' arch='i386'/>
+            </Package>
+            <Package name='cups-libs' type='yum'>
+                <Instance epoch='1' version='1.3.7' release='18.el5_5.8' arch='i386'/>
+            </Package>
+            <Package name='cups-lpd' type='yum'>
+                <Instance epoch='1' version='1.3.7' release='18.el5_5.8' arch='i386'/>
+            </Package>
+            <Package name='dapl' type='yum'>
+                <Instance epoch='0' version='2.0.25' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='dapl-devel' type='yum'>
+                <Instance epoch='0' version='2.0.25' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='dapl-static' type='yum'>
+                <Instance epoch='0' version='2.0.25' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='dapl-utils' type='yum'>
+                <Instance epoch='0' version='2.0.25' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='db4' type='yum'>
+                <Instance epoch='0' version='4.3.29' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='db4-devel' type='yum'>
+                <Instance epoch='0' version='4.3.29' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='db4-java' type='yum'>
+                <Instance epoch='0' version='4.3.29' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='db4-tcl' type='yum'>
+                <Instance epoch='0' version='4.3.29' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='db4-utils' type='yum'>
+                <Instance epoch='0' version='4.3.29' release='10.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='dbus-glib' type='yum'>
+                <Instance epoch='0' version='0.73' release='10.el5_5' arch='i386'/>
+            </Package>
+            <Package name='dbus-glib-devel' type='yum'>
+                <Instance epoch='0' version='0.73' release='10.el5_5' arch='i386'/>
+            </Package>
+            <Package name='devhelp' type='yum'>
+                <Instance epoch='0' version='0.12' release='21.el5' arch='i386'/>
+            </Package>
+            <Package name='devhelp-devel' type='yum'>
+                <Instance epoch='0' version='0.12' release='21.el5' arch='i386'/>
+            </Package>
+            <Package name='device-mapper' type='yum'>
+                <Instance epoch='0' version='1.02.39' release='1.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='device-mapper-event' type='yum'>
+                <Instance epoch='0' version='1.02.39' release='1.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='device-mapper-multipath' type='yum'>
+                <Instance epoch='0' version='0.4.7' release='34.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='dhclient' type='yum'>
+                <Instance epoch='12' version='3.0.5' release='23.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='dhcp' type='yum'>
+                <Instance epoch='12' version='3.0.5' release='23.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='dhcp-devel' type='yum'>
+                <Instance epoch='12' version='3.0.5' release='23.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='e2fsprogs' type='yum'>
+                <Instance epoch='0' version='1.39' release='23.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='e2fsprogs-devel' type='yum'>
+                <Instance epoch='0' version='1.39' release='23.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='e2fsprogs-libs' type='yum'>
+                <Instance epoch='0' version='1.39' release='23.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='esc' type='yum'>
+                <Instance epoch='0' version='1.1.0' release='12.el5' arch='i386'/>
+            </Package>
+            <Package name='exim' type='yum'>
+                <Instance epoch='0' version='4.63' release='5.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='exim-mon' type='yum'>
+                <Instance epoch='0' version='4.63' release='5.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='exim-sa' type='yum'>
+                <Instance epoch='0' version='4.63' release='5.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='expat' type='yum'>
+                <Instance epoch='0' version='1.95.8' release='8.3.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='expat-devel' type='yum'>
+                <Instance epoch='0' version='1.95.8' release='8.3.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='finch' type='yum'>
+                <Instance epoch='0' version='2.6.6' release='5.el5_5' arch='i386'/>
+            </Package>
+            <Package name='finch-devel' type='yum'>
+                <Instance epoch='0' version='2.6.6' release='5.el5_5' arch='i386'/>
+            </Package>
+            <Package name='firefox' type='yum'>
+                <Instance epoch='0' version='3.6.13' release='2.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='freetype' type='yum'>
+                <Instance epoch='0' version='2.2.1' release='28.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='freetype-demos' type='yum'>
+                <Instance epoch='0' version='2.2.1' release='28.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='freetype-devel' type='yum'>
+                <Instance epoch='0' version='2.2.1' release='28.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='gdb' type='yum'>
+                <Instance epoch='0' version='7.0.1' release='23.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='ghostscript' type='yum'>
+                <Instance epoch='0' version='8.15.2' release='9.12.el5_5' arch='i386'/>
+            </Package>
+            <Package name='ghostscript-devel' type='yum'>
+                <Instance epoch='0' version='8.15.2' release='9.12.el5_5' arch='i386'/>
+            </Package>
+            <Package name='ghostscript-gtk' type='yum'>
+                <Instance epoch='0' version='8.15.2' release='9.12.el5_5' arch='i386'/>
+            </Package>
+            <Package name='glibc' type='yum'>
+                <Instance epoch='0' version='2.5' release='49.el5_5.7' arch='i686'/>
+            </Package>
+            <Package name='glibc-common' type='yum'>
+                <Instance epoch='0' version='2.5' release='49.el5_5.7' arch='i386'/>
+            </Package>
+            <Package name='glibc-devel' type='yum'>
+                <Instance epoch='0' version='2.5' release='49.el5_5.7' arch='i386'/>
+            </Package>
+            <Package name='glibc-headers' type='yum'>
+                <Instance epoch='0' version='2.5' release='49.el5_5.7' arch='i386'/>
+            </Package>
+            <Package name='glibc-utils' type='yum'>
+                <Instance epoch='0' version='2.5' release='49.el5_5.7' arch='i386'/>
+            </Package>
+            <Package name='gnome-python2-extras' type='yum'>
+                <Instance epoch='0' version='2.14.2' release='7.el5' arch='i386'/>
+            </Package>
+            <Package name='gnome-python2-gtkhtml2' type='yum'>
+                <Instance epoch='0' version='2.14.2' release='7.el5' arch='i386'/>
+            </Package>
+            <Package name='gnome-python2-gtkmozembed' type='yum'>
+                <Instance epoch='0' version='2.14.2' release='7.el5' arch='i386'/>
+            </Package>
+            <Package name='gnome-python2-gtkspell' type='yum'>
+                <Instance epoch='0' version='2.14.2' release='7.el5' arch='i386'/>
+            </Package>
+            <Package name='gnome-python2-libegg' type='yum'>
+                <Instance epoch='0' version='2.14.2' release='7.el5' arch='i386'/>
+            </Package>
+            <Package name='gnome-screensaver' type='yum'>
+                <Instance epoch='0' version='2.16.1' release='8.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='gnome-vfs2' type='yum'>
+                <Instance epoch='0' version='2.16.2' release='6.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='gnome-vfs2-devel' type='yum'>
+                <Instance epoch='0' version='2.16.2' release='6.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='gnome-vfs2-smb' type='yum'>
+                <Instance epoch='0' version='2.16.2' release='6.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='gnupg' type='yum'>
+                <Instance epoch='0' version='1.4.5' release='14.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='gnupg2' type='yum'>
+                <Instance epoch='0' version='2.0.10' release='3.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='gnutls' type='yum'>
+                <Instance epoch='0' version='1.4.1' release='3.el5_4.8' arch='i386'/>
+            </Package>
+            <Package name='gnutls-devel' type='yum'>
+                <Instance epoch='0' version='1.4.1' release='3.el5_4.8' arch='i386'/>
+            </Package>
+            <Package name='gnutls-utils' type='yum'>
+                <Instance epoch='0' version='1.4.1' release='3.el5_4.8' arch='i386'/>
+            </Package>
+            <Package name='gtk2' type='yum'>
+                <Instance epoch='0' version='2.10.4' release='21.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='gtk2-devel' type='yum'>
+                <Instance epoch='0' version='2.10.4' release='21.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='httpd' type='yum'>
+                <Instance epoch='0' version='2.2.3' release='43.el5.centos.3' arch='i386'/>
+            </Package>
+            <Package name='httpd-devel' type='yum'>
+                <Instance epoch='0' version='2.2.3' release='43.el5.centos.3' arch='i386'/>
+            </Package>
+            <Package name='httpd-manual' type='yum'>
+                <Instance epoch='0' version='2.2.3' release='43.el5.centos.3' arch='i386'/>
+            </Package>
+            <Package name='initscripts' type='yum'>
+                <Instance epoch='0' version='8.45.30' release='3.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='ipsec-tools' type='yum'>
+                <Instance epoch='0' version='0.6.5' release='14.el5_5.5' arch='i386'/>
+            </Package>
+            <Package name='iscsi-initiator-utils' type='yum'>
+                <Instance epoch='0' version='6.2.0.871' release='0.20.el5_5' arch='i386'/>
+            </Package>
+            <Package name='java-1.6.0-openjdk' type='yum'>
+                <Instance epoch='1' version='1.6.0.0' release='1.16.b17.el5' arch='i386'/>
+            </Package>
+            <Package name='java-1.6.0-openjdk-demo' type='yum'>
+                <Instance epoch='1' version='1.6.0.0' release='1.16.b17.el5' arch='i386'/>
+            </Package>
+            <Package name='java-1.6.0-openjdk-devel' type='yum'>
+                <Instance epoch='1' version='1.6.0.0' release='1.16.b17.el5' arch='i386'/>
+            </Package>
+            <Package name='java-1.6.0-openjdk-javadoc' type='yum'>
+                <Instance epoch='1' version='1.6.0.0' release='1.16.b17.el5' arch='i386'/>
+            </Package>
+            <Package name='java-1.6.0-openjdk-src' type='yum'>
+                <Instance epoch='1' version='1.6.0.0' release='1.16.b17.el5' arch='i386'/>
+            </Package>
+            <Package name='kdebase' type='yum'>
+                <Instance epoch='6' version='3.5.4' release='21.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='kdebase-devel' type='yum'>
+                <Instance epoch='6' version='3.5.4' release='21.el5.centos.1' arch='i386'/>
+            </Package>
+            <Package name='kdegraphics' type='yum'>
+                <Instance epoch='7' version='3.5.4' release='17.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='kdegraphics-devel' type='yum'>
+                <Instance epoch='7' version='3.5.4' release='17.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='kernel' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='i686'/>
+            </Package>
+            <Package name='kernel-PAE' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='i686'/>
+            </Package>
+            <Package name='kernel-PAE-devel' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='i686'/>
+            </Package>
+            <Package name='kernel-debug' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='i686'/>
+            </Package>
+            <Package name='kernel-debug-devel' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='i686'/>
+            </Package>
+            <Package name='kernel-devel' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='i686'/>
+            </Package>
+            <Package name='kernel-doc' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='noarch'/>
+            </Package>
+            <Package name='kernel-headers' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='i386'/>
+            </Package>
+            <Package name='kernel-xen' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='i686'/>
+            </Package>
+            <Package name='kernel-xen-devel' type='yum'>
+                <Instance epoch='0' version='2.6.18' release='194.32.1.el5' arch='i686'/>
+            </Package>
+            <Package name='kexec-tools' type='yum'>
+                <Instance epoch='0' version='1.102pre' release='96.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='kmod-spice-usb-redirector' type='yum'>
+                <Instance epoch='0' version='4.5' release='2.el5_5' arch='i386'/>
+            </Package>
+            <Package name='kpartx' type='yum'>
+                <Instance epoch='0' version='0.4.7' release='34.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='krb5-devel' type='yum'>
+                <Instance epoch='0' version='1.6.1' release='36.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='krb5-libs' type='yum'>
+                <Instance epoch='0' version='1.6.1' release='36.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='krb5-server' type='yum'>
+                <Instance epoch='0' version='1.6.1' release='36.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='krb5-workstation' type='yum'>
+                <Instance epoch='0' version='1.6.1' release='36.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='ksh' type='yum'>
+                <Instance epoch='0' version='20100202' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='lftp' type='yum'>
+                <Instance epoch='0' version='3.7.11' release='4.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='libbdevid-python' type='yum'>
+                <Instance epoch='0' version='5.1.19.6' release='61.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='libbonobo' type='yum'>
+                <Instance epoch='0' version='2.16.0' release='1.1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='libbonobo-devel' type='yum'>
+                <Instance epoch='0' version='2.16.0' release='1.1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='libdhcp4client' type='yum'>
+                <Instance epoch='12' version='3.0.5' release='23.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='libdhcp4client-devel' type='yum'>
+                <Instance epoch='12' version='3.0.5' release='23.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='libpng' type='yum'>
+                <Instance epoch='2' version='1.2.10' release='7.1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='libpng-devel' type='yum'>
+                <Instance epoch='2' version='1.2.10' release='7.1.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='libpurple' type='yum'>
+                <Instance epoch='0' version='2.6.6' release='5.el5_5' arch='i386'/>
+            </Package>
+            <Package name='libpurple-devel' type='yum'>
+                <Instance epoch='0' version='2.6.6' release='5.el5_5' arch='i386'/>
+            </Package>
+            <Package name='libpurple-perl' type='yum'>
+                <Instance epoch='0' version='2.6.6' release='5.el5_5' arch='i386'/>
+            </Package>
+            <Package name='libpurple-tcl' type='yum'>
+                <Instance epoch='0' version='2.6.6' release='5.el5_5' arch='i386'/>
+            </Package>
+            <Package name='libsmbclient' type='yum'>
+                <Instance epoch='0' version='3.0.33' release='3.29.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='libsmbclient-devel' type='yum'>
+                <Instance epoch='0' version='3.0.33' release='3.29.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='libtalloc' type='yum'>
+                <Instance epoch='0' version='1.2.0' release='52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='libtalloc-devel' type='yum'>
+                <Instance epoch='0' version='1.2.0' release='52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='libtdb' type='yum'>
+                <Instance epoch='0' version='1.1.2' release='52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='libtdb-devel' type='yum'>
+                <Instance epoch='0' version='1.1.2' release='52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='libtiff' type='yum'>
+                <Instance epoch='0' version='3.8.2' release='7.el5_5.5' arch='i386'/>
+            </Package>
+            <Package name='libtiff-devel' type='yum'>
+                <Instance epoch='0' version='3.8.2' release='7.el5_5.5' arch='i386'/>
+            </Package>
+            <Package name='libvirt' type='yum'>
+                <Instance epoch='0' version='0.6.3' release='33.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='libvirt-devel' type='yum'>
+                <Instance epoch='0' version='0.6.3' release='33.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='libvirt-python' type='yum'>
+                <Instance epoch='0' version='0.6.3' release='33.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='libvolume_id' type='yum'>
+                <Instance epoch='0' version='095' release='14.21.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='libvolume_id-devel' type='yum'>
+                <Instance epoch='0' version='095' release='14.21.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='libxml2' type='yum'>
+                <Instance epoch='0' version='2.6.26' release='2.1.2.8.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='libxml2-devel' type='yum'>
+                <Instance epoch='0' version='2.6.26' release='2.1.2.8.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='libxml2-python' type='yum'>
+                <Instance epoch='0' version='2.6.26' release='2.1.2.8.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='logrotate' type='yum'>
+                <Instance epoch='0' version='3.7.4' release='9.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='luci' type='yum'>
+                <Instance epoch='0' version='0.12.2' release='12.el5.centos.4' arch='i386'/>
+            </Package>
+            <Package name='lvm2' type='yum'>
+                <Instance epoch='0' version='2.02.56' release='8.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='lvm2-cluster' type='yum'>
+                <Instance epoch='0' version='2.02.56' release='7.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='mikmod' type='yum'>
+                <Instance epoch='0' version='3.1.6' release='39.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='mikmod-devel' type='yum'>
+                <Instance epoch='0' version='3.1.6' release='39.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='mkinitrd' type='yum'>
+                <Instance epoch='0' version='5.1.19.6' release='61.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='mkinitrd-devel' type='yum'>
+                <Instance epoch='0' version='5.1.19.6' release='61.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='mod_authz_ldap' type='yum'>
+                <Instance epoch='0' version='0.26' release='9.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='mod_ssl' type='yum'>
+                <Instance epoch='1' version='2.2.3' release='43.el5.centos.3' arch='i386'/>
+            </Package>
+            <Package name='module-init-tools' type='yum'>
+                <Instance epoch='0' version='3.3' release='0.pre3.1.60.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='mysql' type='yum'>
+                <Instance epoch='0' version='5.0.77' release='4.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='mysql-bench' type='yum'>
+                <Instance epoch='0' version='5.0.77' release='4.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='mysql-devel' type='yum'>
+                <Instance epoch='0' version='5.0.77' release='4.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='mysql-server' type='yum'>
+                <Instance epoch='0' version='5.0.77' release='4.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='mysql-test' type='yum'>
+                <Instance epoch='0' version='5.0.77' release='4.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='nash' type='yum'>
+                <Instance epoch='0' version='5.1.19.6' release='61.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='net-snmp' type='yum'>
+                <Instance epoch='1' version='5.3.2.2' release='9.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='net-snmp-devel' type='yum'>
+                <Instance epoch='1' version='5.3.2.2' release='9.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='net-snmp-libs' type='yum'>
+                <Instance epoch='1' version='5.3.2.2' release='9.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='net-snmp-perl' type='yum'>
+                <Instance epoch='1' version='5.3.2.2' release='9.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='net-snmp-utils' type='yum'>
+                <Instance epoch='1' version='5.3.2.2' release='9.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='nfs-utils' type='yum'>
+                <Instance epoch='1' version='1.0.9' release='47.el5_5' arch='i386'/>
+            </Package>
+            <Package name='nscd' type='yum'>
+                <Instance epoch='0' version='2.5' release='49.el5_5.7' arch='i386'/>
+            </Package>
+            <Package name='nspluginwrapper' type='yum'>
+                <Instance epoch='0' version='1.3.0' release='9.el5' arch='i386'/>
+            </Package>
+            <Package name='nspr' type='yum'>
+                <Instance epoch='0' version='4.8.6' release='1.el5_5' arch='i386'/>
+            </Package>
+            <Package name='nspr-devel' type='yum'>
+                <Instance epoch='0' version='4.8.6' release='1.el5_5' arch='i386'/>
+            </Package>
+            <Package name='nss' type='yum'>
+                <Instance epoch='0' version='3.12.8' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='nss-devel' type='yum'>
+                <Instance epoch='0' version='3.12.8' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='nss-pkcs11-devel' type='yum'>
+                <Instance epoch='0' version='3.12.8' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='nss-tools' type='yum'>
+                <Instance epoch='0' version='3.12.8' release='1.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='nss_db' type='yum'>
+                <Instance epoch='0' version='2.2' release='35.4.el5_5' arch='i386'/>
+            </Package>
+            <Package name='openCryptoki' type='yum'>
+                <Instance epoch='0' version='2.2.4' release='22.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openCryptoki-devel' type='yum'>
+                <Instance epoch='0' version='2.2.4' release='22.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openais' type='yum'>
+                <Instance epoch='0' version='0.80.6' release='16.el5_5.9' arch='i386'/>
+            </Package>
+            <Package name='openais-devel' type='yum'>
+                <Instance epoch='0' version='0.80.6' release='16.el5_5.9' arch='i386'/>
+            </Package>
+            <Package name='openldap' type='yum'>
+                <Instance epoch='0' version='2.3.43' release='12.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='openldap-clients' type='yum'>
+                <Instance epoch='0' version='2.3.43' release='12.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='openldap-devel' type='yum'>
+                <Instance epoch='0' version='2.3.43' release='12.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='openldap-servers' type='yum'>
+                <Instance epoch='0' version='2.3.43' release='12.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='openldap-servers-overlays' type='yum'>
+                <Instance epoch='0' version='2.3.43' release='12.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='openldap-servers-sql' type='yum'>
+                <Instance epoch='0' version='2.3.43' release='12.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='openmotif' type='yum'>
+                <Instance epoch='0' version='2.3.1' release='5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openmotif-devel' type='yum'>
+                <Instance epoch='0' version='2.3.1' release='5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-base' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-calc' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-core' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-draw' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-emailmerge' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-graphicfilter' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-headless' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-impress' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-javafilter' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-af_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ar' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-as_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-bg_BG' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-bn' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ca_ES' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-cs_CZ' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-cy_GB' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-da_DK' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-de' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-el_GR' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-es' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-et_EE' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-eu_ES' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-fi_FI' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-fr' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ga_IE' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-gl_ES' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-gu_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-he_IL' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-hi_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-hr_HR' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-hu_HU' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-it' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ja_JP' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-kn_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ko_KR' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-lt_LT' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ml_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-mr_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ms_MY' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-nb_NO' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-nl' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-nn_NO' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-nr_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-nso_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-or_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-pa_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-pl_PL' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-pt_BR' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-pt_PT' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ru' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-sk_SK' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-sl_SI' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-sr_CS' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ss_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-st_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-sv' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ta_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-te_IN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-th_TH' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-tn_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-tr_TR' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ts_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ur' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-ve_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-xh_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-zh_CN' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-zh_TW' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-langpack-zu_ZA' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-math' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-pyuno' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-sdk' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-sdk-doc' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-testtools' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-ure' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-writer' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openoffice.org-xsltfilter' type='yum'>
+                <Instance epoch='1' version='3.1.1' release='19.5.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openssh' type='yum'>
+                <Instance epoch='0' version='4.3p2' release='41.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openssh-askpass' type='yum'>
+                <Instance epoch='0' version='4.3p2' release='41.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openssh-clients' type='yum'>
+                <Instance epoch='0' version='4.3p2' release='41.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openssh-server' type='yum'>
+                <Instance epoch='0' version='4.3p2' release='41.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='openssl' type='yum'>
+                <Instance epoch='0' version='0.9.8e' release='12.el5_5.7' arch='i686'/>
+            </Package>
+            <Package name='openssl-devel' type='yum'>
+                <Instance epoch='0' version='0.9.8e' release='12.el5_5.7' arch='i386'/>
+            </Package>
+            <Package name='openssl-perl' type='yum'>
+                <Instance epoch='0' version='0.9.8e' release='12.el5_5.7' arch='i386'/>
+            </Package>
+            <Package name='openssl097a' type='yum'>
+                <Instance epoch='0' version='0.9.7a' release='9.el5_4.2' arch='i386'/>
+            </Package>
+            <Package name='pam' type='yum'>
+                <Instance epoch='0' version='0.99.6.2' release='6.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='pam-devel' type='yum'>
+                <Instance epoch='0' version='0.99.6.2' release='6.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='pango' type='yum'>
+                <Instance epoch='0' version='1.14.9' release='8.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pango-devel' type='yum'>
+                <Instance epoch='0' version='1.14.9' release='8.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='pcsc-lite' type='yum'>
+                <Instance epoch='0' version='1.4.4' release='4.el5_5' arch='i386'/>
+            </Package>
+            <Package name='pcsc-lite-devel' type='yum'>
+                <Instance epoch='0' version='1.4.4' release='4.el5_5' arch='i386'/>
+            </Package>
+            <Package name='pcsc-lite-doc' type='yum'>
+                <Instance epoch='0' version='1.4.4' release='4.el5_5' arch='i386'/>
+            </Package>
+            <Package name='pcsc-lite-libs' type='yum'>
+                <Instance epoch='0' version='1.4.4' release='4.el5_5' arch='i386'/>
+            </Package>
+            <Package name='perl' type='yum'>
+                <Instance epoch='4' version='5.8.8' release='32.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='perl-Archive-Tar' type='yum'>
+                <Instance epoch='1' version='1.39.1' release='1.el5_5.2' arch='noarch'/>
+            </Package>
+            <Package name='perl-suidperl' type='yum'>
+                <Instance epoch='4' version='5.8.8' release='32.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='php' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-bcmath' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-cli' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-common' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-dba' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-devel' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-gd' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-imap' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-ldap' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-mbstring' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-mysql' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-ncurses' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-odbc' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-pdo' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-pgsql' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-snmp' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-soap' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-xml' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='php-xmlrpc' type='yum'>
+                <Instance epoch='0' version='5.1.6' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='pidgin' type='yum'>
+                <Instance epoch='0' version='2.6.6' release='5.el5_5' arch='i386'/>
+            </Package>
+            <Package name='pidgin-devel' type='yum'>
+                <Instance epoch='0' version='2.6.6' release='5.el5_5' arch='i386'/>
+            </Package>
+            <Package name='pidgin-perl' type='yum'>
+                <Instance epoch='0' version='2.6.6' release='5.el5_5' arch='i386'/>
+            </Package>
+            <Package name='poppler' type='yum'>
+                <Instance epoch='0' version='0.5.4' release='4.4.el5_5.14' arch='i386'/>
+            </Package>
+            <Package name='poppler-devel' type='yum'>
+                <Instance epoch='0' version='0.5.4' release='4.4.el5_5.14' arch='i386'/>
+            </Package>
+            <Package name='poppler-utils' type='yum'>
+                <Instance epoch='0' version='0.5.4' release='4.4.el5_5.14' arch='i386'/>
+            </Package>
+            <Package name='popt' type='yum'>
+                <Instance epoch='0' version='1.10.2.3' release='20.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql-contrib' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql-devel' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql-docs' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql-libs' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql-pl' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql-python' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql-server' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql-tcl' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql-test' type='yum'>
+                <Instance epoch='0' version='8.1.22' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-contrib' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-devel' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-docs' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-libs' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-plperl' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-plpython' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-pltcl' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-python' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-server' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-tcl' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='postgresql84-test' type='yum'>
+                <Instance epoch='0' version='8.4.5' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='python' type='yum'>
+                <Instance epoch='0' version='2.4.3' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='python-devel' type='yum'>
+                <Instance epoch='0' version='2.4.3' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='python-dmidecode' type='yum'>
+                <Instance epoch='0' version='3.10.13' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='python-tools' type='yum'>
+                <Instance epoch='0' version='2.4.3' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='python-virtinst' type='yum'>
+                <Instance epoch='0' version='0.400.3' release='9.el5_5.1' arch='noarch'/>
+            </Package>
+            <Package name='qcairo' type='yum'>
+                <Instance epoch='0' version='1.8.7.1' release='3.el5' arch='i386'/>
+            </Package>
+            <Package name='qcairo-devel' type='yum'>
+                <Instance epoch='0' version='1.8.7.1' release='3.el5' arch='i386'/>
+            </Package>
+            <Package name='qffmpeg-devel' type='yum'>
+                <Instance epoch='0' version='0.4.9' release='0.16.20080908.el5_5' arch='i386'/>
+            </Package>
+            <Package name='qffmpeg-libs' type='yum'>
+                <Instance epoch='0' version='0.4.9' release='0.16.20080908.el5_5' arch='i386'/>
+            </Package>
+            <Package name='qpixman' type='yum'>
+                <Instance epoch='0' version='0.13.3' release='4.el5' arch='i386'/>
+            </Package>
+            <Package name='qspice-client' type='yum'>
+                <Instance epoch='0' version='0.3.0' release='4.el5_5' arch='i386'/>
+            </Package>
+            <Package name='quagga' type='yum'>
+                <Instance epoch='0' version='0.98.6' release='5.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='quagga-contrib' type='yum'>
+                <Instance epoch='0' version='0.98.6' release='5.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='quagga-devel' type='yum'>
+                <Instance epoch='0' version='0.98.6' release='5.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='rgmanager' type='yum'>
+                <Instance epoch='0' version='2.0.52' release='6.el5.centos.8' arch='i386'/>
+            </Package>
+            <Package name='ricci' type='yum'>
+                <Instance epoch='0' version='0.12.2' release='12.el5.centos.4' arch='i386'/>
+            </Package>
+            <Package name='rpm' type='yum'>
+                <Instance epoch='0' version='4.4.2.3' release='20.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rpm-apidocs' type='yum'>
+                <Instance epoch='0' version='4.4.2.3' release='20.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rpm-build' type='yum'>
+                <Instance epoch='0' version='4.4.2.3' release='20.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rpm-devel' type='yum'>
+                <Instance epoch='0' version='4.4.2.3' release='20.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rpm-libs' type='yum'>
+                <Instance epoch='0' version='4.4.2.3' release='20.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rpm-python' type='yum'>
+                <Instance epoch='0' version='4.4.2.3' release='20.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rsyslog' type='yum'>
+                <Instance epoch='0' version='3.22.1' release='3.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rsyslog-gnutls' type='yum'>
+                <Instance epoch='0' version='3.22.1' release='3.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rsyslog-gssapi' type='yum'>
+                <Instance epoch='0' version='3.22.1' release='3.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rsyslog-mysql' type='yum'>
+                <Instance epoch='0' version='3.22.1' release='3.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='rsyslog-pgsql' type='yum'>
+                <Instance epoch='0' version='3.22.1' release='3.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='samba' type='yum'>
+                <Instance epoch='0' version='3.0.33' release='3.29.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='samba-client' type='yum'>
+                <Instance epoch='0' version='3.0.33' release='3.29.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='samba-common' type='yum'>
+                <Instance epoch='0' version='3.0.33' release='3.29.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='samba-swat' type='yum'>
+                <Instance epoch='0' version='3.0.33' release='3.29.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='samba3x' type='yum'>
+                <Instance epoch='0' version='3.3.8' release='0.52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='samba3x-client' type='yum'>
+                <Instance epoch='0' version='3.3.8' release='0.52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='samba3x-common' type='yum'>
+                <Instance epoch='0' version='3.3.8' release='0.52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='samba3x-doc' type='yum'>
+                <Instance epoch='0' version='3.3.8' release='0.52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='samba3x-domainjoin-gui' type='yum'>
+                <Instance epoch='0' version='3.3.8' release='0.52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='samba3x-swat' type='yum'>
+                <Instance epoch='0' version='3.3.8' release='0.52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='samba3x-winbind' type='yum'>
+                <Instance epoch='0' version='3.3.8' release='0.52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='samba3x-winbind-devel' type='yum'>
+                <Instance epoch='0' version='3.3.8' release='0.52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='scsi-target-utils' type='yum'>
+                <Instance epoch='0' version='0.0' release='6.20091205snap.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='selinux-policy' type='yum'>
+                <Instance epoch='0' version='2.4.6' release='279.el5_5.2' arch='noarch'/>
+            </Package>
+            <Package name='selinux-policy-devel' type='yum'>
+                <Instance epoch='0' version='2.4.6' release='279.el5_5.2' arch='noarch'/>
+            </Package>
+            <Package name='selinux-policy-minimum' type='yum'>
+                <Instance epoch='0' version='2.4.6' release='279.el5_5.2' arch='noarch'/>
+            </Package>
+            <Package name='selinux-policy-mls' type='yum'>
+                <Instance epoch='0' version='2.4.6' release='279.el5_5.2' arch='noarch'/>
+            </Package>
+            <Package name='selinux-policy-strict' type='yum'>
+                <Instance epoch='0' version='2.4.6' release='279.el5_5.2' arch='noarch'/>
+            </Package>
+            <Package name='selinux-policy-targeted' type='yum'>
+                <Instance epoch='0' version='2.4.6' release='279.el5_5.2' arch='noarch'/>
+            </Package>
+            <Package name='sox' type='yum'>
+                <Instance epoch='0' version='12.18.1' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='sox-devel' type='yum'>
+                <Instance epoch='0' version='12.18.1' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='spice-xpi' type='yum'>
+                <Instance epoch='0' version='2.2' release='2.3.el5_5' arch='i386'/>
+            </Package>
+            <Package name='strace' type='yum'>
+                <Instance epoch='0' version='4.5.18' release='5.el5_5.5' arch='i386'/>
+            </Package>
+            <Package name='sudo' type='yum'>
+                <Instance epoch='0' version='1.7.2p1' release='9.el5_5' arch='i386'/>
+            </Package>
+            <Package name='sysstat' type='yum'>
+                <Instance epoch='0' version='7.0.2' release='3.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='system-config-cluster' type='yum'>
+                <Instance epoch='0' version='1.0.57' release='3.el5_5.1' arch='noarch'/>
+            </Package>
+            <Package name='systemtap' type='yum'>
+                <Instance epoch='0' version='1.1' release='3.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='systemtap-client' type='yum'>
+                <Instance epoch='0' version='1.1' release='3.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='systemtap-initscript' type='yum'>
+                <Instance epoch='0' version='1.1' release='3.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='systemtap-runtime' type='yum'>
+                <Instance epoch='0' version='1.1' release='3.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='systemtap-sdt-devel' type='yum'>
+                <Instance epoch='0' version='1.1' release='3.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='systemtap-server' type='yum'>
+                <Instance epoch='0' version='1.1' release='3.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='systemtap-testsuite' type='yum'>
+                <Instance epoch='0' version='1.1' release='3.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='tcsh' type='yum'>
+                <Instance epoch='0' version='6.14' release='17.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='tdb-tools' type='yum'>
+                <Instance epoch='0' version='1.1.2' release='52.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='tetex' type='yum'>
+                <Instance epoch='0' version='3.0' release='33.8.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='tetex-afm' type='yum'>
+                <Instance epoch='0' version='3.0' release='33.8.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='tetex-doc' type='yum'>
+                <Instance epoch='0' version='3.0' release='33.8.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='tetex-dvips' type='yum'>
+                <Instance epoch='0' version='3.0' release='33.8.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='tetex-fonts' type='yum'>
+                <Instance epoch='0' version='3.0' release='33.8.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='tetex-latex' type='yum'>
+                <Instance epoch='0' version='3.0' release='33.8.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='tetex-xdvi' type='yum'>
+                <Instance epoch='0' version='3.0' release='33.8.el5_5.6' arch='i386'/>
+            </Package>
+            <Package name='thunderbird' type='yum'>
+                <Instance epoch='0' version='2.0.0.24' release='13.el5.centos' arch='i386'/>
+            </Package>
+            <Package name='tkinter' type='yum'>
+                <Instance epoch='0' version='2.4.3' release='27.el5_5.3' arch='i386'/>
+            </Package>
+            <Package name='tog-pegasus' type='yum'>
+                <Instance epoch='2' version='2.9.1' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='tog-pegasus-devel' type='yum'>
+                <Instance epoch='2' version='2.9.1' release='2.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='tomcat5' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-admin-webapps' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-common-lib' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-jasper' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-jasper-javadoc' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-jsp-2.0-api' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-jsp-2.0-api-javadoc' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-server-lib' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-servlet-2.4-api' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-servlet-2.4-api-javadoc' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='tomcat5-webapps' type='yum'>
+                <Instance epoch='0' version='5.5.23' release='0jpp.11.el5_5' arch='i386'/>
+            </Package>
+            <Package name='totem' type='yum'>
+                <Instance epoch='0' version='2.16.7' release='7.el5' arch='i386'/>
+            </Package>
+            <Package name='totem-devel' type='yum'>
+                <Instance epoch='0' version='2.16.7' release='7.el5' arch='i386'/>
+            </Package>
+            <Package name='totem-mozplugin' type='yum'>
+                <Instance epoch='0' version='2.16.7' release='7.el5' arch='i386'/>
+            </Package>
+            <Package name='tzdata' type='yum'>
+                <Instance epoch='0' version='2011b' release='1.el5' arch='i386'/>
+            </Package>
+            <Package name='tzdata-java' type='yum'>
+                <Instance epoch='0' version='2011b' release='1.el5' arch='i386'/>
+            </Package>
+            <Package name='udev' type='yum'>
+                <Instance epoch='0' version='095' release='14.21.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='uuidd' type='yum'>
+                <Instance epoch='0' version='1.39' release='23.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='vnc' type='yum'>
+                <Instance epoch='0' version='4.1.2' release='14.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='vnc-server' type='yum'>
+                <Instance epoch='0' version='4.1.2' release='14.el5_5.4' arch='i386'/>
+            </Package>
+            <Package name='vsftpd' type='yum'>
+                <Instance epoch='0' version='2.0.5' release='16.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='w3m' type='yum'>
+                <Instance epoch='0' version='0.5.1' release='17.el5_5' arch='i386'/>
+            </Package>
+            <Package name='w3m-img' type='yum'>
+                <Instance epoch='0' version='0.5.1' release='17.el5_5' arch='i386'/>
+            </Package>
+            <Package name='wireshark' type='yum'>
+                <Instance epoch='0' version='1.0.15' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='wireshark-gnome' type='yum'>
+                <Instance epoch='0' version='1.0.15' release='1.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='xen' type='yum'>
+                <Instance epoch='0' version='3.0.3' release='105.el5_5.5' arch='i386'/>
+            </Package>
+            <Package name='xen-devel' type='yum'>
+                <Instance epoch='0' version='3.0.3' release='105.el5_5.5' arch='i386'/>
+            </Package>
+            <Package name='xen-libs' type='yum'>
+                <Instance epoch='0' version='3.0.3' release='105.el5_5.5' arch='i386'/>
+            </Package>
+            <Package name='xorg-x11-drv-ati' type='yum'>
+                <Instance epoch='0' version='6.6.3' release='3.27.el5_5.1' arch='i386'/>
+            </Package>
+            <Package name='xorg-x11-server-Xdmx' type='yum'>
+                <Instance epoch='0' version='1.1.1' release='48.76.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='xorg-x11-server-Xephyr' type='yum'>
+                <Instance epoch='0' version='1.1.1' release='48.76.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='xorg-x11-server-Xnest' type='yum'>
+                <Instance epoch='0' version='1.1.1' release='48.76.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='xorg-x11-server-Xorg' type='yum'>
+                <Instance epoch='0' version='1.1.1' release='48.76.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='xorg-x11-server-Xvfb' type='yum'>
+                <Instance epoch='0' version='1.1.1' release='48.76.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='xorg-x11-server-Xvnc-source' type='yum'>
+                <Instance epoch='0' version='1.1.1' release='48.76.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='xorg-x11-server-sdk' type='yum'>
+                <Instance epoch='0' version='1.1.1' release='48.76.el5_5.2' arch='i386'/>
+            </Package>
+            <Package name='xulrunner' type='yum'>
+                <Instance epoch='0' version='1.9.2.13' release='3.el5' arch='i386'/>
+            </Package>
+            <Package name='xulrunner-devel' type='yum'>
+                <Instance epoch='0' version='1.9.2.13' release='3.el5' arch='i386'/>
+            </Package>
+            <Package name='xulrunner-devel-unstable' type='yum'>
+                <Instance epoch='0' version='1.9.0.19' release='1.el5_5' arch='i386'/>
+            </Package>
+            <Package name='yelp' type='yum'>
+                <Instance epoch='0' version='2.16.0' release='26.el5' arch='i386'/>
+            </Package>
+        </Group>
+    </Group>
+</PackageList>

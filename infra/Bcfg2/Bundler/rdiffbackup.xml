@@ -1,0 +1,6 @@
+<Bundle name='rdiffbackup' revision='$Id: rdiffbackup.xml 342 2010-12-20 20:48:29Z dave $'>
+    <Group name='centos5'>
+        <Package name='rdiff-backup'/>
+    </Group>
+</Bundle>
+

@@ -1,0 +1,30 @@
+#!/bin/sh 
+# BCFG2-IG
+# $Id: mirror-centos 43 2010-08-19 14:17:21Z dave $
+#/usr/bin/find -L /var/www/centos/5/ -name repodata -exec rm -rf {} \;
+/bin/sleep 5
+/usr/local/bin/mirror --base=/home
+/bin/sleep 5
+#/bin/rm -rf /var/www/centos/5/os/i386/repodata
+#sleep 5
+#/usr/bin/createrepo /var/www/centos/5/updates/i386/
+#sleep 5
+#rm -rf /var/www/dag/redhat/el5/en/i386/repodata
+#cd /var/www/dag/redhat/el5/en/i386/ && \
+#/usr/bin/createrepo -v . && \
+#sleep 5
+#/usr/bin/createrepo /var/www/centos/5/centosplus/i386
+#sleep 5
+#/usr/bin/createrepo /var/www/centos/5/os/i386/
+#sleep 5
+#/usr/bin/createrepo /var/www/centos/5/extras/i386
+#sleep 5
+cd /var/www/csbe/ && \
+/usr/bin/createrepo -v .
+#if ls /var/www/centos/5/os/i386/repodata/repomd.xml >/dev/null 2>&1 ;then
+#logger $0 "reposmd.xml deja la"
+#else
+#logger $0 "reposmd.xml n est pas la"
+#logger $0 "creation de reposmd.xml"
+#/usr/bin/createrepo /var/www/centos/5/os/i386/
+#fi

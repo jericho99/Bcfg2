@@ -1,0 +1,3 @@
+<Rules priority='0'>
+    <Action timing='post' name='removesendmail' command='/etc/init.d/sendmail stop;chkconfig sendmail off; update-alternatives --set mta /usr/sbin/sendmail.ssmtp' when='modified' status='check'/>
+</Rules>

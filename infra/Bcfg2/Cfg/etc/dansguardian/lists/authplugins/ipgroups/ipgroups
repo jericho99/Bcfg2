@@ -1,0 +1,40 @@
+# BCFG2-CSBE $Id: ipgroups 794 2009-09-30 15:15:26Z dave $
+# Local modifications WILL be lost
+
+# IP-Group list
+# Used by the IP-based auth plugin to assign IP addresses to filter groups.
+#
+# Examples:
+# Straight IP matching:
+#192.168.0.1 = filter1
+# Subnet matching:
+#192.168.1.0/255.255.255.0 = filter1
+# Range matching:
+#192.168.1.0-192.168.1.255 = filter1
+
+#poste PED pozer
+10.82.60.0/255.255.255.0=filter2
+
+10.82.61.0/255.255.255.0=filter2
+10.82.62.0/255.255.255.0=filter2
+#poste ADM pozer
+10.82.40.0/255.255.255.0=filter2
+#SRV ICA
+#ICA05
+172.30.10.35=filter2
+#ICA06
+172.30.10.36=filter2
+#ICA11
+172.30.10.44=filter2
+#ICA13
+172.30.10.39=filter2
+
+#poste PED PSF
+10.18.60.0/255.255.255.0=filter3
+10.18.61.0/255.255.255.0=filter3
+10.18.62.0/255.255.255.0=filter3
+
+#poste PED Trinite
+10.77.60.0/255.255.255.0=filter4
+10.77.61.0/255.255.255.0=filter4
+10.77.62.0/255.255.255.0=filter4

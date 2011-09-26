@@ -1,0 +1,35 @@
+<Groups revision="$Id: base-virt.xml 179 2010-09-22 14:30:21Z dave $">
+
+    <!-- Virtualiation et paquets de base -->
+
+    
+    <Group name='centos-minimal'>
+        <Group name='yum'/>
+        <Group name='base'/>
+        <Group name='bcfg2'/>
+        <Group name='bcfg2-info'/>
+        <Group name='bashrc'/>
+        <Group name='cron.daily'/>
+        <Group name='sudoers'/> 
+        <Group name='nagios-nrpe'/> 
+        <Group name='logrotate'/>
+        <Group name='crontab'/>
+        <Group name='ntp'/>
+        <Group name='logaricheck'/> 
+    </Group>
+
+    <Group name='centos-minimal2'>
+        <Group name='yum'/>
+        <Group name='base'/>
+        <Group name='bcfg2'/>
+        <Group name='bcfg2-info'/>
+        <Group name='bashrc'/>
+        <Group name='cron.daily'/>
+        <Group name='sudoers'/>
+        <Group name='logrotate'/>
+        <Group name='crontab'/>
+        <Group name='ntp'/>
+    </Group>
+
+
+</Groups>

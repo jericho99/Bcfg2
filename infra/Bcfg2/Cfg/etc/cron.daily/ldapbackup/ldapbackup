@@ -1,0 +1,12 @@
+#!/bin/sh
+# BCFG2-IG
+# Local modifications WILL be lost
+# $Id: ldapbackup 43 2010-08-19 14:17:21Z dave $
+date=`date +%Y-%m-%0e`
+/etc/init.d/autofs restart
+ls /backupldap > /dev/null 2>&1
+sleep 5
+/usr/sbin/slapcat -l /backupldap/ldap-$date.ldif
+/usr/sbin/slapd_db_archive -h /var/lib/ldap/ -d
+sleep 10
+/etc/init.d/ldap restart

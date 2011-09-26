@@ -1,0 +1,7 @@
+<Bundle name='php-mcrypt' revision='$Id: php-mcrypt.xml 342 2010-12-20 20:48:29Z dave $'>
+    <Group name='centos'>
+        <Package name='php-mcrypt'/>
+        <Package name='libmcrypt'/>
+    </Group>
+</Bundle>
+

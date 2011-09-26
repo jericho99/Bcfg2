@@ -1,0 +1,93 @@
+#!/usr/bin/env python
+# encoding:UTF-8
+
+import django
+import os,sys
+import hashlib
+try:
+    import Bcfg2.Server.Reports.settings
+except Exception, e:
+    sys.stderr.write("Failed to load configuration settings. %s\n" % e)
+    sys.exit(1)
+
+project_directory = os.path.dirname(Bcfg2.Server.Reports.settings.__file__)
+project_name = os.path.basename(project_directory)
+sys.path.append(os.path.join(project_directory, '..'))
+project_module = __import__(project_name, '', '', [''])
+sys.path.pop()
+# Set DJANGO_SETTINGS_MODULE appropriately.
+os.environ['DJANGO_SETTINGS_MODULE'] = '%s.settings' % project_name
+
+from Bcfg2.Server.Reports.reports.models import Client, Interaction, Entries, Entries_interactions, Performance, Reason, Ping, TYPE_CHOICES, InternalDatabaseVersion
+from Bcfg2.Server.Reports.updatefix import update_database
+import re
+
+size_limit = re.compile("\-N[0-9]*")
+if __name__ == '__main__':
+    from sys import argv
+    LossLess = True
+    Verbose = False
+    Quiet = False
+    sizeLimit = 10000
+    for arg in argv:
+        if arg == "-D":
+            LossLess = False
+        elif size_limit.match(arg):
+            sizeLimit = int(arg[2:])
+        elif arg == "-V":
+            Verbose = True
+        elif arg == "-q":
+            Quiet = True
+        elif arg == "-help" or arg == "--help" or arg == "-h":
+            print """
+Args    Description
+-D  Bring up loss compression
+-N[int] Give a limit of [int] number of entries to be analysed
+-h  this help
+-V  Verbose
+-q  Quiet
+            """
+            sys.exit(0)
+    DiffCompressCount = 0
+    if not LossLess:
+        # drop diffs
+        count = 0
+        if Verbose:
+            print "compressing reason diff"
+        for r in Reason.objects.all().exclude(current_diff="").exclude(current_diff="compression lost")[:sizeLimit]:
+            r.current_diff = "compression lost"
+            r.save()
+            count = count + 1
+        DiffCompressCount = count
+    count = 0
+    ids_hash_keep = {}
+    for reason in Reason.objects.all()[:sizeLimit]:
+        key = hashlib.sha512()
+        key.update("owner:%s, current_owner:%s\n" % (reason.owner, reason.current_owner))
+        key.update("group:%s, current_group:%s\n" % (reason.group, reason.current_group))
+        key.update("perms:%s, current_perms:%s\n" % (reason.perms, reason.current_perms))
+        key.update("status:%s, current_status:%s\n" % (reason.status, reason.current_status))
+        key.update("to:%s, current_to:%s\n" % (reason.to, reason.current_to))
+        key.update("verison:%s, current_version:%s\n" % (reason.version, reason.current_version))
+        key.update("current_exists:%s\n" % reason.current_exists)
+        key.update("current_diff======\n")
+        key.update(reason.current_diff)
+        
+        hash_key = key.hexdigest()
+        acceptable = True
+        if ids_hash_keep.get(hash_key, False):
+            for e in Entries_interactions.objects.filter(reason__id=reason.id):
+                e.reason = ids_hash_keep[hash_key]
+                e.save()
+            if Verbose:
+                print "found reason id", reason.id, "is same as", ids_hash_keep[hash_key].id
+            reason.delete()
+        else:
+            ids_hash_keep[hash_key] = reason
+            if Verbose:
+                print "reason id", reason.id, "has hash_key", hash_key
+    if not Quiet:
+        print "There is",len(ids_hash_keep),"unique entries in the reason model"
+        print "Compressed with lost", DiffCompressCount, "entries"
+
+

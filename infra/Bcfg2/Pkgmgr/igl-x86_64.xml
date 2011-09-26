@@ -1,0 +1,207 @@
+<PackageList priority='8' type='yum'>
+    <Group name='centos5'>
+        <Group name='x86_64'>
+            <Package name='IGL-release' type='yum'>
+                <Instance epoch='0' version='0.1.1' release='1' arch='noarch'/>
+            </Package>
+            <Package name='logaricheck' type='yum'>
+                <Instance epoch='0' version='0' release='5.3.1' arch='noarch'/>
+            </Package>
+            <Package name='php52' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-bcmath' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-cli' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-common' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-dba' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-debuginfo' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-devel' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-gd' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-imap' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-ldap' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-mbstring' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-mcrypt' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-mhash' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-mssql' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-mysql' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-ncurses' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-odbc' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-pdo' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-pear' type='yum'>
+                <Instance epoch='1' version='1.8.1' release='2.igl.el5' arch='noarch'/>
+            </Package>
+            <Package name='php52-pecl-apc' type='yum'>
+                <Instance epoch='0' version='3.0.19' release='5.ius.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-pecl-apc-debuginfo' type='yum'>
+                <Instance epoch='0' version='3.0.19' release='5.ius.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-pecl-memcache' type='yum'>
+                <Instance epoch='0' version='2.2.5' release='3.ius.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-pecl-memcache-debuginfo' type='yum'>
+                <Instance epoch='0' version='2.2.5' release='3.ius.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-pgsql' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-psa-compat' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-snmp' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-soap' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-tidy' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-xml' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php52-xmlrpc' type='yum'>
+                <Instance epoch='0' version='5.2.14' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-bcmath' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-cli' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-common' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-dba' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-debuginfo' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-devel' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-embedded' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-enchant' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-gd' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-imap' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-intl' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-ldap' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-mbstring' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-mcrypt' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-mssql' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-mysql' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-odbc' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-pdo' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-pear' type='yum'>
+                <Instance epoch='1' version='1.8.1' release='4.igl.el5' arch='noarch'/>
+            </Package>
+            <Package name='php53-pecl-apc' type='yum'>
+                <Instance epoch='0' version='3.1.4' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-pecl-apc-debuginfo' type='yum'>
+                <Instance epoch='0' version='3.1.4' release='1.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-pecl-memcache' type='yum'>
+                <Instance epoch='0' version='2.2.5' release='2.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-pecl-memcache-debuginfo' type='yum'>
+                <Instance epoch='0' version='2.2.5' release='2.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-pgsql' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-process' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-psa-compat' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-pspell' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-recode' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-snmp' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-soap' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-tidy' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-xml' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-xmlrpc' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+            <Package name='php53-zts' type='yum'>
+                <Instance epoch='0' version='5.3.3' release='4.igl.el5' arch='x86_64'/>
+            </Package>
+        </Group>
+    </Group>
+</PackageList>

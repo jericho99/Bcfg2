@@ -1,0 +1,25 @@
+# This file can be used to idcard
+#
+# Requires files : core.schema, cosine.schema, inetorgperson.schema,
+
+attributetype ( 1.3.6.1.4.1.4203.666.100.176 NAME 'cardid'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15)
+
+attributetype ( 1.3.6.1.4.1.4203.666.100.177 NAME 'cardpin'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15)
+
+attributetype ( 1.3.6.1.4.1.4203.666.100.178 NAME 'carddoor' 
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15)
+
+
+objectclass     ( 1.3.6.1.4.1.4203.666.100.1 NAME 'idcard'  
+       SUP top AUXILIARY 
+       DESC 'card user'
+       MAY  ( cardid $ cardpin $ carddoor ))
+

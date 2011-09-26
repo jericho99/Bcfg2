@@ -1,0 +1,15 @@
+<Bundle name='yum' revision='$Id: yum.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos5'>
+        <Path name='/etc/yum.repos.d/CentOS-Base.repo'/> 
+        <Path name='/etc/yum.repos.d/igl.repo'/> 
+        <Path name='/etc/yum/pluginconf.d/fastestmirror.conf'/>
+        <Path name='/etc/yum/yum-updatesd.conf'/>
+        <Package name='yum-updatesd'/>
+        <Package name='yum-fastestmirror'/>
+        <Package name='yum-priorities'/>
+        <Service name='messagebus'/>
+        <Service name='yum-updatesd'/>
+	<Action name='iglkey'/>
+</Group>
+</Bundle>
+

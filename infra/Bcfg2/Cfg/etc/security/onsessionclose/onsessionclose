@@ -1,0 +1,16 @@
+#!/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+MYUSER=`id -un $1`
+
+if [ "$MYUSER" = "root" ]; then
+  logger $0 "Error, User should not be root"
+  exit
+fi
+
+
+
+logger $0 "Removing $MYUSER from apache group if necessary"
+[ -n "$(/usr/bin/groups $MYUSER | grep apache)" ] && /usr/bin/gpasswd -d $MYUSER apache
+
+true

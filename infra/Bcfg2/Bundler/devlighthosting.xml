@@ -1,0 +1,37 @@
+<Bundle name="devlighthosting.xml" revision="$Id: devlighthosting.xml 564 2011-03-11 13:15:55Z dave $">
+  <Group name="centos5">
+    <Path name="/etc/lighttpd/vhosts.d/asssca.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/asssl.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/crdp.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/cslf.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devcsss.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devdsp.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devinfoglobe.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devmamrot.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devoaq.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devopq.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devoqmj.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devplanidesign.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devrevolution.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/devsct.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/electromike.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/fgti.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/hmc.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/igerp.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/linkvalidator.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/mels.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/pj-mdeie-alfresco.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/site1.udem.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/stagefringale.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/twiki.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/udem.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/villemontreal.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/phplist.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/rt.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/clf2.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/infogloberecrute.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/piv.conf"/>
+    <Path name="/etc/lighttpd/vhosts.d/extranetasssl.conf"/>
+    <Action name="lighttpd-reload"/>
+  </Group>
+</Bundle>

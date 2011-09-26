@@ -1,0 +1,28 @@
+<Clients version="1.0" revision="$Id: clients.xml 588 2011-03-21 15:04:50Z dave $">
+   <Client profile="selma" name="selma.int.infoglobe.ca" uuid="b6bb12d9-a9c6-4602-98c5-fedfbd6d49dd" address="10.10.0.1"/>
+   <Client profile="patty" name="patty.int.infoglobe.ca" address="10.10.0.3"/>
+   <Client profile="websrv" name="websrv.int.infoglobe.ca" address="10.10.0.7"/>
+   <Client profile="hercule" name="hercule.int.infoglobe.ca" address="10.10.0.51"/>
+   <Client profile="davetest" name="davetest.int.infoglobe.ca" address="10.10.0.60"/>
+   <Client profile="srv-backup" name="srv-backup.int.infoglobe.ca" address="10.10.0.106"/>
+   <Client profile="bcfg2ig" name="bcfg2ig.int.infoglobe.ca" address="10.10.0.130"/>
+   <Client profile="vmprod1" name="vmprod1.int.infoglobe.ca" address="10.10.0.111"/>
+   <Client profile="vmprod2" name="vmprod2.int.infoglobe.ca" address="10.10.0.104"/>
+   <Client profile="vmdev1" name="vmdev1.int.infoglobe.ca" address="10.10.0.108"/>
+   <Client profile="vmdev2" name="vmdev2.int.infoglobe.ca" address="10.10.0.108"/>
+   <Client profile="vmdmz" name="vmdmz.int.infoglobe.ca" address="10.10.200.10"/>
+   <Client profile="vmsrv" name="vmsrv.int.infoglobe.ca" address="10.10.0.105"/>
+   <Client profile="zeus" name="zeus.int.infoglobe.ca" address="10.10.0.28"/>
+   <Client profile="quimby" name="quimby.int.infoglobe.ca" address="10.10.0.39"/>
+   <Client profile="sshsrv" name="sshsrv.int.infoglobe.ca" address="10.10.200.12"/>
+   <Client profile="ldapslave" name="ldapslave.int.infoglobe.ca" address="10.10.200.15"/>
+<!--   <Client profile="websrvtypo3dev-php53" name="webdev.int.infoglobe.ca" address="10.10.0.32"/>
+   <Client profile="websrvtypo3dev-php52" name="webdev2.int.infoglobe.ca" address="10.10.0.52"/>-->
+   <Client profile="websrvtypo3dev-php52" name="webdev3.int.infoglobe.ca" address="10.10.0.62"/>
+   <Client profile="websrv-java" name="webdev-java.int.infoglobe.ca" address="10.10.0.61"/>
+   <Client profile="websrvtypo3dev-php52" name="ltsp-web-srv2.int.infoglobe.ca" address="10.10.0.131"/>
+   <Client profile="oldsrvdev" name="srvdev.infoglobe.ca" address="208.78.98.227"/>
+   <Client profile="srvweb" name="ns2.infoglobe.ca" address="67.207.145.62"/>
+   <Client profile="vmprod3" name="vmprod3.int.infoglobe.ca" address="10.10.0.159"/>
+</Clients>
+

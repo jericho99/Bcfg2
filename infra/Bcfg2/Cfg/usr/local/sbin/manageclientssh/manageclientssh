@@ -1,0 +1,95 @@
+#!/bin/bash
+
+SSH_GROUP=clientssh
+PROG_PATH=/usr/local/sbin/manageclientssh
+SSH_SHELL_PATH=/usr/local/bin/keep_ssh_alive
+LOCAL_SHELL_PATH=/bin/bash
+SSH_UID_MIN=5000
+SSH_UID_MAX=10000
+LOCAL_UID_MIN=500
+LOCAL_UID_MAX=1000
+REMOTE_ADDR=sshsrv.infoglobe.ca
+REMOTE_PORT=443
+
+if [ "$1" == add -a $# -eq 2 ]; then
+	useradd -M -K UID_MIN=$SSH_UID_MIN -K UID_MAX=$SSH_UID_MAX -g $SSH_GROUP -s $SSH_SHELL_PATH $2
+	mkdir /home/$2
+	chmod 700 /home/$2
+	chown $2:$SSH_GROUP /home/$2
+
+elif [ "$1" == del -a $# -eq 2 ]; then
+	userdel $2
+	rm -rf /home/$2
+
+elif [ "$1" == on -a $# -eq 2 ]; then
+	passwd $2
+
+elif [ "$1" == off -a $# -eq 2 ]; then
+	passwd -l $2
+
+elif [ "$1" == port -a $# -eq 1 ]; then
+	netstat -alntp|grep "127.0.0.1:9"|awk '{print $4}';
+
+elif [ "$1" == user -a $# -eq 1 ]; then
+	cat /etc/passwd | awk -v SSH_UID_MIN=$SSH_UID_MIN -v SSH_UID_MAX=$SSH_UID_MAX -F \: '$3>=SSH_UID_MIN && $3<SSH_UID_MAX{print $1}'
+
+elif [ "$1" == cron -a $# -eq 1 ]; then
+	for i in `cat /etc/passwd | awk -v SSH_UID_MIN=$SSH_UID_MIN -v SSH_UID_MAX=$SSH_UID_MAX -F \: '$3>=SSH_UID_MIN && $3<SSH_UID_MAX{print $1}'`;
+	do
+        	usermod -L -s $SSH_SHELL_PATH $i
+	done
+
+elif [ "$1" == local -a $# -eq 2 ]; then
+	useradd -m -K UID_MIN=$LOCAL_UID_MIN -K UID_MAX=$LOCAL_UID_MAX -g $SSH_GROUP -s $LOCAL_SHELL_PATH $2
+	#echo "$2 ALL=(root) $PROG_PATH" >> /etc/sudoers
+	usermod -a -G wheel $2
+	echo "echo \"\"" >> /home/$2/.bashrc
+	echo "echo \"*** Utilsez le script 'sudo $PROG_PATH help' pour de l'aide ***\"" >> /home/$2/.bashrc
+	passwd $2
+
+elif [ "$1" == doc -a $# -eq 1 ]; then
+	echo "
+	1 - Connectez vous au serveur SSH d'Infoglobe
+	2 - Activez ou créez le compte pour le client sur le serveur SSH d'Infoglobe (ex : $PROG_PATH add user pour créer, $PROG_PATH on user pour activer)
+	3 - Exécutez la commande '$PROG_PATH port' pour voir les ports utilisés (vous devez utiliser des ports plus haut que 9000)
+	4 - Choissisez le premier port libre (ex : 9001)
+	5 - Dites au client d'ouvrir un terminal
+	6 - Dites au client de démarrer un serveur SSH s'il n'en a pas déjà un (ex : /etc/init.d/sshd start)
+	7 - Demandez au client les informations nécessaires pour l'intervention (utilisateur pour se connecter, mot de passe pour l'utilisateur, mot de passe root, adresse IP, port du serveur SSH, etc)
+	8 - Dites au client d'entrer la commande suivante : ssh user@$REMOTE_ADDR -p $REMOTE_PORT -R 9001:localhost:22
+	9 - Voici l'explication de la commande précédente : 
+		user : Le nom d'utilisateur du client sur le serveur d'Infoglobe
+		mot de passe : Le mot de passe du client sur le serveur d'Infoglobe
+		9001 : Le port choisit à l'étape 3
+		22 : Le port qui correspond au serveur SSH du client
+	10 - Dites au client de laisser le terminal ouvert
+	11 - Entrez la commande suivante pour vous connecter au serveur du client : ssh user@localhost -p 9001
+	12 - Voici l'explication de la commande précédente :
+		user : Le nom d'utilisateur que le client vous a fourni à l'étape 6
+		mot de passe : Le mot de passe que le client vous a fourni à l'étape 6
+		9001 : Le port choisit à l'étape 3
+	13 - Effectuez votre intervention sur le serveur du client comme si vous étiez sur place
+	14 - Une fois terminé, déconnectez vous du serveur du client et dites au client de faire CTRL-C dans son terminal, ceci terminera nos accès à son serveur
+	15 - Dites au client de fermer son serveur SSH s'il n'en a pas besoin en tout temps
+	16 - Désactivez le compte du client sur le serveur SSH d'Infoglobe (ex : $PROG_PATH off user)
+	17 - Mentionnez au client ce que vous avez fait, que les accès sont maintenant coupé, etc
+	18 - Déconnectez vous du serveur SSH d'Infoglobe
+
+	Troubleshooting :
+		- Assurez vous que les accès que le client vous donne sont valide (ex : s'il vous donne un compte root, assurez vous que root a le droit de se connecter par SSH, etc)
+	"
+
+else
+        echo "Usage: $PROG_PATH
+                add username : Ajouter un utilisateur distant, accompte désactivé par défaut
+                del username : Effacer un utilisateur distant
+		on username : Active un utilisateur distant à la connexion par ssh
+		off username : Désactive un utilisateur distant à la connexion par ssh
+		port : Liste les ports utilisés pour les connexions distantes (9000 et +)
+		user : Liste les utilisateurs distant
+		cron : Désactive tout les accomptes pour les utilisateurs distant
+		local username : Création d'un utilisateur local pour utiliser le système
+		doc : Affiche la documentation pour utiliser le programme
+		help : Affiche cette aide"
+fi
+

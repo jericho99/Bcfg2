@@ -1,0 +1,326 @@
+<!--
+# BCFG2-CSBE $Id: template.html 765 2009-09-29 13:23:51Z dave $
+# Local modifications WILL be lost
+
+The available variables are as follows:
+- URL- gives the URL the user was trying to get to.
+- REASONGIVEN- gives the nice reason (i.e. not quoting the banned phrase).
+- REASONLOGGED- gives the reason that gets logged including full details.
+- USER- gives the username if known.
+- IP- gives the originating IP.
+
+-->
+
+<html>
+<head>
+<title>Site web non autorisé - Commission scolaire de la Beauce-Etchemin</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+			<style>
+				A:link{color : #800000;font : 13px Arial;}
+				A:visited{color : #800000;font : 13px Arial;}
+				A:hover{color : #336699;font : 13px Arial;}
+				body{margin-top: 0;margin-right: 0;margin-left: 0;font : 10px Arial, Sans, Helvetica, Verdana;}
+				.Texte{font : 13px Arial, Sans, Helvetica, Verdana;}
+				.reponse{color : #000000;font : 12px Arial;}
+				.legende{color : #000000;text-align : left;font : 11px Arial, Sans, Helvetica, Verdana;}
+				.details{color : #000000;font : 12px Arial, Sans, Helvetica, Verdana;}
+				.lienC{color : #FFFFFF;font : 9px Arial, Sans, Helvetica, Verdana;}
+				.titre{color : #000000;font : bold 13px Arial;text-align : center;vertical-align : middle;}
+				.titreJour:link{color : #000000;font : bold 14px Arial;text-align : left;vertical-align : middle;text-decoration: none;}
+				.titreJour:visited{color : #000000;font : bold 14px Arial;text-align : left;vertical-align : middle;text-decoration: none;}
+				.titreJour:hover{color : #000000;font : bold 14px Arial;text-align : left;vertical-align : middle;text-decoration: none;}
+				.numquestion{color : #000000;font : bold 13px Arial;text-align : left;vertical-align : middle;}
+				.grandTitre{color : #477599;font : Bold Italic 26px Arial;text-align : center;vertical-align : middle;}
+				.moyenTitre{color : #477599;font : Bold 14px Arial;text-align : center;vertical-align : middle;}
+				.EnteteTable{background-color : #477599;color : #FFFFFF;font : bold 12px Arial;text-align : center;vertical-align : middle;}
+				.EnteteTable2{background-color : #E59343;color : #FFFFFF;font : bold 12px Arial;text-align : center;vertical-align : middle;}
+				.EnteteCouleur{background-color : #477599;color : #FFFFFF;font : bold 14px Arial;vertical-align : middle;}
+				.Explication{background-color : #FFCC99;color : #000000;font : bold 14px Arial;text-align : Left;vertical-align : middle;}
+				.Formulaire{color : #000000;font : 14px Arial;text-align : left;vertical-align : top;}
+				.FormulaireCentre{color : #000000;font : 14px Arial;text-align : center;vertical-align : top;}
+				.FormT{color : #000000;font : bold 12px Arial;text-align : right;}
+				.Barre_Etat{color : #000000;font : 15px Arial;vertical-align : top;BORDER-BOTTOM: #E59343 2px solid;}
+				.mpv{color : #000000;font : 12px Arial, Sans, Helvetica, Verdana;BORDER-BOTTOM: #477599 2px solid;BORDER-TOP: #477599 2px solid;BORDER-LEFT: #477599 2px solid;BORDER-RIGHT: #477599 2px solid;}
+			</style>
+			<script language="JavaScript">
+			function removeelements(){
+
+			var remove_el=document.all.remove
+
+			if (remove_el!=''&&remove_el.length==null)
+			remove_el.style.display='none'
+			else{
+			for (i=0;i<remove_el.length;i++)
+			remove_el[i].style.display='none'
+			}
+			document.body.style.background=''
+			}
+			function revertback(){
+			setTimeout("window.location.reload()",50)
+			}
+			window.onbeforeprint=removeelements
+			window.onafterprint=revertback
+
+			</script>
+			<script language="JavaScript">
+function DateAndTime()
+{
+				Stamp = new Date();
+				strM = new String;
+				var month = (Stamp.getMonth() + 1);
+				var mois = new String;
+
+				switch(month)
+				{
+					case 1 :
+						mois = 'janvier';
+						break;
+					case 2 :
+						mois = 'février';
+						break;
+					case 3 :
+						mois = 'mars';
+						break;
+					case 4 :
+						mois = 'avril';
+						break;
+					case 5 :
+						mois = 'mai';
+						break;
+					case 6 :
+						mois = 'juin';
+						break;
+					case 7 :
+						mois = 'juillet';
+						break;
+					case 8 :
+						mois = 'août';
+						break;
+					case 9 :
+						mois = 'septembre';
+						break;
+					case 10 :
+						mois = 'octobre';
+						break;
+					case 11 :
+						mois = 'novembre';
+						break;
+					case 12 :
+						mois = 'décembre';
+						break;
+				}
+
+				strM = Stamp.getDate()+ "&nbsp;" + mois + "&nbsp;"+Stamp.getYear();
+				var Hours;
+				var Mins;
+				Hours = Stamp.getHours();
+				if (Hours == 0) {
+				Hours = 12;
+				}
+				Mins = Stamp.getMinutes();
+				if (Mins < 10) {
+				Mins = "0" + Mins;
+				}
+				strM = strM + " " + Hours + ":" + Mins + '</B>';
+				return strM;
+}
+</script>
+<script language="JavaScript">
+function valideFormulaire()
+{
+
+	var vValide = true;
+	var strMessage = "";
+
+	var myerror = document.frm_dem.error.value;
+	var nom = document.frm_dem.name.value;
+	var courriel = document.frm_dem.email.value.toLowerCase();
+
+	if(myerror.length <= 3)
+	{
+		strMessage = "Vous devez spécifier une raison à votre demande!";
+		vValide = false;
+	}
+
+	if(valideAdresse(courriel))
+	{
+		strMessage = "Vous devez indiquer votre code de courriel et non votre courriel complet !";
+		vValide = false;
+	}
+
+	if(nom.length < 3)
+	{
+		strMessage = "Vous devez spécifier votre nom !";
+		vValide = false;
+	}
+
+	if(vValide)
+	{
+		return true;
+	}
+	else
+	{
+		alert(strMessage);
+		return false;
+	}
+}
+	function valideAdresse(adresse)
+	{
+		var taille = adresse.length;
+
+		var arob = adresse.lastIndexOf("@");
+		var login = adresse.substring(0,arob);
+
+		var pointfinal = adresse.lastIndexOf(".");
+		var extension = adresse.substring(pointfinal,taille);
+
+		var domaine = adresse.substring(arob+1,pointfinal);
+
+		if (pointfinal<=-1 || (extension.length != 3 && extension.length != 4) || domaine.length<=1 || login.length<=2)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+</script>
+</head>
+<body background="http://dansguardian.csbe.qc.ca:81/images/acc-bg.gif">
+	<form name="frm_dem" action="http://dansguardian.csbe.qc.ca:81/cgi-bin/dansguardian.pl" method="post" onsubmit="return valideFormulaire();">
+	<table width="743" align="center" bgcolor="#FFCC99" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td background="http://dansguardian.csbe.qc.ca:81/images/Titre.jpg" height="129" align="right" style="vertical-align: bottom" class="Details">&nbsp;&nbsp;<br><br></td>
+		</tr>
+		<tr>
+			<td valign="top" align="center" class="Details">
+				<br>
+					<table border="0" width="90%" align="center" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="Barre_Etat" align="center"><b>Description de l'accès tenté</b></td>
+						</tr>
+					</table>
+				<br>
+				<table border="0" summary="" width="90%">
+					<tr>
+						<td align="right" width="50%" class="Details"><b>Adresse IP du poste demandeur : </b></td>
+						<td align="left"  width="50%" class="Details">-IP-</td>
+					</tr>
+					<tr>
+						<td align="right" class="Details"><b>Nom du poste : </b></td>
+						<td align="left" class="Details">-USER-</td>
+					</tr>
+					<tr>
+						<td align="right" class="Details"><b>Date et Heure : </b></td>
+						<td align="left" class="Details"><script language="javascript">document.write(DateAndTime());</script></td>
+					</tr>
+					<tr>
+						<td align="right" class="Details"><b>Adresse concernée : </b></td>
+						<td align="left" class="Details">-URL-</td>
+					</tr>
+					<tr>
+						<td align="right" class="Details"><b></b></td>
+						<td align="left" class="Details">-REASONGIVEN-</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+		<tr>
+			<td height="40" align="left" class="Details">
+					<table border="0" width="90%" align="center" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="Barre_Etat" align="center">&nbsp;</td>
+						</tr>
+					</table>
+				<br>
+				<table border="0" width="90%" align="center" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="Details">
+								Eu égard aux besoins pédagogiques et administratifs, nous considérons
+								que ce site Internet n'est nullement pertinent, non compatible avec la mission
+								éducative de la CSBE et peut même être considéré comme contre-indiqué ou
+								qu'il s'agit d'un site pouvant compromettre le bon fonctionnement de vos
+								applications ou bien visant la cueillette d'information privée dans une
+								intention malveillante.
+								<br><br>
+								En effet, ce site Internet fait partie de l’une ou l’autre des catégories
+								<a href="http://dansguardian.csbe.qc.ca:81/dg_cat.html">suivantes</a> ou d’un des sites Internet bloqués spécifiquement pour d’autres raisons,
+								telle la préservation de la bande passante Internet commerciale
+								<i>(limitée et très dispendieuse)</i> que nous souhaitons réserver
+								prioritairement en réponse aux besoins pédagogiques et administratifs.
+								<br><br>
+								Nous vous remercions de votre compréhension et de votre collaboration.
+								</td>
+						</tr>
+					</table>
+					<br><br>
+				<table border="0" width="90%" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="Barre_Etat" align="center"><b>Advenant que ce site web doive être autorisé selon vous</b></td>
+					</tr>
+				</table>
+				<br>
+				<table border="0" width="90%" align="center" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="Details">
+								Le personnel de la commission scolaire, croyant que des raisons pédagogiques ou administratives justifiraient
+								un accès à ce site, est invité à faire valoir son argumentaire en complétant le formulaire ci-contre.
+								<br><br>
+									 <input name="DENIEDURL" value="-URL-" type="hidden">
+									 <input name="REASON" value="-REASONGIVEN-" type="hidden">
+									 <input name="FULLREASON" value="-REASONLOGGED-" type="hidden">
+									 <input name="IP" value="-IP-" type="hidden">
+									 <input name="USER" value="-USER-" type="hidden">
+									 <input name="TASK" value="email" type="hidden">
+											<table border="0" width="" align="center">
+												<tr>
+												  <td class="Details"><b>Nom complet : </b></td>
+												  <td><input name="name" size="40" type="text"></td>
+												</tr>
+												<tr>
+												  <td class="Details"><b>Code de Courriel : </b></td>
+												  <td class="Details"><input name="email" size="40" type="text"> exemple : prenom.nom</td>
+												</tr>
+												<tr>
+												  <td class="Details"><b>Mot de passe : </b></td>
+												  <td><input name="passwd" size="15" type="password"></td>
+												</tr>
+												<tr>
+												  <td class="Details"><b>Usage : </b></td>
+												  <td>
+												  		<select name="TYPE">
+												  			<option value="Pedagogique"> Pédagogique </option>
+												  			<option value="Administratif"> Administratif </option>
+												  		</select>
+												  </td>
+												</tr>
+												<tr>
+												  <td valign="top" class="Details"><b>Raison : </b></td>
+												  <td><textarea rows="4" name="error" cols="30"></textarea></td>
+												</tr>
+											</table>
+											</td>
+										  </tr>
+									  </table>
+									  <p align="center"><font face="verdana, arial, helvetica"><input
+									 value="Envoyer" name="B1" type="submit">&nbsp; <input value="Effacer"
+									 name="B2" type="reset"></font></p>
+				<br>
+				<table border="0" width="90%" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="Details">
+							<i>Note : Vos demande de révision et votre justification seront transmises à la personne désignée et, s’il y a lieu, l’accès à ce site Internet sera autorisé. </i>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td background="http://dansguardian.csbe.qc.ca:81/images/bas.jpg" height="35" align="right" style="vertical-align: bottom" class="Details">&nbsp;&nbsp;<br><br></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

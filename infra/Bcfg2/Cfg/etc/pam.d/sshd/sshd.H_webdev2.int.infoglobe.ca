@@ -1,0 +1,16 @@
+#%PAM-1.0
+# BCFG2-IG $Id: sshd 132 2010-08-30 13:54:00Z dave $
+# Local modifications WILL be lost 
+
+auth       include      system-auth
+account    required     pam_nologin.so
+account    include      system-auth
+password   include      system-auth
+session    optional     pam_keyinit.so force revoke
+session    include      system-auth
+session    required     pam_loginuid.so
+account    sufficient   pam_succeed_if.so uid < 100 quiet
+account    required     pam_succeed_if.so user ingroup service_shell quiet_success
+session    required     pam_mkhomedir.so skel=/etc/skel/ umask=0077
+session    optional     pam_script.so expose=1 runas=root
+

@@ -1,0 +1,7 @@
+<Bundle name='bcfg2' revision='$Id: bcfg2.xml 505 2011-02-17 16:07:12Z dave $'>
+    <Group name='centos5'>
+        <Path name='/etc/bcfg2.conf' owner="root" group="root" perms="0644"/>
+        <Path name='/etc/sysconfig/bcfg2'/>
+    </Group>
+</Bundle>
+

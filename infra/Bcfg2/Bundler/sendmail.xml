@@ -1,0 +1,7 @@
+<Bundle name='sendmail' revision='$Id: sendmail.xml 448 2011-01-25 14:55:34Z dave $'>
+    <Group name='centos'>
+        <Package name='sendmail'/>
+        <Service name='sendmail'/>
+    </Group>
+</Bundle>
+

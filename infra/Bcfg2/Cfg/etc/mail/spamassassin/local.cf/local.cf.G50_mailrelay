@@ -1,0 +1,78 @@
+# BCFG2-CSBE $Id: local.cf.G50_mailrelay 943 2010-01-07 19:07:06Z dave $
+# Local modifications WILL be lost
+
+# These values can be overridden by editing ~/.spamassassin/user_prefs.cf
+# (see spamassassin(1) for details)
+
+# These should be safe assumptions and allow for simple visual sifting
+# without risking lost emails.
+
+required_hits 5
+report_safe 0
+rewrite_header Subject [SPAM]
+auto_whitelist_path        /var/spool/spamassassin/auto-whitelist.db
+auto_whitelist_file_mode   0666
+#bayes path /var/spool/spamassassin/bayes.db
+#bayes file mode 0666
+#bayes use hapaxes 1
+#use razor2 1
+razor_timeout 10
+
+body POSTCARD_RULE   /\bpostcard\b/i
+score POSTCARD_RULE 5.0
+
+# whitelist
+ whitelist_from assistanceti@csbe.qc.ca
+ whitelist_from clefat@axion.ca
+ whitelist_from *@thconsulting.com
+ whitelist_from *@telus.com
+ whitelist_from *@radiopirate.com
+ whitelist_from *@redhat.com
+ whitelist_from *@altiris.com
+ whitelist_from *@spectraquest.com
+ whitelist_from *@cabinetbnp.com
+ whitelist_from *@csappalaches.qc.ca
+ whitelist_from *@acsq.qc.ca
+ whitelist_from  stages@fse.ulaval.ca
+ whitelist_from *@rtsq.qc.ca
+ whitelist_from *@designfrancart.com
+ whitelist_from *@theatreperiscope.qc.ca
+ whitelist_from *@Ville.Sainte-Marie.qc.ca
+ whitelist_from *@desjardins.com
+ whitelist_from dominic.loubier@globetrotter.net
+ whitelist_from *@sdm.qc.ca
+ whitelist_from transit@sdm.qc.ca
+ whitelist_from *@moulesindustriels.com
+ whitelist_from amistad@bellnet.ca
+ whitelist_from cl.ruel@sympatico.ca
+ whitelist_from cegepbceapp.qc.ca
+ whitelist_from amistad@bellnet.ca
+ whitelist_from cocotte19931@hotmail.com
+ whitelist_from recitmst.qc.ca
+ whitelist_from *@cjedrummond.qc.ca
+ whitelist_from *@fse.ulaval.ca
+ whitelist_from *@uqar.qc.ca
+ whitelist_from *@edusofad.com
+ whitelist_from *@jade2004@globetrotter.net
+ whitelist_from *@pq.org
+ whitelist_from *@mcc.gouv.qc.ca
+ whitelist_from *@gouv.qc.ca
+ whitelist_from *@meq.gouv.qc.ca
+ whitelist_from *@mels.gouv.qc.ca
+ whitelist_from *@jourdelaterre.org
+ whitelist_from *@fqrsc.gouv.qc.ca
+ whitelist_from *@mels.gouv.qc.ca
+ whitelist_from refad@sympatico.ca
+ whitelist_from *@symantec.com
+ whitelist_from marie_5339@hotmail.com
+ whitelist_from genevieve.beaudet@aquops.qc.ca
+ whitelist_from *@caa-quebec.qc.ca
+ whitelist_from daniela.pizzuto@geo-exchange.ca
+ whitelist_from sara.pelletier@protandem.com
+ whitelist_from hameld@cs-soreltracy.qc.ca
+ whitelist_from info@ecoleolympique.ca
+ whitelist_from *@Dell.com
+ whitelist_from ppo@sofad.qc.ca
+ whitelist_from *@sofad.qc.ca
+ whitelist_from *sviesolutions.com
+ whitelist_from *@courrier.sviesolutions.com 

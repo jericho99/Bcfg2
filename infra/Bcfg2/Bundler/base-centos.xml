@@ -1,0 +1,20 @@
+<Bundle name='base-centos' revision="$Id: base-centos.xml 557 2011-03-08 19:09:35Z dave $">
+
+    <!-- Packages de base commun a tous les clients Bcfg2 -->
+    <Group name='centos5'>
+        <Package name='elinks'/>
+        <Package name='nmap'/>
+        <Package name='ntp'/>
+        <Package name='iperf'/>
+        <Package name='tcpdump'/>
+        <Package name='rsync'/>
+        <Package name='screen'/>
+        <Package name='vim-common'/>
+        <Package name='vim-enhanced'/>
+<!--        <Package name='gcc'/> -->
+<!--        <Package name='flex'/> -->
+<!--        <Package name='bison'/> -->
+        <Package name='yum-utils'/>
+        <Package name='bind-utils'/>
+    </Group>
+</Bundle>

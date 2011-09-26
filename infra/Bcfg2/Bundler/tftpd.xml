@@ -1,0 +1,10 @@
+<Bundle name='tftpd' revision='$Id: tftpd.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos'>
+        <Path name='/etc/xinetd.d/tftp'/>
+        <Package name='tftp-server'/>
+        <Package name='xinetd'/>
+        <Service name='xinetd'/>
+    </Group>
+
+</Bundle>
+

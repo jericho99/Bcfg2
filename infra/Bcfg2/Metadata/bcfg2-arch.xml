@@ -1,0 +1,8 @@
+<Groups revision="$Id: bcfg2-arch.xml 20 2010-08-18 18:17:03Z dave $">
+  <Group name='i386' category='arch' />
+  <Group name='amd64' category='arch' />
+  <Group name='sparc' category='arch' />
+  <Group name='ppc' category='arch' />
+  <Group name='ppc64' category='arch' />
+  <Group name='ia64' category='arch' />
+</Groups>

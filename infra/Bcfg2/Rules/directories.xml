@@ -1,0 +1,11 @@
+<Rules priority='0'>
+
+<Directory name="/home/gestion" group="gestion" owner="gestion" perms="0700" />
+<Directory name="/home/gestion/.ssh" group="gestion" owner="gestion" perms="0700" />
+
+    <Group name='websrvext'>
+    <Directory name='/var/www/virtual' owner='root' group='root' perms='0755'/>
+    <Directory name='/etc/httpd/virtuals' owner='root' group='root' perms='0755'/>
+    </Group>
+</Rules>
+

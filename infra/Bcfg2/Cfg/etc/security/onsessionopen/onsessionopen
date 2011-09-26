@@ -1,0 +1,17 @@
+#!/bin/bash
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+
+MYUSER=`id -un $1`
+
+
+if [ "$MYUSER" = "root" ]; then
+  logger $0 "Error, User should not be root"
+  exit
+fi
+
+  logger $0 "Add $MYUSER to group apache"
+
+[ "$(groups $MYUSER | grep "service_svn")"x != "x"  ] && /usr/bin/gpasswd -a $MYUSER apache || true
+
+
+

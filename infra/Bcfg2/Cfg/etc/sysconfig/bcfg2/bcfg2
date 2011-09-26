@@ -1,0 +1,46 @@
+# BCFG2-IG
+# $Id: bcfg2 43 2010-08-19 14:17:21Z dave $
+# Local modifications WILL be lost
+
+#BCFG2_OPTIONS="-q -n"      # normal operations
+BCFG2_ENABLED=1       # start with /etc/init.d/bcfg2 start
+BCFG2_INIT=0          # don't run at system startup (else we will have a load
+BCFG2_CRON=hourly     # run every hour
+
+
+
+# Configuration options for bcfg2 client
+
+# BCFG2_OPTIONS:
+# Set the default options for Bcfg2 on startup
+#   Default: "-q"
+#BCFG2_OPTIONS="-q"
+
+# BCFG2_ENABLED:
+# Should Bcfg2 be run automatically by system scripts
+#
+# Uncomment the following line to enable any of the below selections
+#   Default: 0 (disable)
+#BCFG2_ENABLED=1
+
+# BCFG2_INIT:
+# Enable bcfg2 during system bootup
+#
+# Set value to 1 to enable
+#   Default: 0 (disable)
+#BCFG2_INIT=1
+
+# BCFG2_AGENT:
+# Run Bcfg2 in Agent mode at system bootup
+#
+# Set value to 1 to enable
+#   Default: 0 (disable)
+#BCFG2_AGENT=1
+
+# BCFG2_CRON:
+# Set the frequency of cron runs.
+#
+# Can be set to off, hourly, daily or both
+#    Default: off
+#BCFG2_CRON=off
+

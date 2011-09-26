@@ -1,0 +1,15 @@
+<Groups revision="$Id: bcfg2-os.xml 50 2010-08-19 15:14:44Z dave $">
+ <Group name='centos5'>
+      <Group name='centos'/>
+   </Group>
+
+   <Group name='ubuntu' category='os'/>
+   <Group name='debian' category='os'/>
+   <Group name='freebsd' category='os'/>
+   <Group name='gentoo' category='os'/>
+   <Group name='centos' category='os'/>
+   <Group name='suse' category='os'/>
+   <Group name='mandrake' category='os'/>
+   <Group name='solaris' category='os'/>
+</Groups>
+

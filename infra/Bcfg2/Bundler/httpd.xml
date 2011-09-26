@@ -1,0 +1,9 @@
+<Bundle name='httpd' revision='$Id: httpd.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos5'>
+        <Package name='httpd'/>
+        <Package name='mod_ssl'/>
+        <Service name='httpd'/>
+        <Path name='/etc/httpd/conf/httpd.conf'/>
+    </Group>
+</Bundle>
+

@@ -1,0 +1,5 @@
+# BCFG2-IG
+# $Id: postgrey 43 2010-08-19 14:17:21Z dave $
+# Local modifications WILL be lost  
+OPTIONS="--unix=/var/spool/postfix/postgrey/socket --delay=60"
+

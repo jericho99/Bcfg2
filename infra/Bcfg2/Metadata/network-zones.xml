@@ -1,0 +1,9 @@
+<Groups revision='$Id: network-zones.xml 377 2011-01-05 14:52:33Z dave $'>
+
+    <!-- Zones reseau -->
+
+    <Group name='LAN' category='network-zone'/>  <!-- 10.10.0.0/23 -->
+    <Group name='DMZ' category='network-zone'/>  <!-- 10.10.200.0/24 -->
+    <Group name='WAN' category='network-zone'/>  <!-- WEB -->
+
+</Groups>

@@ -1,0 +1,20 @@
+#!/bin/sh
+# BCFG2-IG $Id: ldap.conf 128 2010-08-26 19:44:21Z dave $
+# Local modifications WILL be lost 
+dir="/var/www/svn/web"
+if [[ $1 =~ .*../.* ]]
+then
+   echo "not creating .......\n"
+else
+if [ ! -d "$dir/$1" ]; then
+svnadmin create $dir/$1
+svn -m"layout" mkdir file://$dir/$1/trunk
+svn -m"layout" mkdir file://$dir/$1/tags
+svn -m"layout" mkdir file://$dir/$1/branches 
+chown -R apache:service_svn $dir/$1
+find $dir/$1/ -type d -exec chmod 2774 \{} \;
+find $dir/$1/ -type f -exec chmod 664 \{} \;
+else
+echo "already there"
+fi
+fi

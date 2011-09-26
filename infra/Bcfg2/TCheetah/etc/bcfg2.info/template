@@ -1,0 +1,19 @@
+\$Id: template 511 2011-02-18 16:36:06Z dave $
+
+Systeme : $self.metadata.hostname
+
+Groupes :
+#for $group in $self.metadata.groups:
+* $group
+#end for
+
+Bundles :
+#for $bundle in $self.metadata.bundles:
+* $bundle
+#end for
+
+Categories :
+#for $category in $self.metadata.categories:
+* $category -- $self.metadata.categories[$category]
+#end for
+

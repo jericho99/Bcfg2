@@ -1,0 +1,21 @@
+<Bundle name='subversion' revision='$Id: subversion.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos'>
+        <Package name='subversion'/>
+    </Group>
+    <Group name='subversion-server'>
+        <Package name='mod_dav_svn'/>
+        <Package name='mod_authz_ldap'/>
+        <Package name='perl-File-List'/>
+        <Path name='/etc/httpd/conf.d/subversion.conf'/>
+        <Path name='/etc/svn-auth.conf'/>
+        <Path name='/etc/svn-group.conf'/>
+        <Path name='/var/www/html/dircreate.php'/>
+        <Path name='/var/www/html/index.php'/>
+        <Path name='/usr/local/bin/createsvnrepo'/>
+        <Path name='/usr/local/bin/gen-svn-group'/>
+        <Action name='httpd-reload'/>
+
+        </Group>
+
+</Bundle>
+

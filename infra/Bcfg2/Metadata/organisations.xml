@@ -1,0 +1,6 @@
+<Groups revision='$Id: organisations.xml 20 2010-08-18 18:17:03Z dave $'>
+
+    <!-- Organisme proprietaire du systeme -->
+
+    <Group name='csbe' category='organisation'/>
+</Groups>

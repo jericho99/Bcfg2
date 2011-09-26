@@ -1,0 +1,15 @@
+$ORIGIN .
+$TTL 86400     ; 1 day
+ecolepbv.com          IN SOA    ns1.csbe.qc.ca. ns2.csbe.qc.ca (
+                    2009112101 ; serial YYYYMMDDXX
+                    10800      ; refresh (3 hours)
+                    3600       ; retry (1 hour)
+                    604800     ; expire (1 week)
+                    86400      ; minimum (1 day)
+                    )
+               NS   ns1.csbe.qc.ca.
+               NS   ns2.csbe.qc.ca.
+               A 207.96.172.27
+$ORIGIN ecolepbv.com.
+www  A 207.96.172.27
+

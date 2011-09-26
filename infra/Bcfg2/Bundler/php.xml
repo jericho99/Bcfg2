@@ -1,0 +1,58 @@
+<Bundle name='php' revision='$Id: php.xml 342 2010-12-20 20:48:29Z dave $'>
+    <Group name='centos'>
+        <Package name='php'/>
+        <Package name='php-pear'/>
+
+    <Group name='php-ldap'>
+        <Package name='php-ldap'/>
+        </Group>
+    <Group name='php-mysql'>
+        <Package name='php-mysql'/>
+        </Group>
+    <Group name='phpmyadmin'>
+        <Package name='phpmyadmin'/>
+        </Group>
+
+    <Group name='php-odbc'>
+        <Package name='php-odbc'/>
+        </Group>
+
+    <Group name='php-xml'>
+        <Package name='php-xml'/>
+        </Group>
+ 
+    <Group name='php-xmlrpc'>
+        <Package name='php-xmlrpc'/>
+        </Group>
+
+    <Group name='php-devel'>
+        <Package name='php-devel'/>
+        </Group>
+
+    <Group name='php-gd'>
+        <Package name='php-gd'/>
+        </Group>
+
+    <Group name='php-imap'>
+        <Package name='php-imap'/>
+        </Group>
+
+    <Group name='php-snmp'>
+        <Package name='php-snmp'/>
+        </Group>
+
+    <Group name='php-mcrypt'>
+        <Package name='php-mcrypt'/>
+    </Group>
+
+    <Group name='php-mhash'>
+        <Package name='php-mhash'/>
+    </Group>
+
+    <Group name='php-pgsql'>
+        <Package name='php-pgsql'/>
+    </Group>
+
+    </Group>
+</Bundle>
+

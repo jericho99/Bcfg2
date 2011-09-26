@@ -1,0 +1,15 @@
+$ORIGIN .
+$TTL 3600	; 1 hour
+polyst-francois.qc.ca		IN SOA	ns1.csbe.qc.ca. ns2.csbe.qc.ca (
+				2009112102 ; serial YYYYMMDDXX
+				10800      ; refresh (3 hours)
+				3600       ; retry (1 hour)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+               NS   ns1.csbe.qc.ca.
+               NS   ns2.csbe.qc.ca.
+               A    207.96.172.22
+;               MX   5 mail.polyst-francois.qc.ca.
+$ORIGIN polyst-francois.qc.ca.
+www            A    207.96.172.22

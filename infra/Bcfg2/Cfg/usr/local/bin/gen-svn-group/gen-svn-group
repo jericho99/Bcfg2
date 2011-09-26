@@ -1,0 +1,68 @@
+#!/usr/bin/perl
+
+
+
+$lsdir=`ls -1 /var/www/svn/web`;
+(open SVNDIR, "> /tmp/svn.txt");
+print SVNDIR $lsdir;
+close (SVNDIR);
+
+$data_file="/tmp/svn.txt";
+open(DATA, $data_file) || die("Could not open file!");
+@raw_data=<DATA>;
+close(DATA);
+system ("rm -rf /etc/svn-group-web.conf");
+open SVNGROUP, '>>/etc/svn-group-web.conf' or die;
+print SVNGROUP "[groups]\n";
+print SVNGROUP "grpall = joe\n";
+print SVNGROUP "grpread = joe\n";
+print SVNGROUP "\n";
+
+foreach $key (@raw_data){
+chop($key);
+#print "$key\n";
+print SVNGROUP "[$key:/]\n";
+print SVNGROUP "\@grpall = rw\n";
+print SVNGROUP "\@grpread = r\n";
+print SVNGROUP "\n";
+}
+close SVNGROUP;
+
+use Net::LDAP;
+
+$ldap = Net::LDAP->new( '10.10.200.11' ) or die "$@";
+
+ $mesg = $ldap->bind ("cn=marcel,dc=marcel",
+                       password => "sPEilZ5S",
+                       version => 3);
+
+$mesg = $ldap->search( # perform a search
+                        base   => "ou=Groups,dc=marcel",
+                        filter => "(cn=service_svn)",
+                         attrs => ['memberUid'],
+
+                      );
+
+my $entry = $mesg->entry(0);
+
+open U, '>/tmp/aa' or die;
+foreach my $attribute ( $entry->attributes ) {
+foreach my $value ($entry->get_value($attribute)) {
+print U "$value,";
+}
+}
+close (U) ;
+die if ($mesg->code); 
+open T, '/tmp/aa' or die;
+@raw_data=<T>;
+close(T);
+#print @raw_data;
+     open SVNGROUP, '/etc/svn-group-web.conf' or die;
+        my @svngroup = <SVNGROUP>;
+        open SVNGROUP, '>/etc/svn-group-web.conf' or die;
+                foreach (@svngroup) {
+                s/^grpall =.*/grpall = @raw_data/;
+                print SVNGROUP $_;
+        }
+        close SVNGROUP;
+

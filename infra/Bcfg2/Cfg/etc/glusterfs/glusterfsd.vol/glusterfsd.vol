@@ -1,0 +1,74 @@
+### file: server-volume.vol.sample
+# BCFG2-IG
+# $Id: glusterfsd.vol 241 2010-10-14 22:39:39Z dave $
+# Local modifications WILL be lost
+
+#####################################
+###  GlusterFS Server Volume File  ##
+#####################################
+
+#### CONFIG FILE RULES:
+### "#" is comment character.
+### - Config file is case sensitive
+### - Options within a volume block can be in any order.
+### - Spaces or tabs are used as delimitter within a line. 
+### - Multiple values to options will be : delimitted.
+### - Each option should end within a line.
+### - Missing or commented fields will assume default values.
+### - Blank/commented lines are allowed.
+### - Sub-volumes should already be defined above before referring.
+
+### Export volume "brick" with the contents of "/home/export" directory.
+#volume brick
+#  type storage/posix                   # POSIX FS translator
+#  option directory /home/export        # Export this directory
+#end-volume
+
+### Add network serving capability to above brick.
+#volume server
+#  type protocol/server
+#  option transport-type tcp
+# option transport-type unix
+# option transport-type ib-sdp
+# option transport.socket.bind-address 192.168.1.10     # Default is to listen on all interfaces
+# option transport.socket.listen-port 6996              # Default is 6996
+
+# option transport-type ib-verbs
+# option transport.ib-verbs.bind-address 192.168.1.10     # Default is to listen on all interfaces
+# option transport.ib-verbs.listen-port 6996              # Default is 6996
+# option transport.ib-verbs.work-request-send-size  131072
+# option transport.ib-verbs.work-request-send-count 64
+# option transport.ib-verbs.work-request-recv-size  131072
+# option transport.ib-verbs.work-request-recv-count 64
+
+# option client-volume-filename /etc/glusterfs/glusterfs-client.vol
+#  subvolumes brick
+# NOTE: Access to any volume through protocol/server is denied by
+# default. You need to explicitly grant access through # "auth"
+# option.
+#  option auth.addr.brick.allow * # Allow access to "brick" volume
+#end-volume
+
+
+volume posix
+  type storage/posix
+  option directory /data/
+end-volume
+
+volume locks
+  type features/locks
+  subvolumes posix
+end-volume
+
+volume brick
+  type performance/io-threads
+  option thread-count 8
+  subvolumes locks
+end-volume
+
+volume server
+  type protocol/server
+  option transport-type tcp
+  option auth.addr.brick.allow 10.*
+  subvolumes brick
+end-volume

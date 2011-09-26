@@ -1,0 +1,7 @@
+<Bundle name='java' revision='$Id: java.xml 539 2011-02-28 20:06:00Z dave $'>
+    <Group name='centos5'>
+        <Package name='java-1.6.0-openjdk'/>
+        <Package name='jpackage-utils'/>
+    </Group>
+</Bundle>
+

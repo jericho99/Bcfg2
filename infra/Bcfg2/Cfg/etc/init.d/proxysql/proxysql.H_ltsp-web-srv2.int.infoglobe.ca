@@ -1,0 +1,71 @@
+#! /bin/bash
+#
+# proxysql       
+#
+# chkconfig: 2345 99 01
+# description: Activates/Deactivates proxysql
+#
+### BEGIN INIT INFO
+# Provides: $proxysql
+### END INIT INFO
+
+###
+# Slightly modified original script below
+###
+
+# Source function library
+. /etc/init.d/functions
+
+IP=10.10.0.128
+PORT=3306
+PIDFILE=/var/run/proxysql.pid
+
+
+
+start() {
+    echo -n $"Starting proxysql: " 
+    # Start me up!
+    socat UNIX-LISTEN:/var/lib/mysql/mysql.sock,fork,reuseaddr,unlink-early,user=mysql,group=mysql,mode=777 TCP:$IP:$PORT </dev/null &
+    echo $! >$PIDFILE
+
+}
+
+stop() {
+    echo -n $"Stopping proxysql: "
+ /bin/kill $(/bin/cat $PIDFILE)
+ 
+   }    
+
+restart() {
+      stop
+    start
+}    
+
+reload() {
+    stop
+    start
+}
+
+case "$1" in
+  start)
+      start
+    ;;
+  stop)
+      stop
+    ;;
+  status)
+    status proxysql
+    ;;
+  restart)
+      restart
+    ;;
+  reload)
+    reload
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|status|restart|reload}" 
+    exit 1
+esac
+
+exit $?
+

@@ -1,0 +1,173 @@
+$ORIGIN .
+$TTL 3600	; 1 hour
+csbe.qc.ca		IN SOA	ns1.csbe.qc.ca. ns2.csbe.qc.ca. (
+				2010012101 ; serial YYYYMMDDXX
+				10800      ; refresh (3 hours)
+				3600       ; retry (1 hour)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+			NS	ns1.csbe.qc.ca.
+			NS	ns2.csbe.qc.ca.
+			MX	20 mail2.csbe.qc.ca.
+			MX	10 mailrelays.csbe.qc.ca
+                        A       207.96.172.10
+$ORIGIN csbe.qc.ca.
+ns1			A 207.96.172.5
+ns2			A 207.96.172.6
+mail2			A 207.96.172.52
+mailrelays		A 207.96.172.20 
+mail 			A 207.96.172.10
+assistance  		A 207.96.172.32
+adigecs			A 207.96.172.27
+adminpsg  		A 207.96.172.12
+biblio			A 207.96.172.27
+bulletin		A 207.96.172.27
+carrieregr602  		A 207.96.172.27
+cdm			A 207.96.172.27
+cic			A 207.96.172.27
+cimic			A 207.96.172.27
+www.cimic 		CNAME cimic.csbe.qc.ca.
+cimicfp			A 207.96.172.27
+classeajeanphilip	A 207.96.172.27
+classenathalie		A 207.96.172.27
+collection-heritage	A 207.96.172.27
+conference		A 207.96.172.27
+conference030 		A 207.96.172.34
+cooperatic		A 207.96.172.27
+;courriersec  		A 206.167.170.23
+courrier  A 207.96.172.37
+courpsg  		A 207.96.172.13
+critique		A 207.96.172.27
+csbe360etm		A 207.96.172.27
+dragonspsg		A 207.96.172.27
+ecampus			A 207.96.172.11
+www.ecampus		CNAME ecampus.csbe.qc.ca.
+ecoles			A 207.96.172.27
+;educ  			A 206.167.170.6
+erec  			A 207.96.172.14
+$ORIGIN erec.csbe.qc.ca.
+              IN      MX 10  erec.csbe.qc.ca.
+              IN      MX 05  mailrelays.csbe.qc.ca.
+$ORIGIN csbe.qc.ca.
+entreprises  		A 207.96.172.27
+etm			A 207.96.172.27
+etmppo  		A 207.96.172.27
+etmreforme		A 207.96.172.27
+etreettic		A 207.96.172.27
+faim			A 207.96.172.27
+ftp			CNAME www.csbe.qc.ca
+gorre  			A 207.96.172.41
+ispjbenaquis  		A 207.96.172.27
+isibel  		A 207.96.172.27
+lacroixgr602  		A 207.96.172.27
+lafamillecavautlecoup 	A 207.96.172.27
+;lancelot 		NS virtualdns.csbe.qc.ca.
+lery			A 207.96.172.27
+lucan  			A 207.96.172.250
+mbf09  			A 207.96.172.27
+media			A 207.96.172.27
+meleagant  		A 207.96.172.16
+mordred  		A 207.96.172.28
+monecole		A 207.96.172.27
+motivation  		A 207.96.172.17
+nx  			A 207.96.172.42
+pbelsec5		A 207.96.172.27
+pbv		A 207.96.172.27
+per1			A 207.96.172.27
+presentation  		A 207.96.172.32
+poisson			A 207.96.172.27
+ppo			A 207.96.172.27
+psg			A 207.96.172.27
+psg2  			A 207.96.172.29
+quebecgr601		A 207.96.172.27
+radio			A 207.96.172.27
+radioetincelle  	A 207.96.172.30
+reseauvpn 		A 207.96.172.39
+recit               A 207.96.172.15
+resolutiongr602  	A 207.96.172.27
+robotique  		A 207.96.172.27
+saefp  			A 207.96.172.26
+www.saefp  		A 207.96.172.26
+salleetchemin  		A 206.167.170.75
+sakai 			A 207.96.172.38 
+secondairegr602  	A 207.96.172.27
+www.sitte 		CNAME sitte.csbe.qc.ca.
+sitte 			A 207.96.172.25
+robotique		A 207.96.172.27
+technologie		A 207.96.172.27
+;tintagel  		A 206.167.170.23
+virus 			A 207.96.172.230 
+visio 			A 206.167.141.106
+;virtualdns 		A 206.167.170.11
+;virtualdns 		A 216.226.53.251
+;virtualdns 		A 24.226.145.19
+www 			 A 207.96.172.10
+abenaquis       A 207.96.172.9
+accueil         A 207.96.172.9
+appalaches      A 207.96.172.9
+aquarellesb     A 207.96.172.9
+aquarellesg     A 207.96.172.9
+arc-en-cielsc   A 207.96.172.9
+arc-en-cielso   A 207.96.172.9
+arc-en-ciesn    A 207.96.172.9
+astrale         A 207.96.172.9
+barabe-drouin   A 207.96.172.9
+beausoleil      A 207.96.172.9
+belanger        A 207.96.172.9
+bellarmin       A 207.96.172.9
+bois-francs     A 207.96.172.9
+cure-beaudet    A 207.96.172.9
+decouverte      A 207.96.172.9
+dionne          A 207.96.172.9
+dominique-savio A 207.96.172.9
+eco-pin         A 207.96.172.9
+enfant-jesus    A 207.96.172.9
+envolee         A 207.96.172.9
+etincelle       A 207.96.172.9
+eveil           A 207.96.172.9
+fleurs-de-soleil A 207.96.172.9
+grande-coudee   A 207.96.172.9
+guadeloupe      A 207.96.172.9
+harmonie        A 207.96.172.9
+jouvence        A 207.96.172.9
+joyeux-compagnons A 207.96.172.9
+kennebec    A 207.96.172.9
+lacroix     A 207.96.172.9
+lambertdyouville A 207.96.172.9
+lery A 207.96.172.9
+louis-albert-vachon A 207.96.172.9
+maribel A 207.96.172.9
+mgr-feuiltault A 207.96.172.9
+mgr-fortier A 207.96.172.9
+nazareth A 207.96.172.9
+nd.rosaire A 207.96.172.9
+notre-damele A 207.96.172.9
+notre-damese A 207.96.172.9
+pbv A 207.96.172.9
+psf A 207.96.172.9
+petit-chercheur A 207.96.172.9
+petite-abeille A 207.96.172.9
+petits-castors A 207.96.172.9
+pstg A 207.96.172.9
+rayons-de-soleil A 207.96.172.9
+sittelles A 207.96.172.9
+sommets A 207.96.172.9
+source A 207.96.172.9
+st-evariste A 207.96.172.9
+st-francois A 207.96.172.9
+ste-famille A 207.96.172.9
+ste-martine A 207.96.172.9
+ste-therese A 207.96.172.9
+sts-anges  A 207.96.172.9
+tourterelle A 207.96.172.9
+trait-d.union A 207.96.172.9
+tremplin A 207.96.172.9
+trinite A 207.96.172.9
+veilleux A 207.96.172.9
+youville A 207.96.172.9
+artistic A 207.96.172.9
+joomlatest A 207.96.172.53
+veilleux2 A 207.96.172.53
+appalachestest A 207.96.172.53
+moodle A 207.96.172.54

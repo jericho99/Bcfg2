@@ -1,0 +1,6 @@
+<Bundle name='X' revision='$Id: X.xml 553 2011-03-08 15:00:43Z dave $'>
+    <Group name='centos5'>
+<!--        <Package name='yum groupinstall "X Window System"'/>-->
+</Group>
+</Bundle>
+

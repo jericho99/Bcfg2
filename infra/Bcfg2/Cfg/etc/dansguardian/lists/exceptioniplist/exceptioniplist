@@ -1,0 +1,146 @@
+# BCFG2-CSBE $Id: exceptioniplist 819 2009-10-16 15:03:29Z dave $
+# Local modifications WILL be lost
+
+# IP addresses of computers from which
+# web access should not be filtered.
+#
+# These would be servers which
+# need unfiltered access for
+# updates.  Also administrator
+# workstations which need to
+# download programs and check
+# out blocked sites should be
+# put here.
+#
+# Hostnames are allowed here, provided you
+# enable the reverseclientlookups option.
+#
+# This is not the IP of web servers
+# you don't want to filter.
+
+#192.168.0.1
+#192.168.0.2
+#192.168.42.2
+
+# Ranges and subnets can also be used,
+# e.g.
+# 10.0.0.1-10.0.0.3
+# 10.0.0.0/24
+#
+# Hostnames can also be used, provided
+# you cater for reverse DNS lookups
+# on your LAN and enable the
+# "reverseclientiplookups" option in
+# dansguardian.conf
+
+#Christian
+10.54.42.18
+#Pierre
+10.54.43.10
+10.54.42.49
+#Marie
+10.50.43.50
+10.59.41.3
+#Ovascene
+10.74.63.50
+10.74.63.51
+10.74.63.52
+10.74.60.48
+#Joseph
+10.74.60.10
+#Bruno
+10.17.63.50
+10.74.55.50
+10.59.61.10
+10.59.41.2
+#bruno ghost
+10.17.60.10
+#
+#Robert
+10.95.43.50
+#George
+10.22.60.57
+#Marc-Antoine
+10.45.43.50
+10.45.42.13
+#Alaska
+10.18.60.25
+10.54.41.4
+#Marcel
+10.54.43.11
+#Jacques Poirier
+10.54.41.19
+#Pierre-Andre Giguere
+10.23.61.51
+10.23.60.18
+#Henri
+10.54.43.12
+#Gilles
+10.54.42.6
+#Olivier
+10.54.43.14
+10.54.42.57
+10.54.81.7
+10.54.42.2
+10.54.40.139
+#Andre Roy
+10.22.60.100
+#dave
+10.54.42.9
+#0.54.9.6
+##Mathieu
+10.54.42.23
+10.54.42.34
+#GRAPIM de la PSG
+10.22.60.100
+10.22.60.101
+10.22.60.102
+10.22.60.103
+10.22.60.104
+10.22.60.105
+10.22.60.106
+10.22.60.107
+10.22.60.108
+10.22.60.109
+10.22.60.110
+10.22.60.111
+10.22.60.112
+10.22.60.113
+10.22.60.114
+10.22.60.115
+10.22.60.116
+10.22.60.117
+10.22.60.118
+10.22.60.119
+10.22.60.120
+10.22.60.121
+10.22.60.122
+10.22.60.123
+10.22.60.124
+10.22.60.125
+10.22.60.126
+10.22.60.127
+10.22.60.128
+10.22.60.129
+10.22.60.130
+10.22.60.131
+10.22.60.132
+10.22.60.133
+10.22.60.134
+
+#Andre Roy
+10.22.60.166
+#Nancy Roy
+10.17.41.10
+#Ludovic Roy
+10.22.41.82
+#Bobby.Poulin
+10.54.9.21
+#Keven Chabot
+10.54.9.32
+#Martial
+10.54.9.66
+#Ginette Drouin
+10.54.40.43
+#Veronique Bolduc
+10.54.40.44

@@ -1,0 +1,42 @@
+# BCFG2-IG
+# $Id: my.cnf 221 2010-10-12 19:39:27Z dave $
+# Local modifications WILL be lost
+
+[mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+# Default to using old password format for compatibility with mysql 3.x
+# clients (those using the mysqlclient10 compatibility package).
+old_passwords=1
+
+# Disabling symbolic-links is recommended to prevent assorted security risks;
+# to do so, uncomment this line:
+# symbolic-links=0
+
+# * Fine Tuning
+#
+key_buffer      = 16M
+max_allowed_packet  = 16M
+thread_stack        = 128K
+thread_cache_size   = 8
+
+# * Query Cache Configuration
+#
+
+query-cache-type        = 1
+query_cache_limit       = 4M
+query_cache_size        = 32M
+
+expire_logs_days    = 10
+max_binlog_size         = 100M
+
+[mysqld_safe]
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
+
+ 
+[client]
+port = 3306
+host=10.10.0.52
+

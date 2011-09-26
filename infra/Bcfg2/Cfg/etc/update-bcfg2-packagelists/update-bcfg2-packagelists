@@ -1,0 +1,5 @@
+# THIS FILE IS OWNED BY BCFG2-CSBE
+#
+#Every day at 3:30AM
+30 3    * * *   root    test -x /usr/share/bcfg2/scripts/update-bcfg2-packagelists.sh && /usr/share/bcfg2/scripts/update-bcfg2-packagelists.sh
+

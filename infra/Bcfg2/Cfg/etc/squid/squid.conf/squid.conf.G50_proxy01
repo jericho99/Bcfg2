@@ -1,0 +1,110 @@
+# BCFG2-CSBE $Id: squid.conf.G50_proxy01 776 2009-09-30 13:01:07Z dave $
+# Local modifications WILL be lost 
+
+http_port 3128 transparent
+#http_port 3128 
+#wccp2_router 10.54.10.10
+#wccp2_router
+#wccp2_forwarding_method 1
+#wccp2_return_method 1
+
+#CACHE
+cache_mem 64 MB
+maximum_object_size_in_memory 4096 KB
+maximum_object_size 100 MB
+minimum_object_size 0 KB
+cache_swap_low 90
+cache_swap_high 95
+
+cache_dir aufs /var/spool/squid/cache1 2000 16 256
+cache_dir aufs /var/spool/squid/cache2 2000 16 256
+cache_dir aufs /var/spool/squid/cache3 2000 16 256
+cache_dir aufs /var/spool/squid/cache4 2000 16 256
+cache_dir aufs /var/spool/squid/cache5 2000 16 256
+cache_dir aufs /var/spool/squid/cache6 2000 16 256
+cache_log /var/log/squid/cache.log
+cache_store_log none
+
+#cache_peer 10.54.10.199 parent 3128 3130 proxy-only
+
+
+acl all src all
+acl manager proto cache_object
+acl localhost src 127.0.0.1/32
+acl to_localhost dst 127.0.0.0/8
+acl localnet src 10.0.0.0/8	
+acl localnet src 172.16.0.0/12	
+acl localnet src 192.168.0.0/16	
+acl SSL_ports port 443		
+acl SSL_ports port 563		
+acl SSL_ports port 873		
+acl Safe_ports port 80		
+acl Safe_ports port 21		
+acl Safe_ports port 443		
+acl Safe_ports port 70		
+acl Safe_ports port 210		
+acl Safe_ports port 1025-65535	
+acl Safe_ports port 280		
+acl Safe_ports port 488		
+acl Safe_ports port 591		
+acl Safe_ports port 777		
+acl Safe_ports port 631		
+acl Safe_ports port 873		
+acl Safe_ports port 901		
+acl purge method PURGE
+acl CONNECT method CONNECT
+http_access allow manager localhost
+http_access deny manager
+http_access allow purge localhost
+http_access deny purge
+http_access deny !Safe_ports
+http_access deny CONNECT !SSL_ports
+http_access allow localhost
+http_access allow all
+icp_access allow localnet
+icp_access deny all
+#http_port 3128
+hierarchy_stoplist cgi-bin ?
+access_log /var/log/squid/access.log squid
+refresh_pattern ^ftp:		1440	20%	10080
+refresh_pattern ^gopher:	1440	0%	1440
+refresh_pattern -i (/cgi-bin/|\?) 0	0%	0
+
+refresh_pattern -i \.(gif|png|jpg|jpeg|ico|bmp)$ 260000 90% 260009 override-expire ignore-no-cache ignore-private
+refresh_pattern -i \.(iso|avi|wav|mp3|mp4|mpeg|swf|flv|x-flv|mpg|wma|ogg|wmv|asx|asf)$ 260000 90% 260009 override-expire ignore-no-cache ignore-private
+refresh_pattern -i \.(zip|tar|tgz|ram|rar|bin|ppt|doc|tiff|pdf|uxx)$ 260000 90% 260009 override-expire ignore-no-cache ignore-private
+refresh_pattern -i \.index.(html|htm)$ 1440 90% 40320
+refresh_pattern -i \.(html|htm|css|js)$ 1440 90% 40320
+refresh_pattern .		0	20%	4320
+
+acl apache rep_header Server ^Apache
+broken_vary_encoding allow apache
+extension_methods REPORT MERGE MKACTIVITY CHECKOUT
+hosts_file /etc/hosts
+coredump_dir /var/spool/squid
+
+half_closed_clients on
+follow_x_forwarded_for allow all
+log_uses_indirect_client on
+httpd_suppress_version_string on
+visible_hostname Proxy01CSBE
+
+acl SomeDomain dstdomain .simacs.qc.ca .srafp.com .inforoutefpt.org .grics.qc.ca .compusystems.com .calca.ca webkf.fse.ulaval.ca
+no_cache deny SomeDomain
+always_direct allow SomeDomain
+
+acl mail dstdomain .hotmail.com mail.google.com
+no_cache deny mail 
+always_direct allow mail
+
+acl video dstdomain .youtube.com .dailymotion.com alldata.com .facebook.com .canald.com .ulaval.ca
+no_cache deny video
+always_direct allow video
+
+acl beroul dstdomain 172.30.10.11
+no_cache deny beroul
+always_direct allow beroul
+
+acl QUERY urlpath_regex cgi-bin \?
+cache deny QUERY
+

@@ -1,0 +1,6 @@
+Available Boot Options:
+=======================
+hardy         hardy_text           hardy_server
+hardy_expert  hardy_server-expert  hardy_rescue
+hardy_autoinstall  centos_5        centos_autoinstall
+intrepid_autoinstall    winxp_autoinstall

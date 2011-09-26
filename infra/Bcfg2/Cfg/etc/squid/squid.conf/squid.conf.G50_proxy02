@@ -1,0 +1,114 @@
+# BCFG2-CSBE $Id: squid.conf.G50_proxy02 776 2009-09-30 13:01:07Z dave $
+# Local modifications WILL be lost 
+
+http_port 3128 transparent
+
+#http_port 3128
+hierarchy_stoplist cgi-bin ?
+
+
+
+cache_mem 64 MB
+cache_swap_low 85 
+cache_swap_high 100
+maximum_object_size 100 MB
+minimum_object_size 0 KB
+maximum_object_size_in_memory 4096 KB
+ipcache_size 8192
+max_filedesc 4096
+cache_dir aufs /cache/spool/ 30000 16 256
+cache_dir aufs /cache2/spool/ 30000 16 256
+cache_dir aufs /cache3/spool/ 64000 16 256
+access_log /var/log/squid/access.log squid
+cache_log /var/log/squid/cache.log
+#cache_store_log /var/log/squid/cache2.log
+cache_store_log none 
+#dns_nameservers 132.203.250.10 #ulaval
+#dns_nameservers 10.54.10.14 10.54.10.65 206.167.244.5 192.26.210.1 
+quick_abort_max 0 KB
+
+
+refresh_pattern ^ftp:           1440    20%     10080
+refresh_pattern ^gopher:        1440    0%      1440
+refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
+
+refresh_pattern -i \.(gif|png|jpg|jpeg|ico|bmp)$ 260000 90% 260009 override-expire ignore-no-cache ignore-private
+refresh_pattern -i \.(iso|avi|wav|mp3|mp4|mpeg|swf|flv|x-flv|mpg|wma|ogg|wmv|asx|asf)$ 260000 90% 260009 override-expire ignore-no-cache ignore-private
+refresh_pattern -i \.(zip|tar|tgz|ram|rar|bin|ppt|doc|tiff|pdf|uxx)$ 260000 90% 260009 override-expire ignore-no-cache ignore-private
+refresh_pattern -i \.index.(html|htm)$ 1440 90% 40320
+refresh_pattern -i \.(html|htm|css|js)$ 1440 90% 40320
+refresh_pattern .               0       20%     4320
+half_closed_clients on
+
+acl all src all
+acl manager proto cache_object
+acl localhost src 127.0.0.1/32
+acl to_localhost dst 127.0.0.0/8
+acl localnet src 10.0.0.0/8
+acl localnet src 172.16.0.0/12
+acl localnet src 192.168.0.0/16
+acl SSL_ports port 443
+acl SSL_ports port 563
+acl SSL_ports port 873
+acl Safe_ports port 80
+acl Safe_ports port 21
+acl Safe_ports port 443
+acl Safe_ports port 70
+acl Safe_ports port 210
+acl Safe_ports port 1025-65535
+acl Safe_ports port 280
+acl Safe_ports port 488
+acl Safe_ports port 591
+acl Safe_ports port 777
+acl Safe_ports port 631
+acl Safe_ports port 873
+acl Safe_ports port 901
+acl purge method PURGE
+acl CONNECT method CONNECT
+http_access allow manager localhost
+http_access deny manager
+http_access allow purge localhost
+http_access deny purge
+http_access deny !Safe_ports
+http_access deny CONNECT !SSL_ports
+http_access allow localhost
+http_access allow all
+icp_access allow localnet
+icp_access deny all
+
+
+
+follow_x_forwarded_for allow all
+log_uses_indirect_client on
+httpd_suppress_version_string on
+visible_hostname Proxy02CSBE
+logfile_rotate 5
+wccp2_router 10.54.10.10
+coredump_dir /var/spool/squid
+
+acl QUERY urlpath_regex cgi-bin \?
+cache deny QUERY
+
+acl apache rep_header Server ^Apache
+broken_vary_encoding allow apache
+extension_methods REPORT MERGE MKACTIVITY CHECKOUT
+hosts_file /etc/hosts
+
+
+acl SomeDomain dstdomain .simacs.qc.ca .srafp.com .inforoutefpt.org .grics.qc.ca .compusystems.com .calca.ca webkf.fse.ulaval.ca 
+no_cache deny SomeDomain
+always_direct allow SomeDomain
+
+acl mail dstdomain .hotmail.com mail.google.com
+no_cache deny mail 
+always_direct allow mail
+
+acl video dstdomain .youtube.com .dailymotion.com alldata.com .facebook.com .canald.com .ulaval.ca
+
+no_cache deny video
+always_direct allow video
+
+acl beroul dstdomain 172.30.10.11
+no_cache deny beroul
+always_direct allow beroul
+

@@ -1,0 +1,6 @@
+# BCFG2-CSBE $Id: update-bcfg2-packagelists 263 2009-04-21 08:52:29Z ddoyon $
+# Local modifications WILL be lost
+#
+#Every day at 3:30AM
+30 3    * * *   root    test -x /usr/share/bcfg2/scripts/update-bcfg2-packagelists.sh && /usr/share/bcfg2/scripts/update-bcfg2-packagelists.sh
+

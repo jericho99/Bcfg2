@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Id: sqlbackupclean 710 2009-09-16 19:29:16Z dave $
+/usr/bin/find /backupmysql  -type f -prune -mtime +6 -exec /bin/rm -rf {} \;
+

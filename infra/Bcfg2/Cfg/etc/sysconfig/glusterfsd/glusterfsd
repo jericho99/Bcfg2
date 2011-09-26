@@ -1,0 +1,12 @@
+# Change the glusterfsd service defaults here.
+# See "glusterfsd --help" outpout for defaults and possible values.
+
+# BCFG2-IG
+# $Id: glusterfsd 241 2010-10-14 22:39:39Z dave $
+# Local modifications WILL be lost
+
+#GLUSTERFSD_CONFIG="/etc/glusterfs/glusterfsd.vol"
+GLUSTERFSD_LOGFILE="/var/log/glusterfs/glusterfs.log"
+#GLUSTERFSD_LOGLEVEL="NORMAL"
+#GLUSTERFSD_NOFILE="65536"
+

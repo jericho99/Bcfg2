@@ -1,0 +1,42 @@
+<Rules priority='0'>
+    <Group name='centos5'>
+        <Service name="amavisd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="autofs" status='on' type='chkconfig' reload='restart'/>
+        <Service name="aoe" status='on' type='chkconfig' reload='restart'/>
+        <Service name="bcfg2" status='on' type='chkconfig' reload='restart'/>
+        <Service name="clamd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="crond" status='on' type='chkconfig' reload='restart'/>
+        <Service name="dsmcad" status='on' type='chkconfig' reload='restart'/>
+        <Service name="dansguardian" status='on' type='chkconfig' reload='restart'/>
+        <Service name="glusterfsd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="haldaemon" status='on' type='chkconfig' reload='restart'/>
+        <Service name="httpd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="iptables" status='on' type='chkconfig' reload='restart'/>
+        <Service name="ldap" status='on' type='chkconfig' reload='restart'/>
+        <Service name="lighttpd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="mysqld" status='on' type='chkconfig' reload='restart'/>
+        <Service name="messagebus" status='on' type='chkconfig' reload='restart'/>
+        <Service name="memcached" status='on' type='chkconfig' reload='restart'/>
+        <Service name="munin-node" status='on' type='chkconfig' reload='restart'/>
+        <Service name="named" status='on' type='chkconfig' reload='restart'/>
+        <Service name="nrpe" status='on' type='chkconfig' reload='restart'/>
+        <Service name="nfs" status='on' type='chkconfig' reload='restart'/>
+        <Service name="postgrey" status='on' type='chkconfig' reload='restart'/>
+        <Service name="postgresql" status='on' type='chkconfig' reload='restart'/>
+        <Service name="postfix" status='on' type='chkconfig' reload='restart'/>
+        <Service name="portmap" status='on' type='chkconfig' reload='restart'/>
+        <Service name="proxysql" status='on' type='chkconfig' reload='restart'/>
+        <Service name="radiusd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="sendmail" status='on' type='chkconfig' reload='restart'/>
+        <Service name="smb" status='on' type='chkconfig' reload='restart'/>
+        <Service name="squid" status='on' type='chkconfig' reload='restart'/>
+        <Service name="sshd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="snmpd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="syslog-ng" status='on' type='chkconfig' reload='restart'/>
+        <Service name="tomcat5" status='on' type='chkconfig' reload='restart'/>
+        <Service name="vsftpd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="yum-updatesd" status='on' type='chkconfig' reload='restart'/>
+        <Service name="xinetd" status='on' type='chkconfig' reload='restart'/>
+    </Group>
+</Rules>
+

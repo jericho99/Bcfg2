@@ -1,0 +1,46 @@
+DISPLAY boot.txt
+
+DEFAULT hardy_text
+
+LABEL hardy
+        kernel ubuntu/hardy/i386/linux
+        append vga=normal initrd=ubuntu/hardy/i386/initrd.gz ramdisk_size=16417 root=/dev/ram rw  --
+LABEL hardy_text
+        kernel ubuntu/hardy/i386/linux
+        append vga=normal initrd=ubuntu/hardy/i386/initrd.gz ramdisk_size=16417 root=/dev/ram rw  --
+LABEL hardy_server
+        kernel ubuntu/hardy/i386/linux
+        append base-installer/kernel/linux/extra-packages-2.6= pkgsel/install-pattern=~t^ubuntu-standard$ pkgsel/language-pack-patterns= pkgsel/install-language-support=false vga=normal initrd=ubuntu/hardy/i386/initrd.gz ramdisk_size=16417 root=/dev/ram rw  --
+
+LABEL hardy_expert
+        kernel ubuntu/hardy/i386/linux
+        append priority=low vga=normal initrd=ubuntu/hardy/i386/initrd.gz ramdisk_size=16417 root=/dev/ram rw  --
+LABEL hardy_server-expert
+        kernel ubuntu/hardy/i386/linux
+        append base-installer/kernel/linux/extra-packages-2.6= pkgsel/install-pattern=~t^ubuntu-standard$ pkgsel/language-pack-patterns= pkgsel/install-language-support=false priority=low vga=normal initrd=ubuntu/hardy/i386/initrd.gz ramdisk_size=16417 root=/dev/ram rw  --
+
+LABEL hardy_rescue
+        kernel ubuntu/hardy/i386/linux
+        append vga=normal initrd=ubuntu/hardy/i386/initrd.gz ramdisk_size=16417 root=/dev/ram rw  rescue/enable=true --
+
+LABEL hardy_autoinstall
+        kernel ubuntu/hardy/i386/linux
+        append initrd=ubuntu/hardy/i386/initrd.gz debian-installer/locale=en_US.UTF-8 console-setup/layoutcode=us netcfg/choose_interface=eth0 netcfg/get_hostname=hardyautoinstall netcfg/disable_dhcp=false preseed/url=http://logitheque/preseed-ubuntu/804.cfg priority=critical ramdisk_size=14409 root=/dev/rd/0 rw --
+
+LABEL centos_5
+         kernel centos/5/i386/vmlinuz
+         append initrd=centos/5/i386/initrd.img
+
+LABEL centos_autoinstall
+         kernel centos/5/i386/vmlinuz
+         append initrd=centos/5/i386/initrd.img ks=nfs:172.30.2.104:/home/centos.ks
+
+LABEL intrepid_autoinstall 
+    KERNEL ubuntu/intrepid/i386/linux
+    APPEND initrd=ubuntu/intrepid/i386/initrd.gz debian-installer/locale=fr_CA.UTF-8 console-setup/layoutcode=us netcfg/choose_interface=eth0 netcfg/get_hostname=ltsp-appserv02 netcfg/disable_dhcp=false preseed/url=http://logitheque/preseed-ubuntu/810.cfg priority=critical ramdisk_size=14409 root=/dev/rd/0 rw --
+
+LABEL winxp_autoinstall
+         kernel unattendedwin/bzImage 
+         append initrd=unattendedwin/initrd.img z_user=guest z_password=guest z_path=//10.54.9.50/install 
+PROMPT 1
+TIMEOUT 0

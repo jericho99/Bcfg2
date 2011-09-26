@@ -1,0 +1,9 @@
+<Bundle name='clamav' revision='$Id: clamav.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos5'>
+        <Path name='/etc/clamd.conf'/>
+        <Package name='clamav'/> 
+        <Package name='clamd'/>
+        <Service name='clamd'/>
+    </Group>
+</Bundle>
+

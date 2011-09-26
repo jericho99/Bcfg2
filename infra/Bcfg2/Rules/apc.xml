@@ -1,0 +1,3 @@
+<Rules priority='0'>
+<Action timing='post' name='apc' command="pecl install apc-beta; echo extension=apc.so > /etc/php.d/apc.ini" when='modified' status='check'/>
+</Rules>

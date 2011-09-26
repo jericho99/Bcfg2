@@ -1,0 +1,37 @@
+#import random
+#silent random.seed(hash($self.metadata.hostname))
+##
+## L'effet du seed sur le hostname permet d'avoir une heure consistante pour chaque vserver, mais
+## aleatoire pour l'ensemble des vservers. En effet, avec random, en mettant le meme seed a chaque
+## invocation du gabarit (le nom d'hote), cela permet de generer les memes valeurs pour chaque hote
+## mais d'avoir des valeurs differentes globalement.
+## NOTE: CE GABARIT NE S'APPLIQUE QU'À DEBIAN/UBUNTU/CENTOS! 
+##
+#def distro: $self.metadata.categories["os"]
+
+# BCFG2-IG
+# Local modifications WILL be lost
+# \$Id: template 249 2009-04-17 15:13:05Z ddoyon $
+#
+
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
+
+#if $distro == "centos"
+# run-parts
+#01 * * * * root run-parts /etc/cron.hourly
+#02 4 * * * root run-parts /etc/cron.daily
+#22 4 * * 0 root run-parts /etc/cron.weekly
+#42 4 1 * * root run-parts /etc/cron.monthly
+
+
+# m h dom mon dow user command
+# run-parts
+$random.randrange(1,59) * * * * root run-parts /etc/cron.hourly
+$random.randrange(1,59) $random.randrange(0,6) * * * root run-parts /etc/cron.daily
+$random.randrange(1,59) $random.randrange(0,6) * * 0 root run-parts /etc/cron.weekly
+$random.randrange(1,59) $random.randrange(0,6) 1 * * root run-parts /etc/cron.monthly
+#end if
+

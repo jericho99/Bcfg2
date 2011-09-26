@@ -1,0 +1,8 @@
+<Bundle name='buildtools' revision='$Id: buildtools.xml 342 2010-12-20 20:48:29Z dave $'>
+    <Group name='centos5'>
+        <Package name='gcc'/>
+        <Package name='flex'/>
+        <Package name='bison'/>
+    </Group>
+</Bundle>
+

@@ -1,0 +1,8 @@
+<Bundle name='nfs' revision='$Id: nfs.xml 470 2011-01-31 21:47:13Z dave $'>
+    <Group name='centos'>
+        <Path name='/etc/exports'/>
+        <Service name='portmap'/>
+        <Service name='nfs'/>
+</Group>
+</Bundle>
+

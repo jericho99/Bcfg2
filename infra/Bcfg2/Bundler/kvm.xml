@@ -1,0 +1,14 @@
+<Bundle name='kvm' revision='$Id: kvm.xml 555 2011-03-08 16:41:39Z dave $'>
+    <Group name='centos5'>
+	<BoundPath type='directory' owner='root' group='root' perms='0755' name='/vm'/>
+	<BoundPath type='directory' owner='root' group='root' perms='0755' name='/vm/iso'/>
+	<BoundPath type='directory' owner='root' group='root' perms='0700' name='/vm/vm'/>
+	<BoundPath type='directory' owner='root' group='root' perms='0700' name='/vm/snapshot'/>
+        <Package name='virt-manager'/>
+        <Package name='kvm'/>
+        <Package name='bridge-utils'/>
+        <Service name='haldaemon'/>
+    </Group>
+
+</Bundle>
+

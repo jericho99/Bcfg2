@@ -1,0 +1,4 @@
+perms: 0644 
+owner: root
+group: root
+encoding: base64
